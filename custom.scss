@@ -1,0 +1,306 @@
+// global
+* {
+	// make everything relative
+	position: relative;
+	// stop all background repeats
+	background-repeat: no-repeat;
+	// add box sizing
+	box-sizing: border-box;
+}
+
+
+html {
+	height: 100%;
+}
+
+body {
+	background-image: url(../images/bg.jpg);
+	background-position: center center;
+	background-repeat: repeat;
+
+	&.active {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	text-rendering: geometricPrecision;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: $body-font-family
+}
+
+
+main {
+	/* flex: 1; would be enough but it looks bad in IE */
+	flex: 1 0 auto;
+}
+
+// remove underline
+:link,
+:visited {
+	text-decoration: none;
+}
+
+// remove list points
+ul {
+	&.noList {
+		list-style: none;
+		margin-left: 0;
+	}
+}
+
+// set base paragraph size
+p {
+	font-size: rem-calc(14);
+	// if it's the only p contained within an element
+	&:only-child,
+	// or the last of the p's
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	// small print
+	&.small {
+		font-size: rem-calc(10);
+	}
+}
+
+// remove borders
+a {
+	font-weight: bold;
+	img,
+	&:link img,
+	&:visited img {
+		border: none;
+	}
+}
+
+ul li {
+	color: $body-font-color;
+}
+
+// remove address styling
+address {
+	font-style: normal;
+}
+q {
+	font-style: italic;
+}
+
+textarea {
+	resize: none;
+	height: $hundred;
+	box-shadow: none;
+}
+select {
+	color: #cccccc;
+	font-size: rem-calc(14px);
+	font-style: italic;
+}
+label {
+	color: $body-font-color;
+	display: inline-block;
+}
+
+// stop outline on focus
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+// generic styling on input elements
+input:not([type='checkbox']):not([type='radio']):not([type='button']),
+textarea,
+select {
+	// add font awesome to font family for placeholders
+	color: $body-font-color;
+	font-family: 'Gotham-Bold';
+	font-size: rem-calc(12);
+	font-weight: 900;
+	min-height: $input-height;
+	padding: 0;
+	padding-left: ($small-space * 2);
+	border: 1px solid $light;
+	box-shadow: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	// style placeholder
+	&::-webkit-input-placeholder {
+		color: $light;
+		font-family: 'FontAwesome', $body-font-family;
+		font-size: 13px;
+		position: relative;
+		padding: 0;
+		top: 0px;
+		transition: all, 250ms, ease-in;
+		z-index: 10;
+		line-height: normal;
+		z-index: 10;
+
+		// for safari only
+		@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+			padding-top: 0px;
+			line-height: 12px;
+		}
+	}
+	// change the horrible yellow background to white in chrome
+	&:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0px 1000px white inset!important;
+		border: 1px solid #ccc;
+		padding-left: ($small-space * 2);
+		color: $body-font-color;
+		font-family: $body-font-family!important;
+		font-size: 14px;
+	}
+	// hide placeholder on focus
+	&:focus::-webkit-input-placeholder{
+		color: transparent;
+	}
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='button']):focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: 0 0 5px $light;
+	-webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+	transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+	border: none !important;
+}
+
+// buttons
+.button {
+	background-color: $primary;
+	border: none;
+	color: #ffffff;
+	margin: 0;
+	padding: 12px ($small-space * 3);
+	font-size: rem-calc(13px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: normal;
+
+	// style focus & hover
+	&:hover, &:focus {
+		background-color: darken($primary, 10%);
+	}
+	&.primary {
+		@include button-bg($primary, $primaryText);
+	}
+	&.darkPrimary {
+		@include button-bg($darkPrimary, $primaryText);
+	}
+	&.secondary {
+		@include button-bg($secondary, $secondaryText);
+	}
+	&.facebook {
+		@include button-bg($facebook, #ffffff);
+	}
+	&.twitter {
+		@include button-bg($twitter, #ffffff);
+	}
+	&.instagram {
+		@include button-bg($instagram, #ffffff);
+	}
+	&.pinterest {
+		@include button-bg($pinterest, #ffffff);
+	}
+	&.snapchat {
+		@include button-bg($snapchat, #ffffff);
+	}
+	&.hollow.black {
+		background-color: transparent;
+		border: 1px solid #353536;
+		color: #353536;
+		&:hover, &:focus {
+			background-color: #353536;;
+			border: 1px solid #353536;
+			color: #ffffff;
+		}
+	}
+}
+
+// if you want an icon on your select initially, use this
+.select-wrapper {
+	&:before {
+		content: '\f041';
+		font-size: 16px;
+		font-family: 'FontAwesome';
+		position: absolute;
+		left: 12px;
+		top: 7px;
+		color: #222222;
+		z-index: 10;
+	}
+
+	// pad out the select so the icon has room
+	select {
+		padding-left: 34px;
+	}
+}
+
+// apply to anything to make full width
+.full {
+	width: 100%;
+	max-width: 100%;
+}
+
+// remove padding from the left
+.zeroL {
+	padding-left: 0;
+}
+
+// remove padding from the right
+.zeroR {
+	padding-right: 0;
+}
+
+// remove padding from the left and right
+.zero {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.middleAll {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.align-middle {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.align-center {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}

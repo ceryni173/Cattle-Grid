@@ -1,0 +1,170 @@
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url('../fonts/Gotham/GothamHTF-Light.otf');
+}
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../fonts/Gotham/GothamHTF-Book.otf');
+}
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url('../fonts/Gotham/GothamHTF-Bold.otf');
+}
+@font-face {
+	font-family: 'Gotham-Thin';
+	src: url('../fonts/Gotham/GothamHTF-Thin.otf');
+}
+
+//button generators
+@mixin button-bg($bg, $txt) {
+	background: $bg;
+	border: $bg;
+	color: $txt;
+	text-decoration: none;
+	font-size: 12px;
+	&:hover,
+	&:focus {
+		background:darken($bg,10%);
+		border:darken($bg, 10%);
+		transition: all 0.3s ease;
+	}
+}
+
+// Deep Get
+@function map-fetch($map, $keys) {
+	$key: nth($keys, 1);
+	$length: length($keys);
+	$value: map-get($map, $key);
+	@if ($length > 1) {
+		$rest: ();
+		@for $i from 2 through $length {
+			$rest: append($rest, nth($keys, $i))
+		}
+		@return map-fetch($value, $rest)
+	} @else {
+		@return $value;
+	}
+}
+
+@mixin center($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if ($horizontal) {
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if ($vertical) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@mixin center-children {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+$browser-context: 16;
+@function rem-calc($pixels, $context: $browser-context) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1em;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+// @include pseudo;
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+// @include input-placeholder {
+//     color: $grey;
+// }
+
+@function z($name) {
+	@if index($z-indexes, $name) {
+		@return (length($z-indexes) - index($z-indexes, $name)) + 1;
+	} @else {
+		@warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+		@return null;
+	}
+}
+// .site-header {
+//     z-index: z('site-header');
+// }
+
+@mixin screen($size) {
+	$desktop: "(min-width: 1024px)";
+	$tablet: "(min-width: 768px) and (max-width: 1023px)";
+	$mobile: "(max-width: 767px)";
+	@if $size == desktop {
+		@media only screen and #{$desktop} {
+			@content;
+		}
+	}
+	@else if $size == tablet {
+		@media only screen and #{$tablet} {
+			@content;
+		}
+	}
+	@else if $size == mobile {
+		@media only screen and #{$mobile} {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and #{$size} {
+			@content;
+		}
+	}
+}
+//@include screen('tablet') {
+//   width: 90%;
+// }
+
+
+@mixin fade($type) {
+	@if $type == 'hide' {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+	}
+	@else if $type == 'show' {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+	}
+}
+
+//@include fade(hide);
+
+
+
+$small : '(max-width: 480px)';
+$medium-portrait: '(max-width: 767px)';
+$medium-landscape: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$xlarge-desktop: '(min-width: 1440px)';
+
+@mixin mq($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+//@mixin mq($small)

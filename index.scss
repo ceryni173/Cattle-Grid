@@ -1,0 +1,69 @@
+@import "node_modules/spectre.css/src/spectre";
+@import 'mixins';
+
+// sizing
+$small-space: 5px;
+$medium-space: 20px;
+$large-space: 40px;
+$xlarge-space: 60px;
+$hundred: ($large-space + $xlarge-space);
+$input-height: $large-space;
+
+// Crayola & Social
+$palette: (
+	primary: #8eb8ba,
+	darkPrimary: #658c89,
+	primaryText: #fcf8f4,
+	secondary: #ebc7ba,
+	secondaryText: #697280,
+	success: #c9e4bf,
+	error: #d38a8a,
+	alert: #d38a8a,
+	warning: #d29075,
+	light-grey: #c4c5c5
+);
+
+// Z index heirarchy
+$z-indexes: (
+	"modal",
+	"site-header",
+	"page-wrapper",
+	"site-footer"
+);
+
+// shorthand
+$primary: map-get($palette, primary);
+$primaryText: map-get($palette, primaryText);
+$darkPrimary: map-get($palette, darkPrimary);
+$secondary: map-get($palette, secondary);
+$secondaryText: map-get($palette, secondaryText);
+$light: map-get($palette, light-grey);
+
+// notifications
+$success: map-get($palette, success);
+$error: map-get($palette, error);
+$warning: map-get($palette, warning);
+
+
+// Social
+$facebook: #3b5998;
+$twitter: #55acee;
+$instagram: #e1306c;
+$facebook: #3b5998;
+$pinterest: #bd081c;
+$etsy: #d5641c;
+$snapchat: #f8ec1e;
+
+
+// 1. Global
+// ---------
+$global-font-size: 14px;
+$body-background: #fff;
+$body-font-color: #444444;
+$body-font-family: 'Gotham-Light';
+
+
+// app imports
+@import 'custom';
+@import 'app';
+@import 'helpers';
