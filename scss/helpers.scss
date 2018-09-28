@@ -1,6 +1,25 @@
+// if you want an icon on your select initially, use this
+.select-wrapper {
+	&:before {
+		content: '\f041';
+		font-size: 16px;
+		font-family: 'FontAwesome';
+		position: absolute;
+		left: 12px;
+		top: 7px;
+		color: #222222;
+		z-index: 10;
+	}
+
+	// pad out the select so the icon has room
+	select {
+		padding-left: 34px;
+	}
+}
+
 //checkbox & radio
 .control {
-	display: block;
+	display: inline-block;
 	position: relative;
 	padding-left: ($large-space - $small-space);
 	margin-bottom: ($small-space * 3);
@@ -21,10 +40,10 @@
 		.checky {
 			border-radius: 50%;
 			&:after {
-				left: 6px;
-				top: 6px;
-				width: $small-space;
-				height: $small-space;
+				left: 9px;
+				top: 9px;
+				width: ($small-space * 2);
+				height: ($small-space * 2);
 				border-radius: 50%;
 				background: #ffffff;
 			}

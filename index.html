@@ -182,11 +182,11 @@
 			</p>
 		</blockquote>
 
-<pre><code>#header h1 a {
-	display: block;
-	width: 300px;
-	height: 80px;
-}</code></pre>
+		<pre><code>#header h1 a {
+			display: block;
+			width: 300px;
+			height: 80px;
+		}</code></pre>
 
 		<h5>A sub heading which is not as important as the second, but should be used with consideration</h5>
 		<p>
@@ -338,6 +338,7 @@
 			</dd>
 		</dl>
 
+		<p>&nbsp;</p>
 		<table>
 			<caption>
 				Table Caption
@@ -381,6 +382,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<p>&nbsp;</p>
 
 		<form action="#">
 			<fieldset>
@@ -389,37 +391,30 @@
 					<label for="f1">Text input:</label>
 					<input type="text" id="f1" value="input text">
 				</div>
+				<p>&nbsp;</p>
 				<div>
 					<label for="pw">Password input:</label>
 					<input type="password" id="pw" value="password">
 				</div>
-				<div>
-					<label for="f2">Radio input:</label>
-					<input type="radio" id="f2">
-				</div>
-				<div>
-					<label for="f3">Checkbox input:</label>
-					<input type="checkbox" id="f3">
-				</div>
+				<p>&nbsp;</p>
 				<div>
 					<label for="f4">Select field:</label>
-					<select id="f4">
-						<option>
-							Option 01
-						</option>
-						<option>
-							Option 02
-						</option>
-					</select>
+					<div class="select-wrapper">
+						<select id="f4">
+							<option>
+								Option 01
+							</option>
+							<option>
+								Option 02
+							</option>
+						</select>
+					</div>
 				</div>
+				<p>&nbsp;</p>
 				<div>
-					<label for="f5">Textarea:</label>
 					<textarea id="f5" cols="30" rows="5">Textarea text</textarea>
 				</div>
-				<div>
-					<label for="f6">Input Button:</label>
-					<input type="button" id="f6" value="button text">
-				</div>
+				<p>&nbsp;</p>
 				<div>
 					<a class="button primary"> Primary</a>
 					<a class="button primary hollow"> Primary</a>
@@ -445,12 +440,27 @@
 			</fieldset>
 		</form>
 
-		<label class="control" for="control">
-			<input type="checkbox" id="id" name="name" value="value" />
+		<p>&nbsp;</p>
+
+		<label class="control" for="checkbox1">
+			<input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1" />
 			<div class="checky"></div>
-			Hello
-			<span class="fa fa-check"></span>
 		</label>
+		<p>&nbsp;</p>
+		<label class="control radio" for="radio1">
+			<input type="radio" id="radio1" name="radioGroup" value="radio1" />
+			<div class="checky"></div>
+		</label>
+		<label class="control radio" for="radio2">
+			<input type="radio" id="radio2" name="radioGroup" value="radio1" />
+			<div class="checky"></div>
+		</label>
+		<label class="control radio" for="radio3">
+			<input type="radio" id="radio3" name="radioGroup" value="radio1" />
+			<div class="checky"></div>
+		</label>
+
+		<p>&nbsp;</p>
 
 		I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br>
