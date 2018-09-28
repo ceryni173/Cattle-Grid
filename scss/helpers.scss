@@ -82,6 +82,14 @@
 	}
 }
 
+// To use:
+// <label class="control" for="">
+// 	<input type="checkbox" id="" name="" value="" />
+// 	<div class="checky"></div>
+// 	<span class="fa fa-check"></span>
+// </label>
+
+
 
 // toggle switch
 .toggleSwitch {
@@ -155,6 +163,6 @@
 
 .debug {
 	* {
-	    border: 1px solid red; 
+	    border: 1px solid red;
 	}
 }

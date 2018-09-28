@@ -140,6 +140,15 @@ label {
 	display: inline-block;
 }
 
+code {
+    background: rgba($primary, 0.3);
+    border-radius: .1rem;
+    color: $primary;
+    font-size: 85%;
+    line-height: rem-calc(30);
+    padding: $small-space;
+}
+
 // stop outline on focus
 input:focus,
 select:focus,
@@ -305,6 +314,10 @@ input[type="button"] {
 	width: 100%;
 	max-width: 100%;
 }
+
+
+
+//Alignment and positioning
 
 // only for medium up,
 // mobile will hardly ever need these
