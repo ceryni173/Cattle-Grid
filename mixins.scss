@@ -1,19 +1,19 @@
-@font-face {
-	font-family: 'Gotham-Light';
-	src: url('../fonts/Gotham/GothamHTF-Light.otf');
-}
-@font-face {
-	font-family: 'Gotham-Book';
-	src: url('../fonts/Gotham/GothamHTF-Book.otf');
-}
-@font-face {
-	font-family: 'Gotham-Bold';
-	src: url('../fonts/Gotham/GothamHTF-Bold.otf');
-}
-@font-face {
-	font-family: 'Gotham-Thin';
-	src: url('../fonts/Gotham/GothamHTF-Thin.otf');
-}
+// @font-face {
+// 	font-family: 'Gotham-Light';
+// 	src: url('../fonts/Gotham/GothamHTF-Light.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Book';
+// 	src: url('../fonts/Gotham/GothamHTF-Book.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Bold';
+// 	src: url('../fonts/Gotham/GothamHTF-Bold.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Thin';
+// 	src: url('../fonts/Gotham/GothamHTF-Thin.otf');
+// }
 
 //button generators
 @mixin button-bg($bg, $txt) {
@@ -157,6 +157,7 @@ $browser-context: 16;
 
 
 $small : '(max-width: 480px)';
+$medium: '(min-width: 768px)';
 $medium-portrait: '(max-width: 767px)';
 $medium-landscape: '(min-width: 768px) and (max-width: 979px)';
 $large-desktop: '(min-width: 1200px)';

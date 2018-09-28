@@ -255,21 +255,38 @@ textarea:focus {
 	max-width: 100%;
 }
 
-// remove padding from the left
-.zeroL {
-	padding-left: 0;
+// only for medium up,
+// mobile will hardly ever need these
+@mixin mq($medium) {
+	// remove padding from the left
+	.zeroL {
+		padding-left: 0;
+	}
+
+	// remove padding from the right
+	.zeroR {
+		padding-right: 0;
+	}
+
+	// remove padding from the left and right
+	.zero {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
-// remove padding from the right
-.zeroR {
-	padding-right: 0;
+.text-center {
+	text-align: center;
 }
 
-// remove padding from the left and right
-.zero {
-	padding-left: 0;
-	padding-right: 0;
+.text-left {
+	text-align: left;
 }
+
+.text-right {
+	text-align: right;
+}
+
 
 .middleAll {
 	align-items: center;
@@ -293,14 +310,16 @@ textarea:focus {
 	justify-content: center;
 }
 
-.text-center {
-	text-align: center;
+.horizontal-center {
+	position: absolute;
+	left: 50%;
+	top: auto;
+	transform: translatey(-50%);
 }
 
-.text-left {
-	text-align: left;
-}
-
-.text-right {
-	text-align: right;
+.vertical-center {
+	position: absolute;
+	left: auto;
+	top: 50%;
+	transform: translatex(-50%);
 }
