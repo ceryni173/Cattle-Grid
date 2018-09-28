@@ -47,6 +47,31 @@ main {
 	text-decoration: none;
 }
 
+
+// normalise
+abbr[title],
+acronym[title],
+dfn {
+	cursor: help;
+}
+
+img {
+	font-style: italic;
+}
+
+[disabled] {
+	cursor: default;
+}
+
+[aria-disabled="true"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.no-js button[type="button"] {
+	display: none;
+}
+
 // remove list points
 ul {
 	&.noList {
@@ -71,8 +96,16 @@ p {
 }
 
 // remove borders
-a {
+a:not(.button) {
 	font-weight: bold;
+	color: $anchor-font-color;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		color: darken($anchor-font-color, 10%);
+		text-decoration: none;
+	}
 	img,
 	&:link img,
 	&:visited img {
@@ -121,9 +154,9 @@ textarea,
 select {
 	// add font awesome to font family for placeholders
 	color: $body-font-color;
-	font-family: 'Gotham-Bold';
+	font-family: $body-font-family;
 	font-size: rem-calc(12);
-	font-weight: 900;
+	font-weight: 300;
 	min-height: $input-height;
 	padding: 0;
 	padding-left: ($small-space * 2);
@@ -178,7 +211,8 @@ textarea:focus {
 }
 
 // buttons
-.button {
+.button,
+input[type="button"] {
 	background-color: $primary;
 	border: none;
 	color: #ffffff;
@@ -189,43 +223,60 @@ textarea:focus {
 	align-items: center;
 	justify-content: center;
 	font-weight: normal;
+	cursor: pointer;
 
 	// style focus & hover
 	&:hover, &:focus {
 		background-color: darken($primary, 10%);
+		text-decoration: none;
+		color: #ffffff;
 	}
 	&.primary {
 		@include button-bg($primary, $primaryText);
+		&.hollow {
+			@include button-hollow($primary, $primary);
+		}
 	}
 	&.darkPrimary {
 		@include button-bg($darkPrimary, $primaryText);
+		&.hollow {
+			@include button-hollow($darkPrimary, $darkPrimary);
+		}
 	}
 	&.secondary {
 		@include button-bg($secondary, $secondaryText);
+		&.hollow {
+			@include button-hollow($secondary, $secondary);
+		}
 	}
 	&.facebook {
 		@include button-bg($facebook, #ffffff);
+		&.hollow {
+			@include button-hollow($facebook, $facebook);
+		}
 	}
 	&.twitter {
 		@include button-bg($twitter, #ffffff);
+		&.hollow {
+			@include button-hollow($twitter, $twitter);
+		}
 	}
 	&.instagram {
 		@include button-bg($instagram, #ffffff);
+		&.hollow {
+			@include button-hollow($instagram, $instagram);
+		}
 	}
 	&.pinterest {
 		@include button-bg($pinterest, #ffffff);
+		&.hollow {
+			@include button-hollow($pinterest, $pinterest);
+		}
 	}
 	&.snapchat {
 		@include button-bg($snapchat, #ffffff);
-	}
-	&.hollow.black {
-		background-color: transparent;
-		border: 1px solid #353536;
-		color: #353536;
-		&:hover, &:focus {
-			background-color: #353536;;
-			border: 1px solid #353536;
-			color: #ffffff;
+		&.hollow {
+			@include button-hollow($snapchat, $snapchat);
 		}
 	}
 }

@@ -20,13 +20,24 @@
 	background: $bg;
 	border: $bg;
 	color: $txt;
-	text-decoration: none;
-	font-size: 12px;
 	&:hover,
 	&:focus {
 		background:darken($bg,10%);
 		border:darken($bg, 10%);
 		transition: all 0.3s ease;
+	}
+}
+
+//button generators
+@mixin button-hollow($border, $txt) {
+	background: transparent;
+	border: 1px solid $border;
+	color: $txt;
+	&:hover,
+	&:focus {
+		border: 1px solid darken($border, 10%);
+		transition: all 0.3s ease;
+		color: darken($txt, 10%);
 	}
 }
 
@@ -46,29 +57,8 @@
 	}
 }
 
-@mixin center($horizontal: true, $vertical: true) {
-	position: absolute;
-	@if ($horizontal and $vertical) {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	} @else if ($horizontal) {
-		left: 50%;
-		transform: translateX(-50%);
-	} @else if ($vertical) {
-		top: 50%;
-		transform: translateY(-50%);
-	}
-}
-
-@mixin center-children {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-$browser-context: 16;
+// set font isizse in rems
+$browser-context: 14;
 @function rem-calc($pixels, $context: $browser-context) {
 	@if (unitless($pixels)) {
 		$pixels: $pixels * 1px;
@@ -78,7 +68,10 @@ $browser-context: 16;
 	}
 	@return $pixels / $context * 1em;
 }
+// font-size: rem-calc(##)
 
+
+// set the standard for the pseufo code block
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;
 	display: $display;
@@ -109,35 +102,6 @@ $browser-context: 16;
 //     z-index: z('site-header');
 // }
 
-@mixin screen($size) {
-	$desktop: "(min-width: 1024px)";
-	$tablet: "(min-width: 768px) and (max-width: 1023px)";
-	$mobile: "(max-width: 767px)";
-	@if $size == desktop {
-		@media only screen and #{$desktop} {
-			@content;
-		}
-	}
-	@else if $size == tablet {
-		@media only screen and #{$tablet} {
-			@content;
-		}
-	}
-	@else if $size == mobile {
-		@media only screen and #{$mobile} {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and #{$size} {
-			@content;
-		}
-	}
-}
-//@include screen('tablet') {
-//   width: 90%;
-// }
-
 
 @mixin fade($type) {
 	@if $type == 'hide' {
@@ -151,7 +115,6 @@ $browser-context: 16;
 		transition: visibility 1s, opacity 1s;
 	}
 }
-
 //@include fade(hide);
 
 
