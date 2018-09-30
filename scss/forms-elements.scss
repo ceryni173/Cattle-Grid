@@ -24,9 +24,7 @@ select {
 	align-items: center;
 	justify-content: center;
 
-    &.rounded {
-        border-radius: $border-radius;
-    }
+
 
 	// style placeholder
 	&::-webkit-input-placeholder {
@@ -78,10 +76,6 @@ textarea {
 	box-shadow: none;
 	padding: $small-space ($small-space * 2);
     font-size: $body-font-size;
-
-    &.rounded {
-        border-radius: $border-radius;
-    }
 }
 
 label {

@@ -27,7 +27,6 @@
 	    line-height: normal;
 	    color: $body-font-color;
 	    background-color: #ffffff;
-	    border-radius: 0;
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%2834, 34, 34%29"></polygon></svg>');
@@ -35,10 +34,6 @@
 	    background-position: right center;
 	    background-origin: content-box;
 	    background-repeat: no-repeat;
-
-		&.rounded {
-			border-radius: $border-radius;
-		}
 	}
 }
 
@@ -82,9 +77,6 @@
 		width: 30px;
 		background: #ffffff;
 		border: 1px solid #cccccc;
-		&.rounded {
-			border-radius: $border-radius;
-		}
 		&:after {
 			content: '';
 			position: absolute;

@@ -6,6 +6,11 @@
 	background-repeat: no-repeat;
 	// add box sizing
 	box-sizing: border-box;
+
+	// if applied, has a border radius
+	&.rounded {
+        border-radius: $border-radius;
+    }
 }
 
 
