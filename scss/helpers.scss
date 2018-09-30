@@ -60,10 +60,10 @@
 		.checky {
 			border-radius: 50%;
 			&:after {
-				left: 9px;
-				top: 9px;
-				width: ($small-space * 2);
-				height: ($small-space * 2);
+				left: 4px;
+				top: 4px;
+				width: 7px;
+				height: 7px;
 				border-radius: 50%;
 				background: #ffffff;
 			}
@@ -73,20 +73,20 @@
 		position: absolute;
 		top: -7px;
 		left: 0;
-		height: ($xlarge-space / 2);
-		width: ($xlarge-space / 2);
+		height: $medium-space;
+		width: $medium-space;
 		background: #ffffff;
 		border: 1px solid $light;
 		&:after {
 			content: '';
 			position: absolute;
 			display: none;
-			left: ($small-space * 2);
-			top: 4px;
-			width: 8px;
-			height: 17px;
+			left: 6px;
+			top: 2px;
+			width: 6px;
+			height: 12px;
 			border: solid #fff;
-			border-width: 0 3px 3px 0;
+			border-width: 0 2px 2px 0;
 			transform: rotate(45deg);
 		}
 
@@ -130,23 +130,11 @@
 
 
 
-// toggle switch
-.simple-switch-input {
-	position: absolute;
-	width: 0;
-	height: 0;
-	margin: 0;
-	padding: 0;
-	opacity: 0;
-	appearance: none;
-	border: none;
-}
-
-.simple-switch {
+.checkSwitch {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	transition: .4s all;
-	margin: 0 ($small-space * 3);
+	margin: 0 ($small-space * 3) 0 0;
 	border-radius: ($small-space * 10);
 	background: lighten($light, 15%);
 	width: ($small-space * 7);
@@ -161,8 +149,16 @@
 
 /* switch background */
 
-.simple-switch-input {
-	&:checked ~ .simple-switch {
+.checkSwitchInput {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	appearance: none;
+	border: none;
+	&:checked ~ .checkSwitch {
 		background: $primary;
 		transition: .25s all;
 		&.dark {
@@ -177,7 +173,7 @@
 			background: lighten($primary, 10%);
 		}
 	}
-	~ .simple-switch::before {
+	~ .checkSwitch::before {
 		content: '';
 		transition: .26s all;
 		position: absolute;
