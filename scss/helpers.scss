@@ -18,22 +18,22 @@
 	select {
 		padding-left: ($small-space * 7);
 		padding-right: ($small-space * 3);
-    	width: 100%;
+		width: 100%;
 		height: $input-height;
-	    border: 1px solid #cccccc;
-	    margin: 0 0 1.14286rem;
-	    font-size: $body-font-size;
-	    font-family: inherit;
-	    line-height: normal;
-	    color: $body-font-color;
-	    background-color: #ffffff;
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
+		border: 1px solid $light;
+		margin: 0 0 1.14286rem;
+		font-size: $body-font-size;
+		font-family: inherit;
+		line-height: normal;
+		color: $body-font-color;
+		background-color: #ffffff;
+		-webkit-appearance: none;
+		-moz-appearance: none;
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%2834, 34, 34%29"></polygon></svg>');
-	    background-size: 9px 6px;
-	    background-position: right center;
-	    background-origin: content-box;
-	    background-repeat: no-repeat;
+		background-size: 9px 6px;
+		background-position: right center;
+		background-origin: content-box;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -53,7 +53,7 @@
 		opacity: 0;
 		margin-bottom: 0;
 		&:disabled ~ .checky:after {
-			border-color: #7b7b7b;
+			border-color: $light;
 		}
 	}
 	&.radio {
@@ -73,15 +73,15 @@
 		position: absolute;
 		top: -7px;
 		left: 0;
-		height: 30px;
-		width: 30px;
+		height: ($xlarge-space / 2);
+		width: ($xlarge-space / 2);
 		background: #ffffff;
-		border: 1px solid #cccccc;
+		border: 1px solid $light;
 		&:after {
 			content: '';
 			position: absolute;
 			display: none;
-			left: 10px;
+			left: ($small-space * 2);
 			top: 4px;
 			width: 8px;
 			height: 17px;
@@ -131,77 +131,72 @@
 
 
 // toggle switch
-.toggleSwitch {
-	margin-top: $medium-space;
-	input[type="checkbox"] {
-		&.switch {
-			position: absolute;
-			opacity: 0;
-			+ div {
-				vertical-align: middle;
-				width: $large-space;
-				height: $medium-space;
-				border-radius: 999px;
-				background-color: $primary;
-				transition-duration: .4s;
-				transition-property: background-color, box-shadow;
-				cursor: pointer;
-				span {
-					position: absolute;
-					font-size: rem-calc(14);
-					color: #ffffff;
-					top: 50%;
-					transform: translateY(-50%);
-					&:nth-child(1) {
-						left: ($small-space * 3);
-					}
-					&:nth-child(2) {
-						right: ($small-space * 3);
-					}
-				}
-			}
-			&:checked {
-				+ div {
-					width: ($large-space * 2);
-					background-position: 0 0;
-					background-color: $primary;
-				}
-				+ div {
-					background-color: $secondary;
-				}
-				+ div > div {
-					transform: translateY(-50%) translate3d(#{$medium-space}, 0, 0);
-					background-color: #ffffff;
-				}
-			}
-			+ div {
-				width: ($large-space * 2);
-				height: $large-space;
-			}
-			+ div > div {
-				float: left;
-				width: ($large-space - $small-space);
-				height: ($large-space - $small-space);
-				border-radius: inherit;
-				background: #ffffff;
-				transition-timing-function: cubic-bezier(1, 0, 0, 1);
-				transition-duration: 0.4s;
-				transition-property: transform, background-color;
-				pointer-events: none;
-				top: 50%;
-				transform: translateY(-50%);
-				margin-left: $small-space;
-			}
+.simple-switch-input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	appearance: none;
+	border: none;
+}
+
+.simple-switch {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: .4s all;
+	margin: 0 ($small-space * 3);
+	border-radius: ($small-space * 10);
+	background: lighten($light, 15%);
+	width: ($small-space * 7);
+	height: ($small-space * 3);
+	outline: 0;
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+	display: inline-block;
+	top: $small-space;
+}
+
+/* switch background */
+
+.simple-switch-input {
+	&:checked ~ .simple-switch {
+		background: $primary;
+		transition: .25s all;
+		&.dark {
+			background: darken($primary, 10%);
 		}
-		&.switch:checked + div > div {
-			transform: translateY(-50%) translate3d(#{($large-space - $small-space)}, 0, 0);
+		&::before {
+			transform: translate(18px, 0);
+			background: darken($primary, 10%);
+
 		}
+		&.dark::before {
+			background: lighten($primary, 10%);
+		}
+	}
+	~ .simple-switch::before {
+		content: '';
+		transition: .26s all;
+		position: absolute;
+		left: 0px;
+		top: -3px;
+		bottom: 2px;
+		right: auto;
+		transform: translate(0, 0);
+		display: block;
+		width: $medium-space;
+		height: $medium-space;
+		border-radius: $large-space;
+		background: lighten($primary, 15%);
 	}
 }
 
 
 .debug {
 	* {
-	    border: 1px solid red;
+		border: 1px solid red;
 	}
 }
