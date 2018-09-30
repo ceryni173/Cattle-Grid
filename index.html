@@ -393,13 +393,18 @@
 				</div>
 				<p>&nbsp;</p>
 				<div>
+					<label for="f2">Text input Rounded:</label>
+					<input type="text" id="f2" value="input text" class="rounded">
+				</div>
+				<p>&nbsp;</p>
+				<div>
 					<label for="pw">Password input:</label>
 					<input type="password" id="pw" value="password">
 				</div>
 				<p>&nbsp;</p>
 				<div>
 					<label for="f4">Select field:</label>
-					<div class="select-wrapper">
+					<div class="select-wrapper name">
 						<select id="f4">
 							<option>
 								Option 01
@@ -412,30 +417,52 @@
 				</div>
 				<p>&nbsp;</p>
 				<div>
+					<label for="f5">Select field:</label>
+					<div class="select-wrapper name">
+						<select id="f5" class="rounded">
+							<option>
+								Option 01
+							</option>
+							<option>
+								Option 02
+							</option>
+						</select>
+					</div>
+				</div>
+				<p>&nbsp;</p>
+				<div>
 					<textarea id="f5" cols="30" rows="5">Textarea text</textarea>
+					<textarea class="rounded" id="f6" cols="30" rows="5">Textarea text</textarea>
 				</div>
 				<p>&nbsp;</p>
 				<div>
 					<a class="button primary"> Primary</a>
 					<a class="button primary hollow"> Primary</a>
+					<a class="button primary rounded"> Rounded</a>
 
 					<a class="button secondary"> Secondary</a>
 					<a class="button secondary hollow"> Secondary</a>
+					<a class="button secondary rounded"> Rounded</a>
 
 					<a class="button facebook"> Facebook</a>
 					<a class="button facebook hollow"> Facebook</a>
+					<a class="button facebook rounded"> Rounded</a>
 
 					<a class="button instagram"> Instagram</a>
 					<a class="button instagram hollow"> Instagram</a>
+					<a class="button instagram rounded"> Rounded</a>
 
 					<a class="button twitter"> Twitter</a>
 					<a class="button twitter hollow"> Twitter</a>
+					<a class="button twitter rounded"> Rounded</a>
 
 					<a class="button pinterest"> Pinterest</a>
 					<a class="button pinterest hollow"> Pinterest</a>
+					<a class="button pinterest rounded"> Rounded</a>
 
 					<a class="button snapchat"> Snapchat</a>
 					<a class="button snapchat hollow"> Snapchat</a>
+					<a class="button snapchat rounded"> Rounded</a>
 				</div>
 			</fieldset>
 		</form>
@@ -445,6 +472,10 @@
 		<label class="control" for="checkbox1">
 			<input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1" />
 			<div class="checky"></div>
+		</label>
+		<label class="control" for="checkbox2">
+			<input type="checkbox" id="checkbox2" name="checkbox1" value="checkbox1" />
+			<div class="checky rounded"></div>
 		</label>
 		<p>&nbsp;</p>
 		<label class="control radio" for="radio1">
@@ -471,15 +502,4 @@
 		I am <a href="mailto:something">an email address</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="http://yourwebsite.com">an internal link</a>. Change the stylesheet's "http://yourwebsite.com" to your domain name so I don't look like an external link.<br>
 
-		<br>
-
-		<p class="success">
-			<img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>.
-		</p>
-		<p class="error">
-			<img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> This is a paragraph with class="error" and <a href="http://www.something.com">a link</a>.
-		</p>
-		<p class="notice">
-			<img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
-		</p>
 	</div>

@@ -7,6 +7,7 @@ $large-space: 40px;
 $xlarge-space: 60px;
 $hundred: ($large-space + $xlarge-space);
 $input-height: $large-space;
+$border-radius: 3px;
 
 // Crayola & Social
 $palette: (
@@ -56,7 +57,7 @@ $snapchat: #f8ec1e;
 
 // 1. Global
 // ---------
-$global-font-size: 14px;
+$body-font-size: rem-calc(13);
 $body-background: #fff;
 $body-font-color: #444444;
 $body-font-family: 'Open Sans', sans-serif;

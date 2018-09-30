@@ -29,6 +29,10 @@ input[type="button"] {
         box-sizing: border-box;
     }
 
+    &.rounded {
+        border-radius: $border-radius;
+    }
+
 	&.primary {
 		@include button-bg($primary, $primaryText);
 		&.hollow {
@@ -72,9 +76,9 @@ input[type="button"] {
 		}
 	}
 	&.snapchat {
-		@include button-bg($snapchat, #ffffff);
+		@include button-bg($snapchat, $body-font-color);
 		&.hollow {
-			@include button-hollow($snapchat, $snapchat);
+			@include button-hollow($snapchat, $body-font-color);
 		}
 	}
 }

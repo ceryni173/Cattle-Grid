@@ -24,6 +24,10 @@ select {
 	align-items: center;
 	justify-content: center;
 
+    &.rounded {
+        border-radius: $border-radius;
+    }
+
 	// style placeholder
 	&::-webkit-input-placeholder {
 		color: $light;
@@ -73,6 +77,17 @@ textarea {
 	height: $hundred;
 	box-shadow: none;
 	padding: $small-space ($small-space * 2);
+    font-size: $body-font-size;
+
+    &.rounded {
+        border-radius: $border-radius;
+    }
+}
+
+label {
+	color: $body-font-color;
+	display: inline-block;
+	font-size: $body-font-size;
 }
 
 
