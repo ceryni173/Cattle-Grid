@@ -1,0 +1,83 @@
+// stop outline on focus
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+// generic styling on input elements
+input:not([type='checkbox']):not([type='radio']):not([type='button']),
+textarea,
+select {
+	// add font awesome to font family for placeholders
+	color: $body-font-color;
+	font-family: $body-font-family;
+	font-size: rem-calc(12);
+	font-weight: 300;
+	min-height: $input-height;
+	padding: 0;
+	padding-left: ($small-space * 2);
+	border: 1px solid $light;
+	box-shadow: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	// style placeholder
+	&::-webkit-input-placeholder {
+		color: $light;
+		font-family: 'FontAwesome', $body-font-family;
+		font-size: 13px;
+		position: relative;
+		padding: 0;
+		top: 0px;
+		transition: all, 250ms, ease-in;
+		z-index: 10;
+		line-height: normal;
+		z-index: 10;
+
+		// for safari only
+		@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+			padding-top: 0px;
+			line-height: 12px;
+		}
+	}
+	// change the horrible yellow background to white in chrome
+	&:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0px 1000px white inset!important;
+		border: 1px solid #ccc;
+		padding-left: ($small-space * 2);
+		color: $body-font-color;
+		font-family: $body-font-family!important;
+		font-size: 14px;
+	}
+	// hide placeholder on focus
+	&:focus::-webkit-input-placeholder{
+		color: transparent;
+	}
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='button']):focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: 0 0 5px $light;
+	-webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+	transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+	border: none !important;
+}
+
+textarea {
+	resize: none;
+	height: $hundred;
+	box-shadow: none;
+	padding: $small-space ($small-space * 2);
+}
+
+
+select {
+	min-height: $input-height;
+	color: #cccccc;
+	font-size: rem-calc(14px);
+}
