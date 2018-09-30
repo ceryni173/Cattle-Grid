@@ -1,9 +1,5 @@
-// site specific
-//
-#wrapper {
-	padding: $xlarge-space;
+// general files
+@import 'general/index';
 
-	.button {
-		margin-bottom: ($small-space * 2);
-	}
-}
+// site specific
+@import 'specific/index';
