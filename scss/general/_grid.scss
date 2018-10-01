@@ -1,44 +1,48 @@
-.container {
-	max-width: $grid-max-width;
-	margin: 0 auto;
-}
+$small : '(max-width: 480px)';
+$medium: '(min-width: 768px)';
+$medium-portrait: '(max-width: 767px)';
+$medium-landscape: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$xlarge-desktop: '(min-width: 1440px)';
 
-.container,
-.container-fluid {
-	padding: 0 $grid-gutter;
-}
-
-.row {
-	display: flex;
-	box-sizing: border-box;
-	margin-left: -$grid-gutter;
-	list-style: none;
-	flex: 0 1 auto;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	&.collapse  {
-		margin-left: 0;
-	}
-
-	&.reverse {
-		flex-direction: row-reverse;
+@mixin mq($media) {
+	@media only screen and #{$media} {
+		@content;
 	}
 }
+//@mixin mq($small)
 
-.column {
-	max-width: 100%;
-	box-sizing: border-box;
-	padding-left: $grid-gutter;
-	flex: 0 0 auto;
-	flex-grow: 1;
-	flex-basis: 0;
 
-	.collapse & {
-		padding-left: 0;
-	}
-	&.reverse{
-		flex-direction: column-reverse;
+$grid-gutter-medium: 30px !default;
+$grid-gutter-small: 20px !default;
+$global-width: 1200px;
+$grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
+$grid-columns: 12 !default;
+
+$breakpoint-small: 767px !default;
+$breakpoint-medium: 992px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1440px !default;
+
+$breakpoints: (
+	'xlarge' '(min-width: ' + $breakpoint-xlarge + ')',
+	'large' '(min-width: ' + $breakpoint-medium + ')',
+	'medium' '(min-width: ' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-medium - 1) + ')',
+	'small' '(max-width: ' + $breakpoint-small + ')'
+) !default;
+
+// create the grid
+@mixin create-grid($name) {
+	@for $i from 0 through $grid-columns {
+		@if $i != 0 {
+			.#{$name}-#{$i} {
+				flex-basis: percentage($i / $grid-columns)!important;
+				max-width: percentage($i / $grid-columns)!important;
+			}
+		}
+		.#{$name}-offset-#{$i} {
+			margin-left: percentage($i / $grid-columns)!important;
+		}
 	}
 }
 
@@ -50,3 +54,84 @@
 		@include create-grid($name);
 	}
 }
+
+.container {
+	max-width: $grid-max-width;
+	margin: 0 auto;
+}
+
+.container,
+.container-fluid {
+	padding: 0 $grid-gutter-medium;
+}
+
+.row {
+	display: flex;
+	box-sizing: border-box;
+	margin-left: -$grid-gutter-medium;
+	list-style: none;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	&.collapse {
+		margin-left: 0;
+	}
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+.column {
+	box-sizing: border-box;
+	padding-left: $grid-gutter-medium;
+	flex-grow: 1;
+	max-width: 100%;
+	flex-basis: 0;
+	flex: 0 0 auto;
+	.collapse & {
+		padding-left: 0;
+	}
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+
+.row {
+	background-color: #cccccc;
+	.column {
+		border: 1px solid #ff0000;
+	}
+}
+
+// $breakpoints: (
+// 	devices: (
+// 		xlarge: (
+// 			name: 'xlarge'
+// 			catch: '(min-width: ' + $breakpoint-large + ')',
+// 		),
+// 		large: (
+// 			name: 'large'
+// 			catch: '(min-width: ' + $breakpoint-medium + ') and (max-width: ' + ($breakpoint-large - 1) + ')',
+// 		),
+// 		medium: (
+// 			name: 'medium'
+// 			catch: '(min-width: ' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-medium - 1) + ')',
+// 		),
+// 		small: (
+// 			name: 'small'
+// 			catch: '(max-width: ' + $breakpoint-small + ')',
+// 		),
+// 	),
+// );
+
+
+// @each $range in map-keys(map-get($breakpoints, devices)) {
+//
+// 	$catch: map-fetch(#{$breakpoints}, devices #{$range} catch);
+// 	$name: map-fetch($breakpoints, devices $range name)
+//
+// 	@media only screen and $catch{
+// 		@include create-grid();
+// 	}
+// }
