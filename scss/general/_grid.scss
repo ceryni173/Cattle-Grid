@@ -1,0 +1,52 @@
+.container {
+	max-width: $grid-max-width;
+	margin: 0 auto;
+}
+
+.container,
+.container-fluid {
+	padding: 0 $grid-gutter;
+}
+
+.row {
+	display: flex;
+	box-sizing: border-box;
+	margin-left: -$grid-gutter;
+	list-style: none;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.collapse  {
+		margin-left: 0;
+	}
+
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+.column {
+	max-width: 100%;
+	box-sizing: border-box;
+	padding-left: $grid-gutter;
+	flex: 0 0 auto;
+	flex-grow: 1;
+	flex-basis: 0;
+
+	.collapse & {
+		padding-left: 0;
+	}
+	&.reverse{
+		flex-direction: column-reverse;
+	}
+}
+
+@each $breakpoint in $breakpoints {
+	$name: nth($breakpoint, 1);
+	$declaration: nth($breakpoint, 2);
+
+	@media only screen and #{$declaration} {
+		@include create-grid($name);
+	}
+}

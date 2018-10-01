@@ -6,4 +6,11 @@
 	.button {
 		margin-bottom: ($small-space * 2);
 	}
+
+	.row {
+		background-color: $light;
+		.column {
+			border: 1px solid $primary;
+		}
+	}
 }
