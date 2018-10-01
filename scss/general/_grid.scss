@@ -15,7 +15,7 @@ $xlarge-desktop: '(min-width: 1440px)';
 
 $grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
-$global-width: 1200px;
+$global-width: 1220px;
 $grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
 $grid-columns: 12 !default;
 
@@ -50,10 +50,13 @@ $breakpoints: (
 	$name: nth($breakpoint, 1);
 	$declaration: nth($breakpoint, 2);
 
-	@media only screen and #{$declaration} {
+	@media #{$declaration} {
 		@include create-grid($name);
 	}
 }
+
+
+
 
 .container {
 	max-width: $grid-max-width;
