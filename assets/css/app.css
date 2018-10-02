@@ -104,7 +104,9 @@
 
 .container { max-width: 1280px; margin: 0 auto; }
 
-.container, .container-fluid { padding: 0 15px; }
+.container { padding: 0 15px; }
+
+@media (min-width: 0) { .container { padding: 0 10px; } }
 
 .row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; box-sizing: border-box; margin-left: auto; margin-right: auto; list-style: none; -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; max-width: 1220px; }
 
@@ -113,6 +115,8 @@
 .row.reverse { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
 
 .column, .columns { -webkit-box-sizing: border-box; box-sizing: border-box; min-width: 0; min-width: initial; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; padding-left: 15px; padding-right: 15px; }
+
+@media (min-width: 0) { .column, .columns { padding-left: 10px; padding-right: 10px; } }
 
 .collapse .column, .collapse .columns { padding-left: 0; }
 

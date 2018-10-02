@@ -61,10 +61,9 @@ $breakpoints: (
 	margin: 0 auto;
 }
 
-.container,
-.container-fluid {
+.container{
 	padding: 0 calc(#{$grid-gutter-medium} / 2);
-	@mixin breakpoint($small) {
+	@include breakpoint($small) {
 		padding: 0 calc(#{$grid-gutter-small} / 2);
 	}
 }
@@ -94,7 +93,7 @@ $breakpoints: (
 	flex-grow: 1;
 	padding-left: calc(#{$grid-gutter-medium} / 2);
 	padding-right: calc(#{$grid-gutter-medium} / 2);
-	@mixin breakpoint($small) {
+	@include breakpoint($small) {
 		padding-left: calc(#{$grid-gutter-small} / 2);
 		padding-right: calc(#{$grid-gutter-small} / 2);
 	}
