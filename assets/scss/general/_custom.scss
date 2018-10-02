@@ -71,6 +71,9 @@ tr, td, th {
 
 // set base paragraph size
 p {
+	line-height: 1.6;
+	margin-bottom: 1.2rem;
+	text-rendering: optimizeLegibility;
 	font-size: $body-font-size;
 	// if it's the only p contained within an element
 	&:only-child,

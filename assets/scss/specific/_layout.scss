@@ -1,0 +1,11 @@
+// site specific
+//
+#wrapper {
+	padding: $xlarge-space;
+	.button {
+		margin-bottom: ($small-space * 2);
+	}
+	.column {
+		margin-bottom: $medium-space;
+	}
+}

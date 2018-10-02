@@ -10,10 +10,10 @@ $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
 
 $breakpoints: (
-	'xlarge' '(min-width: ' + $breakpoint-xlarge + ')',
-	'large' '(min-width: ' + $breakpoint-medium + ')',
+	'small' '(max-width: ' + $breakpoint-small + ')',
 	'medium' '(min-width: ' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-medium - 1) + ')',
-	'small' '(max-width: ' + $breakpoint-small + ')'
+	'large' '(min-width: ' + $breakpoint-medium + ')',
+	'xlarge' '(min-width: ' + $breakpoint-xlarge + ')',
 ) !default;
 
 // create the grid
@@ -31,6 +31,7 @@ $breakpoints: (
 	}
 }
 
+// create the grid within the MQ points
 @each $breakpoint in $breakpoints {
 	$name: nth($breakpoint, 1);
 	$declaration: nth($breakpoint, 2);
@@ -83,6 +84,7 @@ $xlarge-desktop: '(min-width: 1440px)';
 .column {
 	box-sizing: border-box;
 	padding-left: $grid-gutter-medium;
+	padding-right: $grid-gutter-medium;
 	flex-grow: 1;
 	max-width: 100%;
 	flex-basis: 0;
@@ -93,12 +95,5 @@ $xlarge-desktop: '(min-width: 1440px)';
 	&.reverse {
 		flex-direction: column-reverse;
 	}
-}
 
-
-.row {
-	background-color: #cccccc;
-	.column {
-		border: 1px solid #ff0000;
-	}
 }
