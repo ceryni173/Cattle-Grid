@@ -1,18 +1,3 @@
-$small : '(max-width: 480px)';
-$medium: '(min-width: 768px)';
-$medium-portrait: '(max-width: 767px)';
-$medium-landscape: '(min-width: 768px) and (max-width: 979px)';
-$large-desktop: '(min-width: 1200px)';
-$xlarge-desktop: '(min-width: 1440px)';
-
-@mixin mq($media) {
-	@media only screen and #{$media} {
-		@content;
-	}
-}
-//@mixin mq($small)
-
-
 $grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
 $global-width: 1220px;
@@ -55,6 +40,19 @@ $breakpoints: (
 	}
 }
 
+$small : '(max-width: 480px)';
+$medium: '(min-width: 768px)';
+$medium-portrait: '(max-width: 767px)';
+$medium-landscape: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$xlarge-desktop: '(min-width: 1440px)';
+
+@mixin mq($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+//@mixin mq($small)
 
 .container {
 	max-width: $grid-max-width;
@@ -104,35 +102,3 @@ $breakpoints: (
 		border: 1px solid #ff0000;
 	}
 }
-
-// $breakpoints: (
-// 	devices: (
-// 		xlarge: (
-// 			name: 'xlarge'
-// 			catch: '(min-width: ' + $breakpoint-large + ')',
-// 		),
-// 		large: (
-// 			name: 'large'
-// 			catch: '(min-width: ' + $breakpoint-medium + ') and (max-width: ' + ($breakpoint-large - 1) + ')',
-// 		),
-// 		medium: (
-// 			name: 'medium'
-// 			catch: '(min-width: ' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-medium - 1) + ')',
-// 		),
-// 		small: (
-// 			name: 'small'
-// 			catch: '(max-width: ' + $breakpoint-small + ')',
-// 		),
-// 	),
-// );
-
-
-// @each $range in map-keys(map-get($breakpoints, devices)) {
-//
-// 	$catch: map-fetch(#{$breakpoints}, devices #{$range} catch);
-// 	$name: map-fetch($breakpoints, devices $range name)
-//
-// 	@media only screen and $catch{
-// 		@include create-grid();
-// 	}
-// }
