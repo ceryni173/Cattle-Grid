@@ -90,3 +90,21 @@ select {
 	color: $light;
 	font-size: rem-calc(14px);
 }
+
+fieldset {
+    margin-bottom: $medium-space;
+	border: 0;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    font-size: $body-font-size;
+    font-weight: 500;
+    margin-bottom: $medium-space;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}

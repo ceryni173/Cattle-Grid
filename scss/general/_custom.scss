@@ -84,6 +84,25 @@ p {
 	}
 }
 
+small {
+    font-size: rem-calc(10);
+    font-weight: 400;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
 // remove borders
 a:not(.button) {
 	font-weight: bold;
