@@ -71,14 +71,66 @@ $browser-context: 14;
 // font-size: rem-calc(##)
 
 
-// // set Headline sizes
-$body-font-size: rem-calc(11);
-
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: $body-font-size  * (6 - $i);
-  }
+// Headline
+@mixin heading {
+	color: inherit;
+    font-weight: 500;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.4;
+    padding: 0;
 }
+
+@mixin h1 {
+	@include heading;
+	font-size: rem-calc(40);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(30);
+	}
+}
+
+@mixin h2 {
+	@include heading;
+	font-size: rem-calc(30);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(20);
+	}
+}
+
+@mixin h3 {
+	@include heading;
+	font-size: rem-calc(25);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(18);
+	}
+}
+
+@mixin h4 {
+	@include heading;
+	font-size: rem-calc(20);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(16);
+	}
+}
+
+@mixin h5 {
+	@include heading;
+	font-size: rem-calc(18);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(14);
+	}
+}
+
+@mixin h6 {
+	@include heading;
+	font-size: rem-calc(16);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(14);
+	}
+}
+
 
 // set the standard for the pseufo code block
 @mixin pseudo($display: block, $pos: absolute, $content: ''){

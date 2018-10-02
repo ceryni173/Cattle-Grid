@@ -9,9 +9,10 @@ $breakpoint-medium: 992px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
 
+$smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
 $small : '(min-width: 0)';
 $medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
-$medium-portrait: '(min-width: ' + $breakpoint-small + ')';
+$mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($breakpoint-medium - 1) + ')';
 $large: '(min-width: ' + $breakpoint-medium + ')';
 $xlarge: '(min-width: ' + $breakpoint-xlarge + ')';
 

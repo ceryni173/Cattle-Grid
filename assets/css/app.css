@@ -122,18 +122,6 @@
 
 .column.reverse, .columns.reverse { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
-h1 { font-size: 3.92857em; }
-
-h2 { font-size: 3.14286em; }
-
-h3 { font-size: 2.35714em; }
-
-h4 { font-size: 1.57143em; }
-
-h5 { font-size: 0.78571em; }
-
-h6 { font-size: 0em; }
-
 * { position: relative; background-repeat: no-repeat; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *.rounded { border-radius: 3px; }
@@ -184,7 +172,29 @@ ul li, ol li { color: #53596C; font-size: 0.92857em; padding-bottom: 5px; }
 
 ul li ul, ol li ul { list-style-type: circle; }
 
-h1, h2, h3, h4, h5, h6 { color: inherit; font-weight: 500; line-height: 1.2; margin-bottom: .5em; margin-top: 0; }
+h1 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 2.85714em; }
+
+@media screen and (max-width: 767px) { h1 { font-size: 2.14286em; } }
+
+h2 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 2.14286em; }
+
+@media screen and (max-width: 767px) { h2 { font-size: 1.42857em; } }
+
+h3 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 1.78571em; }
+
+@media screen and (max-width: 767px) { h3 { font-size: 1.28571em; } }
+
+h4 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 1.42857em; }
+
+@media screen and (max-width: 767px) { h4 { font-size: 1.14286em; } }
+
+h5 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 1.28571em; }
+
+@media screen and (max-width: 767px) { h5 { font-size: 1em; } }
+
+h6 { color: inherit; font-weight: 500; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 8px; margin-bottom: 0.5rem; line-height: 1.4; padding: 0; font-size: 1.14286em; }
+
+@media screen and (max-width: 767px) { h6 { font-size: 1em; } }
 
 address { font-style: normal; }
 

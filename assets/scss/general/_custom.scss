@@ -148,13 +148,14 @@ ul, ol {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: .5em;
-    margin-top: 0;
-}
+
+
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include h6; }
 
 // remove address styling
 address {
