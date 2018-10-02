@@ -71,6 +71,15 @@ $browser-context: 14;
 // font-size: rem-calc(##)
 
 
+// // set Headline sizes
+$body-font-size: rem-calc(11);
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $body-font-size  * (6 - $i);
+  }
+}
+
 // set the standard for the pseufo code block
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;

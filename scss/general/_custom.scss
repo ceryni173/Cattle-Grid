@@ -33,6 +33,7 @@ body, html {
 	flex-direction: column;
 	font-family: $body-font-family;
 	font-size: $body-font-size;
+	color: $body-font-color;
 }
 
 
@@ -67,13 +68,6 @@ tr, td, th {
 	font-size: $body-font-size;
 }
 
-// remove list points
-ul {
-	&.noList {
-		list-style: none;
-		margin-left: 0;
-	}
-}
 
 // set base paragraph size
 p {
@@ -114,10 +108,28 @@ a:not(.button) {
 
 }
 
-ul li,
-ol li {
-	color: $body-font-color;
-	font-size: $body-font-size;
+ul, ol {
+	padding-top: $small-space;
+	&.noList {
+		list-style: none;
+		margin-left: 0;
+	}
+	li {
+		color: $body-font-color;
+		font-size: $body-font-size;
+		padding-bottom: $small-space;
+		ul {
+			list-style-type: circle;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: .5em;
+    margin-top: 0;
 }
 
 // remove address styling
@@ -132,11 +144,34 @@ code {
     background: rgba($primary, 0.3);
     border-radius: $border-radius;
     color: $primary;
-    font-size: 85%;
+    font-size: $body-font-size;
     line-height: rem-calc(30);
     padding: $small-space;
+	font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace
 }
 
+kbd {
+    background: #454d5d;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .7rem;
+    line-height: 1.2;
+    padding: .1rem .2rem;
+}
+
+code, kbd, pre, samp {
+    font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
+    font-size: 1em;
+}
+
+blockquote {
+    border-left: .1rem solid #e7e9ed;
+    margin-left: 0;
+    padding: .4rem .8rem;
+	p {
+		margin: 0;
+	}
+}
 
 // apply to anything to make full width
 .full {
