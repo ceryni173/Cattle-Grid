@@ -1,0 +1,298 @@
+// global
+* {
+	// make everything relative
+	position: relative;
+	// stop all background repeats
+	background-repeat: no-repeat;
+	// add box sizing
+	box-sizing: border-box;
+
+	// if applied, has a border radius
+	&.rounded {
+        border-radius: $border-radius;
+    }
+}
+
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	flex-direction: column;
+
+	background-position: center center;
+	background-repeat: repeat;
+
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	color: $body-font-color;
+}
+
+
+
+// wrap any body content in a margin
+// creates a sticky footer
+main {
+	/* flex: 1; would be enough but it looks bad in IE */
+	flex: 1 0 auto;
+}
+
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+// normalise
+abbr[title],
+acronym[title],
+dfn {
+	cursor: help;
+}
+
+img {
+	font-style: italic;
+	max-width: 100%;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed $light;
+    background: #999;
+	opacity: 0.4;
+	margin: $medium-space 0;
+}
+
+[disabled] {
+	cursor: default;
+}
+
+[aria-disabled="true"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+tr, td, th {
+	font-size: $body-font-size;
+}
+
+
+// set base paragraph size
+p {
+	line-height: 1.6;
+	margin-bottom: 1.2rem;
+	text-rendering: optimizeLegibility;
+	font-size: $body-font-size;
+	// if it's the only p contained within an element
+	&:only-child,
+	// or the last of the p's
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	// small print
+	&.small {
+		font-size: rem-calc(10);
+	}
+}
+
+small {
+    font-size: rem-calc(10);
+    font-weight: 400;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+// remove borders
+a:not(.button) {
+	font-weight: bold;
+	color: $anchor-font-color;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		color: darken($anchor-font-color, 10%);
+		text-decoration: none;
+	}
+	img,
+	&:link img,
+	&:visited img {
+		border: none;
+	}
+	// remove underline
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
+
+}
+
+ul, ol {
+	padding-top: $small-space;
+	list-style-position: inside;
+	&.noList {
+		list-style: none;
+		margin-left: 0;
+	}
+	li {
+		color: $body-font-color;
+		font-size: $body-font-size;
+		padding-bottom: $small-space;
+		ul {
+			list-style-type: circle;
+			margin: .8rem 0 .8rem .8rem;
+		}
+	}
+}
+
+
+
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include h6; }
+
+// remove address styling
+address {
+	font-style: normal;
+}
+q {
+	font-style: italic;
+}
+
+
+code {
+    background: rgba($primary, 0.3);
+    border-radius: $border-radius;
+    color: $primary;
+    font-size: $body-font-size;
+    line-height: rem-calc(30);
+    padding: $small-space;
+}
+
+kbd {
+    background: #454d5d;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .7rem;
+    line-height: 1.2;
+    padding: .1rem .2rem;
+}
+
+code, kbd, pre, samp {
+    font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
+
+}
+
+blockquote {
+    border-left: .1rem solid #e7e9ed;
+    margin-left: 0;
+    padding: .4rem .8rem;
+	p {
+		margin: 0;
+	}
+}
+
+// apply to anything to make full width
+.full {
+	width: 100%;
+	max-width: 100%;
+}
+
+
+//Alignment and positioning
+
+// only for medium up,
+// mobile will hardly ever need these
+@mixin mq($medium) {
+	// remove padding from the left
+	.zeroL {
+		padding-left: 0;
+	}
+
+	// remove padding from the right
+	.zeroR {
+		padding-right: 0;
+	}
+
+	// remove padding from the left and right
+	.zero {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+
+.middleAll {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.align-middle {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.align-center {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.horizontal-center {
+	position: absolute;
+	left: 50%;
+	top: auto;
+	transform: translatey(-50%);
+}
+
+.vertical-center {
+	position: absolute;
+	left: auto;
+	top: 50%;
+	transform: translatex(-50%);
+}

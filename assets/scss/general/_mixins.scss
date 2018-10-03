@@ -1,0 +1,178 @@
+// @font-face {
+// 	font-family: 'Gotham-Light';
+// 	src: url('../fonts/Gotham/GothamHTF-Light.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Book';
+// 	src: url('../fonts/Gotham/GothamHTF-Book.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Bold';
+// 	src: url('../fonts/Gotham/GothamHTF-Bold.otf');
+// }
+// @font-face {
+// 	font-family: 'Gotham-Thin';
+// 	src: url('../fonts/Gotham/GothamHTF-Thin.otf');
+// }
+
+//button generators
+@mixin button-bg($bg, $txt) {
+	background: $bg;
+	border: $bg;
+	color: $txt;
+	&:hover,
+	&:focus {
+		background:darken($bg,10%);
+		border:darken($bg, 10%);
+		transition: all 0.3s ease;
+	}
+}
+
+//button generators
+@mixin button-hollow($border, $txt) {
+	background: transparent;
+	border: 1px solid $border;
+	color: $txt;
+	&:hover,
+	&:focus {
+		border: 1px solid darken($border, 10%);
+		transition: all 0.3s ease;
+		color: darken($txt, 10%);
+	}
+}
+
+// Deep Get
+@function map-fetch($map, $keys) {
+	$key: nth($keys, 1);
+	$length: length($keys);
+	$value: map-get($map, $key);
+	@if ($length > 1) {
+		$rest: ();
+		@for $i from 2 through $length {
+			$rest: append($rest, nth($keys, $i))
+		}
+		@return map-fetch($value, $rest)
+	} @else {
+		@return $value;
+	}
+}
+
+// set font isizse in rems
+$browser-context: 14;
+@function rem-calc($pixels, $context: $browser-context) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1em;
+}
+// font-size: rem-calc(##)
+
+
+// Headline
+@mixin heading {
+	color: inherit;
+    font-weight: 500;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.4;
+    padding: 0;
+}
+
+@mixin h1 {
+	@include heading;
+	font-size: rem-calc(40);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(30);
+	}
+}
+
+@mixin h2 {
+	@include heading;
+	font-size: rem-calc(30);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(20);
+	}
+}
+
+@mixin h3 {
+	@include heading;
+	font-size: rem-calc(25);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(18);
+	}
+}
+
+@mixin h4 {
+	@include heading;
+	font-size: rem-calc(20);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(16);
+	}
+}
+
+@mixin h5 {
+	@include heading;
+	font-size: rem-calc(18);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(14);
+	}
+}
+
+@mixin h6 {
+	@include heading;
+	font-size: rem-calc(16);
+	@include breakpoint($smallOnly) {
+		font-size: rem-calc(14);
+	}
+}
+
+
+// set the standard for the pseufo code block
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+// @include pseudo;
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+// @include input-placeholder {
+//     color: $grey;
+// }
+
+@function z($name) {
+	@if index($z-indexes, $name) {
+		@return (length($z-indexes) - index($z-indexes, $name)) + 1;
+	} @else {
+		@warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+		@return null;
+	}
+}
+// .site-header {
+//     z-index: z('site-header');
+// }
+
+
+@mixin fade($type) {
+	@if $type == 'hide' {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+	}
+	@else if $type == 'show' {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+	}
+}

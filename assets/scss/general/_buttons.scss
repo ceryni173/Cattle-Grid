@@ -1,0 +1,80 @@
+.no-js button[type="button"] {
+	display: none;
+}
+
+// buttons
+.button,
+input[type="button"] {
+	background-color: $primary;
+	border: none;
+	color: #ffffff;
+	margin: 0;
+	padding: 0 ($small-space * 3);
+	font-size: rem-calc(11px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: normal;
+	cursor: pointer;
+    height: $input-height;
+
+	@include breakpoint($smallOnly) {
+		width: 100%;
+	}
+
+	// style focus & hover
+	&:hover, &:focus {
+		background-color: darken($primary, 10%);
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	&.primary {
+		@include button-bg($primary, $primaryText);
+		&.hollow {
+			@include button-hollow($primary, $primary);
+		}
+	}
+	&.darkPrimary {
+		@include button-bg($darkPrimary, $primaryText);
+		&.hollow {
+			@include button-hollow($darkPrimary, $darkPrimary);
+		}
+	}
+	&.secondary {
+		@include button-bg($secondary, $secondaryText);
+		&.hollow {
+			@include button-hollow($secondary, $secondary);
+		}
+	}
+	&.facebook {
+		@include button-bg($facebook, #ffffff);
+		&.hollow {
+			@include button-hollow($facebook, $facebook);
+		}
+	}
+	&.twitter {
+		@include button-bg($twitter, #ffffff);
+		&.hollow {
+			@include button-hollow($twitter, $twitter);
+		}
+	}
+	&.instagram {
+		@include button-bg($instagram, #ffffff);
+		&.hollow {
+			@include button-hollow($instagram, $instagram);
+		}
+	}
+	&.pinterest {
+		@include button-bg($pinterest, #ffffff);
+		&.hollow {
+			@include button-hollow($pinterest, $pinterest);
+		}
+	}
+	&.snapchat {
+		@include button-bg($snapchat, $body-font-color);
+		&.hollow {
+			@include button-hollow($snapchat, $body-font-color);
+		}
+	}
+}

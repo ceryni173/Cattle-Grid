@@ -1,0 +1,115 @@
+$grid-gutter-medium: 30px !default;
+$grid-gutter-small: 20px !default;
+$global-width: rem-calc(1200px);
+$grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
+$grid-columns: 12 !default;
+
+$breakpoint-small: 767px !default;
+$breakpoint-medium: 992px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1440px !default;
+
+$small : '(min-width: 0)';
+$smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
+$medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
+$mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($breakpoint-medium - 1) + ')';
+$large: '(min-width: ' + $breakpoint-medium + ')';
+$xlarge: '(min-width: ' + $breakpoint-xlarge + ')';
+
+$breakpoints: (
+	'small' $small,
+	'medium' $medium,
+	'large' $large,
+	'xlarge' $xlarge,
+) !default;
+
+// create the grid
+@mixin create-grid($name) {
+	@for $i from 0 through $grid-columns {
+		@if $i != 0 {
+			.#{$name}-#{$i} {
+				flex: 0 0 percentage($i / $grid-columns);
+				max-width: percentage($i / $grid-columns);
+			}
+		}
+		.#{$name}-offset-#{$i} {
+			margin-left: percentage($i / $grid-columns);
+		}
+	}
+}
+
+// create the grid within the MQ points
+@each $breakpoint in $breakpoints {
+	$name: nth($breakpoint, 1);
+	$declaration: nth($breakpoint, 2);
+
+	@media screen and #{$declaration} {
+		@include create-grid($name);
+	}
+}
+
+
+// Media query
+@mixin breakpoint($media) {
+	@media #{$media} {
+		@content;
+	}
+}
+
+
+.container {
+	max-width: $grid-max-width;
+	margin: 0 auto;
+}
+
+.container{
+	padding: 0 calc(#{$grid-gutter-medium} / 2);
+	@include breakpoint($small) {
+		padding: 0 calc(#{$grid-gutter-small} / 2);
+	}
+}
+
+.row {
+	display: flex;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+	-webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+	max-width: $global-width;
+
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&.collapse {
+		margin-left: 0;
+	}
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+.column,
+.columns {
+	box-sizing: border-box;
+    min-width: initial;
+	flex-grow: 1;
+	padding-left: calc(#{$grid-gutter-medium} / 2);
+	padding-right: calc(#{$grid-gutter-medium} / 2);
+	@include breakpoint($small) {
+		padding-left: calc(#{$grid-gutter-small} / 2);
+		padding-right: calc(#{$grid-gutter-small} / 2);
+	}
+
+	.collapse & {
+		padding-left: 0;
+	}
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+}
