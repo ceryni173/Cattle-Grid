@@ -89,7 +89,6 @@ tr, td, th {
 	font-size: $body-font-size;
 }
 
-
 // set base paragraph size
 p {
 	line-height: 1.6;
@@ -108,8 +107,14 @@ p {
 	}
 }
 
-small {
+small,
+.small {
     font-size: rem-calc(10);
+    font-weight: 400;
+}
+
+.large {
+	font-size: rem-calc(18);
     font-weight: 400;
 }
 
@@ -126,6 +131,17 @@ sup {
     position: relative;
     vertical-align: baseline;
 }
+
+.highlight {
+	background-color: $primary;
+	color: $primaryText;
+	padding: 0 $small-space;
+}
+
+.quiet {
+	opacity: 0.3;
+}
+
 
 // remove borders
 a:not(.button) {
