@@ -22,7 +22,7 @@
 		height: $input-height;
 		border: 1px solid $light;
 		margin: 0 0 1.14286rem;
-		font-size: $body-font-size;
+		font-size: rem-calc(12);
 		font-family: inherit;
 		line-height: normal;
 		color: $body-font-color;
