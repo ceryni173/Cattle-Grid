@@ -62,10 +62,10 @@
 		.checky {
 			border-radius: 50%;
 			&:after {
-				left: 4px;
-				top: 4px;
-				width: 7px;
-				height: 7px;
+				left: $small-space;
+				top: $small-space;
+				width: 6px;
+				height: 6px;
 				border-radius: 50%;
 				background: #ffffff;
 			}
@@ -123,14 +123,6 @@
 	}
 }
 
-// To use:
-// <label class="control" for="">
-// 	<input type="checkbox" id="" name="" value="" />
-// 	<div class="checky"></div>
-// 	<span class="fa fa-check"></span>
-// </label>
-
-
 
 .checkSwitch {
 	-webkit-appearance: none;
@@ -150,7 +142,6 @@
 }
 
 /* switch background */
-
 .checkSwitchInput {
 	position: absolute;
 	width: 0;
@@ -192,7 +183,25 @@
 	}
 }
 
-
+.imgFilter {
+	display: inline-block;
+	img {
+		display: block;
+	}
+	&.imgCover {
+		&:after {
+			@include pseudo;
+			top: 0;
+			left: 0;
+			background-color: rgba(#000, 0.5);
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&.greyScale {
+		filter: grayscale(100%)
+	}
+}
 .debug {
 	* {
 		border: 1px solid red;

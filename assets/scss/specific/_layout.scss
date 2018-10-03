@@ -8,13 +8,13 @@ main {
 	margin-bottom: ($small-space * 2);
 }
 
-strong {
+strong:not(.alone) {
 	display: block;
 	margin-bottom: $small-space;
 }
 .grid {
 	margin-bottom: $medium-space;
-	margin-top: $small-space;
+	margin-top: ($small-space * 2);
 	.row {
         font-size: 11px;
         line-height: 2rem;
