@@ -1,6 +1,6 @@
 $grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
-$global-width: 1220px;
+$global-width: rem-calc(1200px);
 $grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
 $grid-columns: 12 !default;
 
@@ -9,8 +9,8 @@ $breakpoint-medium: 992px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
 
-$smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
 $small : '(min-width: 0)';
+$smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
 $medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
 $mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($breakpoint-medium - 1) + ')';
 $large: '(min-width: ' + $breakpoint-medium + ')';
@@ -43,7 +43,7 @@ $breakpoints: (
 	$name: nth($breakpoint, 1);
 	$declaration: nth($breakpoint, 2);
 
-	@media #{$declaration} {
+	@media screen and #{$declaration} {
 		@include create-grid($name);
 	}
 }
@@ -75,10 +75,12 @@ $breakpoints: (
 	margin-left: auto;
 	margin-right: auto;
 	list-style: none;
-	flex: 0 1 auto;
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
 	max-width: $global-width;
+
 	&.collapse {
 		margin-left: 0;
 	}

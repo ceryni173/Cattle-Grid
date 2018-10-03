@@ -15,28 +15,33 @@
 
 
 html {
-	height: 100%;
+	box-sizing: border-box;
 }
 
 body {
-	// if it has a background
-	background-position: center center;
-	background-repeat: repeat;
-}
-
-body, html {
+	background-color: #fff;
 	height: 100%;
 	width: 100%;
-	text-rendering: geometricPrecision;
-	min-height: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	flex-direction: column;
+
+	background-position: center center;
+	background-repeat: repeat;
+
 	font-family: $body-font-family;
 	font-size: $body-font-size;
 	color: $body-font-color;
-	padding: 0;
-	margin: 0;
 }
+
 
 
 // wrap any body content in a margin
@@ -44,6 +49,14 @@ body, html {
 main {
 	/* flex: 1; would be enough but it looks bad in IE */
 	flex: 1 0 auto;
+}
+
+
+
+
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0;
 }
 
 // normalise
@@ -165,6 +178,7 @@ q {
 	font-style: italic;
 }
 
+
 code {
     background: rgba($primary, 0.3);
     border-radius: $border-radius;
@@ -172,7 +186,6 @@ code {
     font-size: $body-font-size;
     line-height: rem-calc(30);
     padding: $small-space;
-	font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace
 }
 
 kbd {
@@ -186,7 +199,7 @@ kbd {
 
 code, kbd, pre, samp {
     font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
-    font-size: 1em;
+
 }
 
 blockquote {

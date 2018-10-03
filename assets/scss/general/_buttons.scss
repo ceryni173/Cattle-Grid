@@ -18,6 +18,10 @@ input[type="button"] {
 	cursor: pointer;
     height: $input-height;
 
+	@include breakpoint($small) {
+		width: 100%;
+	}
+
 	// style focus & hover
 	&:hover, &:focus {
 		background-color: darken($primary, 10%);
