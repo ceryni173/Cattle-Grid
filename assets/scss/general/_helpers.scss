@@ -46,10 +46,12 @@
 	cursor: pointer;
 	font-size: rem-calc(12px);
 	padding-top: 3px;
-	margin-left: 7px;
+	width: $medium-space;
+	height: $medium-space;
 	input {
 		position: absolute;
 		z-index: -1;
+		left: 0;
 		opacity: 0;
 		margin-bottom: 0;
 		&:disabled ~ .checky:after {
@@ -71,7 +73,7 @@
 	}
 	.checky {
 		position: absolute;
-		top: -7px;
+		top: 0;
 		left: 0;
 		height: $medium-space;
 		width: $medium-space;
@@ -83,8 +85,8 @@
 			display: none;
 			left: 6px;
 			top: 2px;
-			width: 6px;
-			height: 12px;
+			width: $small-space;
+			height: ($small-space * 2);
 			border: solid #fff;
 			border-width: 0 2px 2px 0;
 			transform: rotate(45deg);

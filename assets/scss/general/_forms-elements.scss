@@ -24,8 +24,6 @@ select {
 	align-items: center;
 	justify-content: center;
 
-
-
 	// style placeholder
 	&::-webkit-input-placeholder {
 		color: $light;
@@ -81,7 +79,10 @@ textarea {
 label {
 	color: $body-font-color;
 	display: inline-block;
-	font-size: $body-font-size;
+	font-size: rem-calc(10);
+	text-transform: uppercase;
+	margin-bottom: $small-space;
+	opacity: 0.6;
 }
 
 
@@ -97,6 +98,7 @@ fieldset {
     margin: 0;
     padding: 0;
 }
+
 legend {
     font-size: $body-font-size;
     font-weight: 500;

@@ -51,9 +51,6 @@ main {
 	flex: 1 0 auto;
 }
 
-
-
-
 blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
     margin: 0;
     padding: 0;
@@ -68,6 +65,15 @@ dfn {
 
 img {
 	font-style: italic;
+	max-width: 100%;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed $light;
+    background: #999;
+	opacity: 0.4;
+	margin: $medium-space 0;
 }
 
 [disabled] {

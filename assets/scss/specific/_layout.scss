@@ -1,17 +1,21 @@
 // site specific
 //
 
+main {
+	padding: $large-space 0;
+}
 .button {
 	margin-bottom: ($small-space * 2);
 }
-.column {
-	margin-bottom: $medium-space;
+
+strong {
+	display: block;
+	margin-bottom: $small-space;
 }
 .grid {
 	margin-bottom: $medium-space;
-	margin-top: $large-space;
+	margin-top: $small-space;
 	.row {
-
         font-size: 11px;
         line-height: 2rem;
         border: solid 1px #c6c6c6;
