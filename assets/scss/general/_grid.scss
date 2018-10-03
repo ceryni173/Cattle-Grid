@@ -81,6 +81,11 @@ $breakpoints: (
     flex-flow: row wrap;
 	max-width: $global-width;
 
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	&.collapse {
 		margin-left: 0;
 	}

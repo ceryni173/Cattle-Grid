@@ -147,6 +147,7 @@ a:not(.button) {
 
 ul, ol {
 	padding-top: $small-space;
+	list-style-position: inside;
 	&.noList {
 		list-style: none;
 		margin-left: 0;
@@ -157,6 +158,7 @@ ul, ol {
 		padding-bottom: $small-space;
 		ul {
 			list-style-type: circle;
+			margin: .8rem 0 .8rem .8rem;
 		}
 	}
 }
