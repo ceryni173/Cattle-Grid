@@ -4,6 +4,18 @@ Extremely lightweight, basic flex grid built from a simple sass mixin
 
 ## Getting Started
 
+Hunter grid contains not only a very simple grid (only 6KB minified!) but a small suite of extra settings I've collected over the years of doing Front End. Unlike most frameworks, this grid is easy to isolate and use on it's own - the rest is just for sheer aesthetics and laziness!
+
+To isolate the grid, navigate to **assets/scss/general** and pick **_grid.scss** and add this to your own project
+
+If you wish to use the entire project, the folder structure is very simple.
+
+#### General ####
+General contains all files needed to set up a new site, from colours, helpers, form elements and mixins
+
+#### Specific ####
+Specific contains files related to the project you're about to build.
+
 ### Defining Variables
 
 ```
