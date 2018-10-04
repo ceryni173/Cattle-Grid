@@ -1,4 +1,4 @@
-# Hunter Grid
+# Cattle Grid
 
 Extremely lightweight, basic flex grid built from a simple sass mixin
 
