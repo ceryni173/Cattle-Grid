@@ -4,8 +4,7 @@ Extremely lightweight, basic flex grid built from a simple mixin
 
 ## Demo
 
-[Codepen (Grid Only)](https://codepen.io/Ceryni17/pen/dgMYjG)   
-[Codepen (All)](https://codepen.io/Ceryni17/pen/LgNBXE)
+[Cattle Grid Example](http://ceryni.com/cattle-grid/)   
 
 
 ## Getting Started
