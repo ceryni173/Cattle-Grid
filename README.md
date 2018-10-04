@@ -1,3 +1,5 @@
+![Cattle Grid](http://ceryni.com/cattle-grid/assets/images/logo-type-small.png)
+
 # Cattle Grid
 
 Extremely lightweight, basic flex grid built from a simple sass mixin

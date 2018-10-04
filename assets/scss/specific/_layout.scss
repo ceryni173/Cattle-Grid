@@ -14,17 +14,23 @@ strong:not(.alone) {
 }
 .grid {
 	margin-bottom: $medium-space;
-	margin-top: ($small-space * 2);
+	margin-top: $large-space;
 	.row {
-        font-size: 11px;
-        line-height: 2rem;
-        border: solid 1px #c6c6c6;
+		font-size: 11px;
+		line-height: 2rem;
+		border: solid 1px #c6c6c6;
 		.columns {
 			background: #eee;
 		}
-    }
+	}
 
-    .row .columns:nth-child(even)  {
-        background: #e1e1e1;
-    }
+	.row .columns:nth-child(even)  {
+		background: #e1e1e1;
+	}
+}
+
+.logo {
+	width: 100%;
+	max-width: 400px;
+	margin: $large-space 0;
 }
