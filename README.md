@@ -4,7 +4,8 @@ Extremely lightweight, basic flex grid built from a simple sass mixin
 
 ## Demo
 
-[Codepen](https://codepen.io/Ceryni17/pen/dgMYjG)
+[Codepen (Grid Only)](https://codepen.io/Ceryni17/pen/dgMYjG)
+[Codepen (All)](https://codepen.io/Ceryni17/pen/LgNBXE)
 
 
 ## Getting Started
