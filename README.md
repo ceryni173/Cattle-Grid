@@ -4,6 +4,22 @@ Extremely lightweight, basic flex grid built from a simple sass mixin
 
 ## Getting Started
 
+### Defining Variables
+
+```
+$grid-gutter-medium: 30px !default;
+$grid-gutter-small: 20px !default;
+$global-width: rem-calc(1200px);
+$grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
+$grid-columns: 12 !default;
+
+$breakpoint-small: 767px !default;
+$breakpoint-medium: 992px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1440px !default;
+
+```
+
 ### Using Breakpoint Mixin
 
 ```

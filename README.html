@@ -7,7 +7,19 @@
         <h1 id="hunter-grid">Hunter Grid</h1>
 <p>Extremely lightweight, basic flex grid built from a simple sass mixin</p>
 <h2 id="getting-started">Getting Started</h2>
-<h3 id="using-breakpoint-mixin">Using Breakpoint Mixin</h3>
+<h3 id="defining-variables">Defining Variables</h3>
+<pre><code>$grid-gutter-medium: 30px !default;
+$grid-gutter-small: 20px !default;
+$global-width: rem-calc(1200px);
+$grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
+$grid-columns: 12 !default;
+
+$breakpoint-small: 767px !default;
+$breakpoint-medium: 992px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1440px !default;
+
+</code></pre><h3 id="using-breakpoint-mixin">Using Breakpoint Mixin</h3>
 <pre><code>$small : (min-width: 0)
 $smallOnly : (max-width: 767px)
 $medium : (min-width: 768px)
