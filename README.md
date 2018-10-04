@@ -1,8 +1,6 @@
 ![Cattle Grid](http://ceryni.com/cattle-grid/assets/images/logo-type-small.png)
 
-# Cattle Grid
-
-Extremely lightweight, basic flex grid built from a simple sass mixin
+Extremely lightweight, basic flex grid built from a simple mixin
 
 ## Demo
 
@@ -23,6 +21,8 @@ General contains all files needed to set up a new site, from colours, helpers, f
 
 #### Specific ####
 Specific contains files related to the project you're about to build.
+
+
 
 ### Defining Variables
 
