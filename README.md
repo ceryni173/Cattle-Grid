@@ -2,6 +2,11 @@
 
 Extremely lightweight, basic flex grid built from a simple sass mixin
 
+## Demo
+
+[Codepen](https://codepen.io/Ceryni17/pen/dgMYjG)
+
+
 ## Getting Started
 
 Hunter grid contains not only a very simple grid (only 6KB minified!) but a small suite of extra settings I've collected over the years of doing Front End. Unlike most frameworks, this grid is easy to isolate and use on it's own - the rest is just for sheer aesthetics and laziness!
