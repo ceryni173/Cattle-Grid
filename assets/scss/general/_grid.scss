@@ -14,7 +14,7 @@ $smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
 $medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
 $mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($breakpoint-medium - 1) + ')';
 $large: '(min-width: ' + $breakpoint-medium + ')';
-$xlarge: '(min-width: ' + $breakpoint-xlarge + ')';
+$xlarge: '(min-width: ' + $breakpoint-large + ')';
 
 $breakpoints: (
 	'small' $small,
