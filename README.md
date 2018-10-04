@@ -4,40 +4,36 @@ Extremely lightweight, basic flex grid built from a simple sass mixin
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-So long as you have some way to compil ethis,
+### Using Breakpoint Mixin
 
 ```
-Give examples
+$small : (min-width: 0)
+$smallOnly : (max-width: 767px)
+$medium : (min-width: 768px)
+$mediumOnly : (min-width: 767px) and (max-width: 991px)
+$large : (min-width: 992px)
+$xlarge : (min-width: 1200px)
+
+@mixin breakpoint($small) {
+	@content
+}
+
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+### Using Grid Markup
 
 ```
-Give the example
+<div class="container">
+	<div class="row">
+		<div class="small-12 medium-6 large-3 columns">column</div>
+		<div class="small-12 medium-6 large-3 columns">column</div>
+		<div class="small-12 medium-6 large-3 columns">column</div>
+		<div class="small-12 medium-6 large-3 columns">column</div>
+	</div>
+</div>
+
 ```
 
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
