@@ -27,7 +27,6 @@ $breakpoint-small: 767px !default;
 $breakpoint-medium: 992px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
-
 </code></pre><h3 id="using-breakpoint-mixin">Using Breakpoint Mixin</h3>
 <pre><code>@mixin breakpoint($media) {
     @media #{$media} {
@@ -43,7 +42,90 @@ $breakpoint-xlarge: 1440px !default;
         &lt;div class=&quot;small-12 medium-6 large-3 columns&quot;&gt;column&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+</code></pre><h2 id="extra-mixins">Extra mixins</h2>
+<p>These are just tidbits that come in handy when starting out a new build</p>
+<h3 id="buttons">Buttons</h3>
+<pre><code>@mixin button-bg($bg, $txt) {
+    background: $bg;
+    border: $bg;
+    color: $txt;
+    &amp;:hover,
+    &amp;:focus {
+        background:darken($bg,10%);
+        border:darken($bg, 10%);
+        transition: all 0.3s ease;
+    }
+}
+</code></pre><p>To use:</p>
+<pre><code>@include button-bg(#000000, #ffffff);
+</code></pre><h3 id="hollow-buttons">Hollow Buttons</h3>
+<pre><code>@mixin button-hollow($border, $txt) {
+    background: transparent;
+    border: 1px solid $border;
+    color: $txt;
+    &amp;:hover,
+    &amp;:focus {
+        border: 1px solid darken($border, 10%);
+        transition: all 0.3s ease;
+        color: darken($txt, 10%);
+    }
+}
+</code></pre><p>To use:</p>
+<pre><code>@include button-hollow(#000000, #000000);
+</code></pre><h3 id="pseudos">Pseudos</h3>
+<pre><code>@mixin pseudo($display: block, $pos: absolute, $content: &#39;&#39;){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+</code></pre><p>To use:</p>
+<pre><code>@include pseudo;
+</code></pre><h3 id="placeholders">Placeholders</h3>
+<pre><code>@mixin input-placeholder {
+    &amp;.placeholder { @content; }
+    &amp;:-moz-placeholder { @content; }
+    &amp;::-moz-placeholder { @content; }
+    &amp;:-ms-input-placeholder { @content; }
+    &amp;::-webkit-input-placeholder { @content; }
+}
+</code></pre><p>To use:</p>
+<pre><code>@include input-placeholder {
+    color: $grey;
+}
+</code></pre><h3 id="headlines">Headlines</h3>
+<pre><code>@mixin heading {
+    color: inherit;
+    font-weight: 500;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    padding: 0;
+}
 
+@mixin h1 {
+    @include heading;
+    font-size: rem-calc(40);
+    @include breakpoint($smallOnly) {
+        font-size: rem-calc(30);
+    }
+}
+</code></pre><p>To use:</p>
+<pre><code>@include h1;
+</code></pre><h3 id="font-sizes">Font sizes</h3>
+<pre><code>$body-font-size: 14
+@function rem-calc($pixels, $context: $body-font-size) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
+}
+</code></pre><p>To use:</p>
+<pre><code>font-size: rem-calc(12)
 </code></pre><h2 id="authors">Authors</h2>
 <ul>
 <li><strong>Ceryni</strong> - <em>Initial work</em> - <a href="https://github.com/Ceryni173">Ceryni173</a></li>

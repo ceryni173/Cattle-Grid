@@ -57,9 +57,9 @@
 	}
 }
 
-// set font isizse in rems
-$browser-context: 14;
-@function rem-calc($pixels, $context: $browser-context) {
+// set font size in rems
+$body-font-size: 14
+@function rem-calc($pixels, $context: $body-font-size) {
 	@if (unitless($pixels)) {
 		$pixels: $pixels * 1px;
 	}
