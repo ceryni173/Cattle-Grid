@@ -42,7 +42,6 @@ $breakpoint-xlarge: 1440px !default;
 ### Using Breakpoint Mixin
 
 ```
-
 @mixin breakpoint($small) {
 	@content
 }
