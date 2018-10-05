@@ -23,6 +23,7 @@ select {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 0;
 
 	// style placeholder
 	&::-webkit-input-placeholder {

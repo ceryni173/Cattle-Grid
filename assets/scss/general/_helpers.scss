@@ -187,8 +187,10 @@
 	display: inline-block;
 	img {
 		display: block;
+		width: 100%;
+		height: auto;
 	}
-	&.imgCover {
+	&.overlay {
 		&:after {
 			@include pseudo;
 			top: 0;
@@ -200,6 +202,9 @@
 	}
 	&.greyScale {
 		filter: grayscale(100%)
+	}
+	&.blur {
+		filter: blur(#{$small-space});
 	}
 }
 .debug {
