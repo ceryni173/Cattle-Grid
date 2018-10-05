@@ -150,13 +150,13 @@ To use:
 ```
 @mixin heading {
 	color: inherit;
-    font-weight: 500;
+	font-weight: 500;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 	line-height: 1.4;
-    padding: 0;
+	padding: 0;
 }
 
 @mixin h1 {
@@ -204,11 +204,11 @@ font-size: rem-calc(12)
 
 ```
 $z-index: (
-  modal              : 200,
-  navigation         : 100,
-  footer             : 10,
-  header           	 : 50,
-  main				 : 10,
+  modal			: 200,
+  navigation	: 100,
+  footer		: 10,
+  header		: 50,
+  main			: 10,
 );
 
 @function z-index($key) {
