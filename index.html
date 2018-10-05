@@ -39,17 +39,30 @@
 
 <body>
 	<main>
+		<nav>
+			<ul>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#headlines">Headlines</a></li>
+				<li><a href="#list">Lists</a></li>
+				<li><a href="#tables">Tables</a></li>
+				<li><a href="#quotes">Quotes &amp; Code</a></li>
+				<li><a href="#text">Text</a></li>
+				<li><a href="#form">Form</a></li>
+				<li><a href="#buttons">Buttons</a></li>
+				<li><a href="#images">Images</a></li>
+			</ul>
+		</nav>
 		<div class="container">
 			<div class="row">
 				<div class="small-12 columns text-center">
 					<img src="./assets/images/logo-type.png" class="logo">
 				</div>
 				<div class="small-12 columns">
-
 					<p>Finally got around to building my own CSS Framework after eventually becoming too annoyed at the reliance on the likes of a Foundation & Bootstrap. Foundation served me well for years, but it’s too bloated and too contaminated with elements that could be refactored and simplified. </p>
 					<p>Which leads me to today. I now have my simple 6kb responsive flex box grid I’ve named the Cattle Grid 🐮 - If you want just the grid, grab <strong class="alone">_grid.scss</strong> from <em> assets/scss/general</em> and import it into your stylesheets!</p>
 				</div>
 			</div>
+			<div id="grid"></div>
 			<div class="grid">
 				<div class="row">
 					<div class="small-12 medium-6 large-3 columns">column</div>
@@ -70,6 +83,7 @@
 					<div class="small-12 columns">column</div>
 				</div>
 			</div>
+			<div id="headlines"></div>
 			<div class="row">
 				<div class="column small-12">
 					<h1>
@@ -107,6 +121,7 @@
 
 					<hr/>
 				</div>
+				<div id="list"></div>
 				<div class="column small-12">
 					<strong>List items</strong>
 					<ul>
@@ -140,6 +155,7 @@
 					</ol>
 					<hr/>
 				</div>
+				<div id="tables"></div>
 				<div class="column small-12">
 					<strong>A Table</strong>
 					<table>
@@ -186,6 +202,7 @@
 					</table>
 					<hr/>
 				</div>
+				<div id="quotes"></div>
 				<div class="column small-12">
 					<strong>Block Quotes</strong>
 					<blockquote>
@@ -215,19 +232,7 @@
 					<hr/>
 				</div>
 				<div class="column small-12">
-					<strong>Definition List</strong>
-					<dl>
-						<dd>
-							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						</dd>
-						<dt>Lorem ipsum dolor sit amet</dt>
-						<dd>
-							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						</dd>
-					</dl>
-					<hr/>
-				</div>
-				<div class="column small-12">
+					<div id="text"></div>
 					<strong>Address</strong>
 					<address>
 						Address: Example address 224, Sweden
@@ -273,6 +278,7 @@
 					</p>
 				</div>
 
+				<div id="form"></div>
 				<div class="column small-12">
 					<hr/>
 					<strong>Inputs</strong>
@@ -342,38 +348,7 @@
 					<hr/>
 				</div>
 
-				<div class="column small-12">
-					<strong>Buttons</strong>
-					<a class="button primary"> Primary</a>
-					<a class="button primary hollow"> Primary</a>
-					<a class="button primary rounded"> Rounded</a>
-
-					<a class="button secondary"> Secondary</a>
-					<a class="button secondary hollow"> Secondary</a>
-					<a class="button secondary rounded"> Rounded</a>
-
-					<a class="button facebook"> Facebook</a>
-					<a class="button facebook hollow"> Facebook</a>
-					<a class="button facebook rounded"> Rounded</a>
-
-					<a class="button instagram"> Instagram</a>
-					<a class="button instagram hollow"> Instagram</a>
-					<a class="button instagram rounded"> Rounded</a>
-
-					<a class="button twitter"> Twitter</a>
-					<a class="button twitter hollow"> Twitter</a>
-					<a class="button twitter rounded"> Rounded</a>
-
-					<a class="button pinterest"> Pinterest</a>
-					<a class="button pinterest hollow"> Pinterest</a>
-					<a class="button pinterest rounded"> Rounded</a>
-
-					<a class="button snapchat"> Snapchat</a>
-					<a class="button snapchat hollow"> Snapchat</a>
-					<a class="button snapchat rounded"> Rounded</a>
-				</div>
 				<div class="small-12 columns">
-					<hr/>
 					<strong>Check Boxes</strong>
 				</div>
 				<div class="column small-12 medium-4 large-2">
@@ -421,6 +396,40 @@
 				</div>
 			</div>
 			<div class="row">
+				<div id="buttons"></div>
+				<div class="column small-12">
+					<strong>Buttons</strong>
+					<a class="button primary"> Primary</a>
+					<a class="button primary hollow"> Primary</a>
+					<a class="button primary rounded"> Rounded</a>
+
+					<a class="button secondary"> Secondary</a>
+					<a class="button secondary hollow"> Secondary</a>
+					<a class="button secondary rounded"> Rounded</a>
+
+					<a class="button facebook"> Facebook</a>
+					<a class="button facebook hollow"> Facebook</a>
+					<a class="button facebook rounded"> Rounded</a>
+
+					<a class="button instagram"> Instagram</a>
+					<a class="button instagram hollow"> Instagram</a>
+					<a class="button instagram rounded"> Rounded</a>
+
+					<a class="button twitter"> Twitter</a>
+					<a class="button twitter hollow"> Twitter</a>
+					<a class="button twitter rounded"> Rounded</a>
+
+					<a class="button pinterest"> Pinterest</a>
+					<a class="button pinterest hollow"> Pinterest</a>
+					<a class="button pinterest rounded"> Rounded</a>
+
+					<a class="button snapchat"> Snapchat</a>
+					<a class="button snapchat hollow"> Snapchat</a>
+					<a class="button snapchat rounded"> Rounded</a>
+				</div>
+			</div>
+			<div class="row">
+				<div id="images"></div>
 				<div class="small-12 columns">
 					<strong>Image Filters</strong>
 				</div>

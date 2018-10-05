@@ -38,3 +38,37 @@ strong:not(.alone) {
 .control {
 	margin-top: $small-space;
 }
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: $small-space $large-space;
+	background-color: #ffffff;
+	z-index: 10;
+	@media #{$smallOnly}{
+		display: none;
+	}
+	ul {
+		margin: 0;
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		li {
+			display: block;
+			flex: 0 1 auto;
+			list-style-type: none;
+			display: inline-flex;
+			a {
+				font-size: rem-calc(10);
+				text-transform: uppercase;
+				&:hover,
+				&:focus,
+				&:active {
+					border-bottom: 2px solid $secondary;
+				}
+			}
+		}
+	}
+}
