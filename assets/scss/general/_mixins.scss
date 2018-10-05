@@ -58,7 +58,7 @@
 }
 
 // set font size in rems
-$body-font-size: 14
+$body-font-size: 14;
 @function rem-calc($pixels, $context: $body-font-size) {
 	@if (unitless($pixels)) {
 		$pixels: $pixels * 1px;

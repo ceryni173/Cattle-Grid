@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    width: 100%;
+    tr, td, th {
+    	font-size: $body-font-size;
+    }
+    th {
+        padding: $small-space;
+        background: rgba($primary, 0.4);
+        color: #ffffff;
+    }
+    tbody {
+        tr {
+            &:nth-of-type(odd) {
+                background: rgba($light, 0.2);
+            }
+        }
+        td {
+            border-bottom: .05rem solid rgba($light, 0.4);
+            padding: $small-space;
+        }
+    }
+}
