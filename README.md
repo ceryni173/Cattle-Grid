@@ -42,12 +42,6 @@ $breakpoint-xlarge: 1440px !default;
 ### Using Breakpoint Mixin
 
 ```
-$small : (min-width: 0)
-$smallOnly : (max-width: 767px)
-$medium : (min-width: 768px)
-$mediumOnly : (min-width: 767px) and (max-width: 991px)
-$large : (min-width: 992px)
-$xlarge : (min-width: 1200px)
 
 @mixin breakpoint($small) {
 	@content
