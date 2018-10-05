@@ -13,7 +13,6 @@
     }
 }
 
-
 html {
 	box-sizing: border-box;
 }
@@ -26,14 +25,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	display: flex;
 	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 0;
 	margin: 0;
-	flex-direction: column;
 
+	// if the body has a backgroud image
 	background-position: center center;
 	background-repeat: repeat;
 
@@ -41,7 +37,6 @@ body {
 	font-size: $body-font-size;
 	color: $body-font-color;
 }
-
 
 
 // wrap any body content in a margin
@@ -167,6 +162,7 @@ a:not(.button) {
 
 }
 
+// list items
 ul, ol {
 	padding-top: $small-space;
 	list-style-position: inside;
@@ -185,8 +181,7 @@ ul, ol {
 	}
 }
 
-
-
+// headlines
 h1 { @include h1; }
 h2 { @include h2; }
 h3 { @include h3; }
@@ -201,7 +196,6 @@ address {
 q {
 	font-style: italic;
 }
-
 
 code {
     background: rgba($primary, 0.3);
@@ -275,7 +269,6 @@ blockquote {
 .text-right {
 	text-align: right;
 }
-
 
 .middleAll {
 	align-items: center;

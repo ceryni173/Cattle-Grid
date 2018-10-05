@@ -1,10 +1,11 @@
+// table styling 
 table {
     border-collapse: collapse;
     border-spacing: 0;
     text-align: left;
     width: 100%;
     tr, td, th {
-    	font-size: $body-font-size;
+        font-size: $body-font-size;
     }
     th {
         padding: $small-space;

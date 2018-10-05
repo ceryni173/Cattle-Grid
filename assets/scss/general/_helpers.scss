@@ -10,6 +10,7 @@
 		z-index: 10;
 	}
 
+	// set a class name, with a matching icon (Font Awesome)
 	&.name:before {
 		content: '\f041';
 	}
@@ -58,6 +59,8 @@
 			border-color: $light;
 		}
 	}
+
+	// for radio buttons
 	&.radio {
 		.checky {
 			border-radius: 50%;
@@ -123,7 +126,7 @@
 	}
 }
 
-
+// toggle switch
 .checkSwitch {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -183,6 +186,7 @@
 	}
 }
 
+// image filters 
 .imgFilter {
 	display: inline-block;
 	img {
@@ -207,6 +211,9 @@
 		filter: blur(#{$small-space});
 	}
 }
+
+
+// to debug any element
 .debug {
 	* {
 		border: 1px solid red;

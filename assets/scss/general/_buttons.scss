@@ -16,7 +16,7 @@ input[type="button"] {
 	justify-content: center;
 	font-weight: normal;
 	cursor: pointer;
-    height: $input-height;
+	height: $input-height;
 
 	@include breakpoint($smallOnly) {
 		width: 100%;

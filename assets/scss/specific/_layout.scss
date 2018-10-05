@@ -1,5 +1,4 @@
-// site specific
-//
+// site specific (demo purposes only)
 
 main {
 	padding: $large-space 0;
@@ -46,7 +45,7 @@ nav {
 	width: 100%;
 	padding: $small-space $large-space;
 	background-color: #ffffff;
-	z-index: 10;
+	@include z-index(navigation);
 	@media #{$smallOnly}{
 		display: none;
 	}

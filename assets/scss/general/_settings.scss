@@ -9,28 +9,28 @@ $hundred: ($large-space + $xlarge-space);
 $input-height: $large-space;
 $border-radius: 3px;
 
-// Crayola & Social
+// crayola
 $palette: (
-	primary: #8eb8ba,
-	darkPrimary: #658c89,
-	primaryText: #fcf8f4,
-	secondary: #ebc7ba,
-	secondaryText: #697280,
-	success: #c9e4bf,
-	error: #d38a8a,
-	alert: #d38a8a,
-	warning: #d29075,
-	light-grey: #c4c5c5
+primary: #8eb8ba,
+darkPrimary: #658c89,
+primaryText: #fcf8f4,
+secondary: #ebc7ba,
+secondaryText: #697280,
+success: #c9e4bf,
+error: #d38a8a,
+alert: #d38a8a,
+warning: #d29075,
+light-grey: #c4c5c5
 );
 
 // Z index heirarchy
-$z-indexes: (
-	"modal",
-	"site-header",
-	"page-wrapper",
-	"site-footer"
+$z-index: (
+  modal              : 200,
+  navigation         : 100,
+  footer             : 10,
+  header           	 : 50,
+  main				 : 10,
 );
-
 
 // shorthand
 $primary: map-get($palette, primary);
@@ -45,8 +45,7 @@ $success: map-get($palette, success);
 $error: map-get($palette, error);
 $warning: map-get($palette, warning);
 
-
-// Social
+// social
 $facebook: #3b5998;
 $twitter: #55acee;
 $instagram: #e1306c;
@@ -55,9 +54,7 @@ $pinterest: #bd081c;
 $etsy: #d5641c;
 $snapchat: #f8ec1e;
 
-
-// 1. Global
-// ---------
+// global
 $body-font-size: rem-calc(13);
 $body-background: #fff;
 $body-font-color: #53596C;

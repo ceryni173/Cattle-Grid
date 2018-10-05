@@ -1,14 +1,17 @@
+// base variables
 $grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
 $global-width: rem-calc(1200px);
 $grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
 $grid-columns: 12 !default;
 
+// set your breakpoints
 $breakpoint-small: 767px !default;
 $breakpoint-medium: 992px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
 
+// set your queries
 $small : '(min-width: 0)';
 $smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
 $medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
@@ -16,6 +19,7 @@ $mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($break
 $large: '(min-width: ' + $breakpoint-medium + ')';
 $xlarge: '(min-width: ' + $breakpoint-large + ')';
 
+// map your points
 $breakpoints: (
 	'small' $small,
 	'medium' $medium,
@@ -48,8 +52,7 @@ $breakpoints: (
 	}
 }
 
-
-// Media query
+// Allow the query
 @mixin breakpoint($media) {
 	@media #{$media} {
 		@content;
@@ -60,9 +63,6 @@ $breakpoints: (
 .container {
 	max-width: $grid-max-width;
 	margin: 0 auto;
-}
-
-.container{
 	padding: 0 calc(#{$grid-gutter-medium} / 2);
 	@include breakpoint($small) {
 		padding: 0 calc(#{$grid-gutter-small} / 2);
@@ -81,6 +81,7 @@ $breakpoints: (
     flex-flow: row wrap;
 	max-width: $global-width;
 
+	// row within a row
 	.row {
 		margin-left: 0;
 		margin-right: 0;
@@ -92,24 +93,25 @@ $breakpoints: (
 	&.reverse {
 		flex-direction: row-reverse;
 	}
-}
 
-.column,
-.columns {
-	box-sizing: border-box;
-    min-width: initial;
-	flex-grow: 1;
-	padding-left: calc(#{$grid-gutter-medium} / 2);
-	padding-right: calc(#{$grid-gutter-medium} / 2);
-	@include breakpoint($small) {
-		padding-left: calc(#{$grid-gutter-small} / 2);
-		padding-right: calc(#{$grid-gutter-small} / 2);
-	}
+	// columns
+	.column,
+	.columns {
+		box-sizing: border-box;
+	    min-width: initial;
+		flex-grow: 1;
+		padding-left: calc(#{$grid-gutter-medium} / 2);
+		padding-right: calc(#{$grid-gutter-medium} / 2);
+		@include breakpoint($small) {
+			padding-left: calc(#{$grid-gutter-small} / 2);
+			padding-right: calc(#{$grid-gutter-small} / 2);
+		}
 
-	.collapse & {
-		padding-left: 0;
-	}
-	&.reverse {
-		flex-direction: column-reverse;
+		.collapse & {
+			padding-left: 0;
+		}
+		&.reverse {
+			flex-direction: column-reverse;
+		}
 	}
 }
