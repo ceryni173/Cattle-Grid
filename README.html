@@ -29,10 +29,11 @@ $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1440px !default;
 
 </code></pre><h3 id="using-breakpoint-mixin">Using Breakpoint Mixin</h3>
-<pre><code>@mixin breakpoint($small) {
-    @content
+<pre><code>@mixin breakpoint($media) {
+    @media #{$media} {
+        @content;
+    }
 }
-
 </code></pre><h3 id="using-grid-markup">Using Grid Markup</h3>
 <pre><code>&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
