@@ -128,11 +128,11 @@ $breakpoint-xlarge: 1440px !default;
 <pre><code>font-size: rem-calc(12)
 </code></pre><h3 id="font-sizes">Font sizes</h3>
 <pre><code>$z-index: (
-  modal            : 200,
-  navigation    : 100,
-  footer        : 10,
-  header        : 50,
-  main            : 10,
+    modal: 200,
+    navigation: 100,
+    footer: 10,
+    header: 50,
+    main: 10,
 );
 
 @function z-index($key) {
@@ -143,6 +143,22 @@ $breakpoint-xlarge: 1440px !default;
 }
 </code></pre><p>To use:</p>
 <pre><code>@include z-index(header);
+</code></pre><h3 id="fades">Fades</h3>
+<pre><code>@mixin fade($type) {
+    @if $type == &#39;hide&#39; {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+    }
+    @else if $type == &#39;show&#39; {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s, opacity 1s;
+    }
+}
+</code></pre><p>To use:</p>
+<pre><code>@include fade(hide)
+@include fade(show)
 </code></pre><h2 id="authors">Authors</h2>
 <ul>
 <li><strong>Ceryni</strong> - <em>Initial work</em> - <a href="https://github.com/Ceryni173">Ceryni173</a></li>

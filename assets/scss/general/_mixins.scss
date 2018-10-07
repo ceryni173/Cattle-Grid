@@ -158,7 +158,8 @@ $body-font-size: 14;
 		transition: visibility 1s, opacity 1s;
 	}
 }
-
+// @include fade(hide)
+// @include fade(show)
 
 // z-indexes
 @function z-index($key) {

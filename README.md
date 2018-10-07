@@ -204,11 +204,11 @@ font-size: rem-calc(12)
 
 ```
 $z-index: (
-  modal			: 200,
-  navigation	: 100,
-  footer		: 10,
-  header		: 50,
-  main			: 10,
+	modal: 200,
+	navigation: 100,
+	footer: 10,
+	header: 50,
+	main: 10,
 );
 
 @function z-index($key) {
@@ -223,6 +223,30 @@ To use:
 
 ```
 @include z-index(header);
+```
+
+### Fades ###
+
+```
+@mixin fade($type) {
+	@if $type == 'hide' {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+	}
+	@else if $type == 'show' {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+	}
+}
+```
+
+To use:
+
+```
+@include fade(hide)
+@include fade(show)
 ```
 
 
