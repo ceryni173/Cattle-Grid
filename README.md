@@ -9,7 +9,7 @@ Extremely lightweight, basic flex grid built from a simple mixin
 
 ## Getting Started
 
-Cattle grid contains not only a very simple grid (only 6KB minified!) but a small suite of extra settings I've collected over the years of doing Front End. Unlike most frameworks, this grid is easy to isolate and use on it's own - the rest is just for sheer aesthetics and laziness!
+Cattle grid contains not only a very simple grid (only 5KB minified!) but a small suite of extra settings I've collected over the years of doing Front End. Unlike most frameworks, this grid is easy to isolate and use on it's own - the rest is just for sheer aesthetics and laziness!
 
 To isolate the grid, navigate to [grid.scss](https://github.com/ceryni173/Cattle-Grid/blob/master/assets/scss/general/_grid.scss) and add this to your own project! Simple.
 
