@@ -71,3 +71,35 @@ nav {
 		}
 	}
 }
+
+
+p {
+	&.fade {
+		cursor: pointer;
+		+ span {
+			color: $secondary;
+			font-weight: bold;
+			font-size: rem-calc(16);
+		}
+		&.show {
+			+ span {
+				@include fade(show);
+			}
+			&:hover {
+				+ span {
+					@include fade(hide);
+				}
+			}
+		}
+		&.hide {
+			+ span {
+				@include fade(hide);
+			}
+			&:hover {
+				+ span {
+					@include fade(show)
+				}
+			}
+		}
+	}
+}

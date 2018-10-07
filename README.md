@@ -197,10 +197,7 @@ font-size: rem-calc(12)
 ```
 
 
-
-
-
-### Font sizes ###
+### Z Indexes ###
 
 ```
 $z-index: (
