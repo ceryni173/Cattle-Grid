@@ -278,11 +278,11 @@ _To use:_
 
 // Columns in a flex grid can be aligned horizontal or vertical individually also
 	.align-self-bottom {
-	    align-self: flex-end;
+		align-self: flex-end;
 	}
 
 	.align-self-middle {
-	    align-self: center;
+		align-self: center;
 	}
 
 	.align-self-top {
