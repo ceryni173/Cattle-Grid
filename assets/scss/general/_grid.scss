@@ -13,11 +13,14 @@ $breakpoint-xlarge: 1440px !default;
 
 // set your queries
 $small : '(min-width: 0)';
-$smallOnly : 'screen and (max-width: ' + $breakpoint-small + ')';
+$smallOnly : '(max-width: ' + $breakpoint-small + ')';
 $medium: '(min-width: ' + ($breakpoint-small + 1) + ')';
 $mediumOnly: '(min-width: ' + $breakpoint-small + ') and (max-width: ' + ($breakpoint-medium - 1) + ')';
+$mediumDown: '(max-width: ' + ($breakpoint-medium) + ')';
 $large: '(min-width: ' + $breakpoint-medium + ')';
-$xlarge: '(min-width: ' + $breakpoint-large + ')';
+$largeOnly: '(min-width: ' + $breakpoint-medium + ') and (max-width: ' + ($breakpoint-xlarge - 1) + ')';
+$largeDown: '(max-width: ' + $breakpoint-large + ')';
+$xlarge: '(min-width: ' + $breakpoint-xlarge + ')';
 
 // map your points
 $breakpoints: (
@@ -80,7 +83,7 @@ $breakpoints: (
 	max-width: $grid-max-width;
 	margin: 0 auto;
 	padding: 0 calc(#{$grid-gutter-medium} / 2);
-	@include breakpoint($small) {
+	@media #{$smallOnly} {
 		padding: 0 calc(#{$grid-gutter-small} / 2);
 	}
 }
@@ -118,7 +121,7 @@ $breakpoints: (
 		flex-grow: 1;
 		padding-left: calc(#{$grid-gutter-medium} / 2);
 		padding-right: calc(#{$grid-gutter-medium} / 2);
-		@include breakpoint($small) {
+		@media #{$smallOnly} {
 			padding-left: calc(#{$grid-gutter-small} / 2);
 			padding-right: calc(#{$grid-gutter-small} / 2);
 		}
