@@ -416,36 +416,6 @@ _To use:_
 </div>
 ```
 
-
-### Text Alignment
-
-```
-// align texts center
-.text-center {
-	text-align: center;
-}
-// .. left
-.text-left {
-	text-align: left;
-}
-// .. right
-.text-right {
-	text-align: right;
-}
-```
-
-_To use:_
-
-```
-<div class="container">
-	<div class="row align-center align-middle">
-		<div class="small-12 large-4 columns text-left">column</div>
-		<div class="small-12 large-4 column text-right">column</div>
-		<div class="small-12 large-4 columns text-center">column</div>
-	</div>
-</div>
-```
-
 ---
 
 ## Authors
