@@ -21,6 +21,8 @@ General contains all files needed to set up a new site, from colours, helpers, f
 #### Specific ####
 Specific contains files related to the project you're about to build.
 
+_I use an autoprefixer on my scss!_
+
 
 
 ### Defining Variables
@@ -267,33 +269,23 @@ _To use:_
 	}
 
 	.align-middle {
-	    -webkit-box-align: center;
-	    -ms-flex-align: center;
 	    align-items: center;
 	}
 
 	.align-center {
-	    -webkit-box-pack: center;
-	    -ms-flex-pack: center;
 	    justify-content: center;
 	}
 
 // Columns in a flex grid can be aligned horizontal or vertical individually also
 	.align-self-bottom {
-	    -webkit-align-self: flex-end;
-	    -ms-flex-item-align: end;
 	    align-self: flex-end;
 	}
 
 	.align-self-middle {
-		-webkit-align-self: center;
-	    -ms-flex-item-align: center;
 	    align-self: center;
 	}
 
 	.align-self-top {
-		-webkit-align-self: flex-start;
-		-ms-flex-item-align: start;
 		align-self: flex-start;
 	}
 

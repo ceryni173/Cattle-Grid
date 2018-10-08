@@ -16,6 +16,7 @@
 <p>General contains all files needed to set up a new site, from colours, helpers, form elements and mixins</p>
 <h4 id="specific">Specific</h4>
 <p>Specific contains files related to the project you&#39;re about to build.</p>
+<p><em>I use an autoprefixer on my scss!</em></p>
 <h3 id="defining-variables">Defining Variables</h3>
 <pre><code>$grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
@@ -173,33 +174,23 @@ $breakpoint-xlarge: 1440px !default;
     }
 
     .align-middle {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
     }
 
     .align-center {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
     }
 
 // Columns in a flex grid can be aligned horizontal or vertical individually also
     .align-self-bottom {
-        -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
         align-self: flex-end;
     }
 
     .align-self-middle {
-        -webkit-align-self: center;
-        -ms-flex-item-align: center;
         align-self: center;
     }
 
     .align-self-top {
-        -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
         align-self: flex-start;
     }
 
