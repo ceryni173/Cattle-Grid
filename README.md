@@ -30,7 +30,7 @@ _I use an autoprefixer on my scss!_
 ```
 $grid-gutter-medium: 30px !default;
 $grid-gutter-small: 20px !default;
-$global-width: rem-calc(1200px);
+$global-width: 1200px;
 $grid-max-width: $global-width + ($grid-gutter-medium * 2) !default;
 $grid-columns: 12 !default;
 
