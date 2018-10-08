@@ -258,7 +258,6 @@ _To use:_
 
 ```
 // Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
-	// within a container, align items visually center
 	.middle-all{
 		align-items: center;
 		justify-content: center;
@@ -267,14 +266,12 @@ _To use:_
 		align-items: center;
 	}
 
-	// within a container, align items in the middle
 	.align-middle {
 	    -webkit-box-align: center;
 	    -ms-flex-align: center;
 	    align-items: center;
 	}
 
-	// within a container, align items in the center
 	.align-center {
 	    -webkit-box-pack: center;
 	    -ms-flex-pack: center;
@@ -282,21 +279,18 @@ _To use:_
 	}
 
 // Columns in a flex grid can be aligned horizontal or vertical individually also
-	// align a column within a row to the bottom
 	.align-self-bottom {
 	    -webkit-align-self: flex-end;
 	    -ms-flex-item-align: end;
 	    align-self: flex-end;
 	}
 
-	// align a column within a row to the middle
 	.align-self-middle {
 		-webkit-align-self: center;
 	    -ms-flex-item-align: center;
 	    align-self: center;
 	}
 
-	// align a column within a row to the top
 	.align-self-top {
 		-webkit-align-self: flex-start;
 		-ms-flex-item-align: start;
@@ -304,7 +298,6 @@ _To use:_
 	}
 
 // Elements can be absolutely positioned inside of it's relative parent
-	// Horizontally centers the element
 	.horizontal-center {
 		position: absolute;
 		left: 50%;
@@ -312,7 +305,6 @@ _To use:_
 		transform: translatey(-50%);
 	}
 
-	// Vertically centers the element
 	.vertical-center {
 		position: absolute;
 		left: auto;
@@ -320,7 +312,6 @@ _To use:_
 		transform: translatex(-50%);
 	}
 
-	// Abolutely centers the element
 	.absolute-center {
 		position: absolute;
 		left: 50%;
@@ -333,8 +324,6 @@ _To use:_
 
 ```
 @extend .middle-all
-@extend .align-middle
-@extend .align-center
 @extend .horizontal-middle
 @extend .vertical-middle
 @extend .absolute-middle
