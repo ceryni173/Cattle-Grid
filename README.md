@@ -23,7 +23,7 @@ Specific contains files related to the project you're about to build.
 
 _I use an autoprefixer on my scss!_
 
-
+---
 
 ### Defining Variables
 
