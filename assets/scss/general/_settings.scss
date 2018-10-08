@@ -11,16 +11,15 @@ $border-radius: 3px;
 
 // crayola
 $palette: (
-primary: #8eb8ba,
-darkPrimary: #658c89,
-primaryText: #fcf8f4,
-secondary: #ebc7ba,
-secondaryText: #697280,
-success: #c9e4bf,
-error: #d38a8a,
-alert: #d38a8a,
-warning: #d29075,
-light-grey: #c4c5c5
+	primary: #8eb8ba,
+	primaryText: #fcf8f4,
+	secondary: #ebc7ba,
+	secondaryText: #697280,
+	success: #c9e4bf,
+	error: #d38a8a,
+	alert: #d38a8a,
+	warning: #d29075,
+	light-grey: #c4c5c5
 );
 
 // Z index heirarchy
@@ -35,7 +34,6 @@ $z-index: (
 // shorthand
 $primary: map-get($palette, primary);
 $primaryText: map-get($palette, primaryText);
-$darkPrimary: map-get($palette, darkPrimary);
 $secondary: map-get($palette, secondary);
 $secondaryText: map-get($palette, secondaryText);
 $light: map-get($palette, light-grey);

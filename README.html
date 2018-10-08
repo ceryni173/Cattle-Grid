@@ -44,9 +44,69 @@ $breakpoint-xlarge: 1440px !default;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><hr>
-<h2 id="extra-mixins">Extra mixins</h2>
-<p>These are just tidbits that come in handy when starting out a new build</p>
-<h3 id="buttons">Buttons</h3>
+<h2 id="extra-mixins-settings">Extra mixins &amp; Settings</h2>
+<p>These are just tidbits that come in handy when starting out a new build!</p>
+<h3 id="sizings">Sizings</h3>
+<pre><code>$small-space: 5px;
+$medium-space: 20px;
+$large-space: 40px;
+$xlarge-space: 60px;
+$hundred: ($large-space + $xlarge-space);
+$input-height: $large-space;
+$border-radius: 3px;
+</code></pre><h3 id="atom-users-">Atom Users!</h3>
+<p>If you use Atom - this handy snippet allows for easy autofill of sizes! Be a faster dev</p>
+<pre><code>&#39;.source.css.scss&#39;:
+  &#39;5px&#39;:
+    &#39;prefix&#39;: &#39;5px&#39;
+    &#39;body&#39;: &#39;$small-space&#39;;
+  &#39;10px&#39;:
+    &#39;prefix&#39;: &#39;10px&#39;
+    &#39;body&#39;: &#39;($small-space * 2)&#39;;
+  &#39;15px&#39;:
+    &#39;prefix&#39;: &#39;15px&#39;
+    &#39;body&#39;: &#39;($small-space * 3)&#39;;
+  &#39;20px&#39;:
+    &#39;prefix&#39;: &#39;20px&#39;
+    &#39;body&#39;: &#39;$medium-space&#39;;
+  &#39;25px&#39;:
+    &#39;prefix&#39;: &#39;25px&#39;
+    &#39;body&#39;: &#39;($small-space * 5)&#39;;
+  &#39;30px&#39;:
+    &#39;prefix&#39;: &#39;30px&#39;
+    &#39;body&#39;: &#39;($xlarge-space / 2)&#39;;
+  &#39;40px&#39;:
+    &#39;prefix&#39;: &#39;40px&#39;
+    &#39;body&#39;: &#39;$large-space&#39;;
+  &#39;50px&#39;:
+    &#39;prefix&#39;: &#39;50px&#39;
+    &#39;body&#39;: &#39;($small-space * 10)&#39;;
+  &#39;60px&#39;:
+    &#39;prefix&#39;: &#39;60px&#39;
+    &#39;body&#39;: &#39;$xlarge-space&#39;;
+</code></pre><h3 id="crayola">Crayola</h3>
+<pre><code>$palette: (
+    primary: #8eb8ba,
+    primaryText: #fcf8f4,
+    secondary: #ebc7ba,
+    secondaryText: #697280,
+    success: #c9e4bf,
+    error: #d38a8a,
+    alert: #d38a8a,
+    warning: #d29075,
+    light-grey: #c4c5c5
+);
+
+// shorthand
+$primary: map-get($palette, primary);
+$primaryText: map-get($palette, primaryText);
+$secondary: map-get($palette, secondary);
+$secondaryText: map-get($palette, secondaryText);
+$light: map-get($palette, light-grey);
+</code></pre><p><em>To use</em></p>
+<pre><code>background-color: $primary;
+color: $primaryText;
+</code></pre><h3 id="buttons">Buttons</h3>
 <pre><code>@mixin button-bg($bg, $txt) {
     background: $bg;
     border: $bg;

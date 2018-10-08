@@ -65,9 +65,88 @@ $breakpoint-xlarge: 1440px !default;
 
 ---
 
-## Extra mixins ##
+## Extra mixins & Settings ##
 
-These are just tidbits that come in handy when starting out a new build
+These are just tidbits that come in handy when starting out a new build!
+
+
+### Sizings ###
+```
+$small-space: 5px;
+$medium-space: 20px;
+$large-space: 40px;
+$xlarge-space: 60px;
+$hundred: ($large-space + $xlarge-space);
+$input-height: $large-space;
+$border-radius: 3px;
+```
+
+
+### Atom Users!###
+
+If you use Atom - this handy snippet allows for easy autofill of sizes! Be a faster dev
+
+```
+'.source.css.scss':
+  '5px':
+    'prefix': '5px'
+    'body': '$small-space';
+  '10px':
+    'prefix': '10px'
+    'body': '($small-space * 2)';
+  '15px':
+    'prefix': '15px'
+    'body': '($small-space * 3)';
+  '20px':
+    'prefix': '20px'
+    'body': '$medium-space';
+  '25px':
+    'prefix': '25px'
+    'body': '($small-space * 5)';
+  '30px':
+    'prefix': '30px'
+    'body': '($xlarge-space / 2)';
+  '40px':
+    'prefix': '40px'
+    'body': '$large-space';
+  '50px':
+    'prefix': '50px'
+    'body': '($small-space * 10)';
+  '60px':
+    'prefix': '60px'
+    'body': '$xlarge-space';
+```
+
+
+### Crayola ###
+
+```
+$palette: (
+	primary: #8eb8ba,
+	primaryText: #fcf8f4,
+	secondary: #ebc7ba,
+	secondaryText: #697280,
+	success: #c9e4bf,
+	error: #d38a8a,
+	alert: #d38a8a,
+	warning: #d29075,
+	light-grey: #c4c5c5
+);
+
+// shorthand
+$primary: map-get($palette, primary);
+$primaryText: map-get($palette, primaryText);
+$secondary: map-get($palette, secondary);
+$secondaryText: map-get($palette, secondaryText);
+$light: map-get($palette, light-grey);
+```
+
+_To use_
+
+```
+background-color: $primary;
+color: $primaryText;
+```
 
 ### Buttons ###
 

@@ -9,8 +9,8 @@
 
 	// if applied, has a border radius
 	&.rounded {
-        border-radius: $border-radius;
-    }
+		border-radius: $border-radius;
+	}
 }
 
 html {
@@ -29,7 +29,7 @@ body {
 	padding: 0;
 	margin: 0;
 
-	// if the body has a backgroud image
+	// if the body has a background image
 	background-position: center center;
 	background-repeat: repeat;
 
@@ -46,9 +46,17 @@ main {
 	flex: 1 0 auto;
 }
 
+// headlines
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include h6; }
+
 blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 // normalise
@@ -58,7 +66,7 @@ dfn {
 	cursor: help;
 }
 
-del{
+del {
 	text-decoration: line-through;
 }
 
@@ -68,9 +76,9 @@ img {
 }
 
 hr {
-    border: 0;
-    border-bottom: 1px dashed $light;
-    background: #999;
+	border: 0;
+	border-bottom: 1px dashed $light;
+	background: #999;
 	opacity: 0.4;
 	margin: $medium-space 0;
 }
@@ -104,27 +112,27 @@ p {
 
 small,
 .small {
-    font-size: rem-calc(10);
-    font-weight: 400;
+	font-size: rem-calc(10);
+	font-weight: 400;
 }
 
 .large {
 	font-size: rem-calc(18);
-    font-weight: 400;
+	font-weight: 400;
 }
 
 hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
 }
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 .highlight {
@@ -181,14 +189,6 @@ ul, ol {
 	}
 }
 
-// headlines
-h1 { @include h1; }
-h2 { @include h2; }
-h3 { @include h3; }
-h4 { @include h4; }
-h5 { @include h5; }
-h6 { @include h6; }
-
 // remove address styling
 address {
 	font-style: normal;
@@ -198,32 +198,32 @@ q {
 }
 
 code {
-    background: rgba($primary, 0.3);
-    border-radius: $border-radius;
-    color: $primary;
-    font-size: $body-font-size;
-    line-height: rem-calc(30);
-    padding: $small-space;
+	background: rgba($primary, 0.3);
+	border-radius: $border-radius;
+	color: $primary;
+	font-size: $body-font-size;
+	line-height: rem-calc(30);
+	padding: $small-space;
 }
 
 kbd {
-    background: #454d5d;
-    border-radius: .1rem;
-    color: #fff;
-    font-size: .7rem;
-    line-height: 1.2;
-    padding: .1rem .2rem;
+	background: #454d5d;
+	border-radius: .1rem;
+	color: #fff;
+	font-size: .7rem;
+	line-height: 1.2;
+	padding: .1rem .2rem;
 }
 
 code, kbd, pre, samp {
-    font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
+	font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
 
 }
 
 blockquote {
-    border-left: .1rem solid #e7e9ed;
-    margin-left: 0;
-    padding: .4rem .8rem;
+	border-left: .1rem solid #e7e9ed;
+	margin-left: 0;
+	padding: .4rem .8rem;
 	p {
 		margin: 0;
 	}
@@ -273,62 +273,62 @@ blockquote {
 
 
 // Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
-	// within a container, align items visually center
-	.middle-all{
-		align-items: center;
-		justify-content: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+// within a container, align items visually center
+.middle-all{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-	// within a container, align items in the middle
-	.align-middle {
-	    align-items: center;
-	}
+// within a container, align items in the middle
+.align-middle {
+	align-items: center;
+}
 
-	// within a container, align items in the center
-	.align-center {
-	    justify-content: center;
-	}
+// within a container, align items in the center
+.align-center {
+	justify-content: center;
+}
 
 // Columns in a flex grid can be aligned horizontal or vertical individually also
-	// align a column within a row to the bottom
-	.align-self-bottom {
-	    align-self: flex-end;
-	}
+// align a column within a row to the bottom
+.align-self-bottom {
+	align-self: flex-end;
+}
 
-	// align a column within a row to the middle
-	.align-self-middle {
-	    align-self: center;
-	}
+// align a column within a row to the middle
+.align-self-middle {
+	align-self: center;
+}
 
-	// align a column within a row to the top
-	.align-self-top {
-		align-self: flex-start;
-	}
+// align a column within a row to the top
+.align-self-top {
+	align-self: flex-start;
+}
 
 // Elements can be absolutely positioned inside of it's relative parent
-	// Horizontally centers the element
-	.horizontal-center {
-		position: absolute;
-		left: 50%;
-		top: auto;
-		transform: translatey(-50%);
-	}
+// Horizontally centers the element
+.horizontal-center {
+	position: absolute;
+	left: 50%;
+	top: auto;
+	transform: translatey(-50%);
+}
 
-	// Vertically centers the element
-	.vertical-center {
-		position: absolute;
-		left: auto;
-		top: 50%;
-		transform: translatex(-50%);
-	}
+// Vertically centers the element
+.vertical-center {
+	position: absolute;
+	left: auto;
+	top: 50%;
+	transform: translatex(-50%);
+}
 
-	// Abolutely centers the element
-	.absolute-center {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+// Abolutely centers the element
+.absolute-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
