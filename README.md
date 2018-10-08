@@ -316,9 +316,9 @@ _To use:_
 
 ```
 @extend .middle-all
-@extend .horizontal-middle
-@extend .vertical-middle
-@extend .absolute-middle
+@extend .horizontal-center
+@extend .vertical-center
+@extend .absolute-center
 
 <div class="container">
 	<div class="row align-center align-middle">
