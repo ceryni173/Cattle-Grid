@@ -82,6 +82,14 @@ $border-radius: 3px;
 ```
 
 
+### Text Alignments
+To be able to align text left, right or centrally within the markup, there are 4 classes available!
+
+_To use_
+```
+	<div class="small-12 medium-6 large-3 columns small-text-center medium-text-right large-text-left xlarge-text-center">column</div>
+```
+
 ### Atom Users!
 
 If you use Atom - this handy snippet allows for easy autofill of sizes! Be a faster dev

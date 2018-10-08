@@ -42,6 +42,22 @@ $breakpoints: (
 	}
 }
 
+// create text based alignments
+@mixin create-alignments($name) {
+	// align texts center
+	.#{$name}-text-center {
+		text-align: center;
+	}
+	// .. left
+	.#{$name}-text-left {
+		text-align: left;
+	}
+	// .. right
+	.#{$name}-text-right {
+		text-align: right;
+	}
+}
+
 // create the grid within the MQ points
 @each $breakpoint in $breakpoints {
 	$name: nth($breakpoint, 1);
@@ -49,6 +65,7 @@ $breakpoints: (
 
 	@media screen and #{$declaration} {
 		@include create-grid($name);
+		@include create-alignments($name);
 	}
 }
 
@@ -58,7 +75,6 @@ $breakpoints: (
 		@content;
 	}
 }
-
 
 .container {
 	max-width: $grid-max-width;
