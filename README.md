@@ -87,7 +87,7 @@ To be able to align text left, right or centrally within the markup, there are 4
 
 _To use_
 ```
-	<div class="small-12 medium-6 large-3 columns small-text-center medium-text-right large-text-left xlarge-text-center">column</div>
+<div class="small-text-center medium-text-right large-text-left xlarge-text-center">Align me!</div>
 ```
 
 ### Atom Users!
