@@ -42,7 +42,8 @@ $breakpoint-xlarge: 1440px !default;
         &lt;div class=&quot;small-12 medium-6 large-3 columns&quot;&gt;column&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><h2 id="extra-mixins">Extra mixins</h2>
+</code></pre><hr>
+<h2 id="extra-mixins">Extra mixins</h2>
 <p>These are just tidbits that come in handy when starting out a new build</p>
 <h3 id="buttons">Buttons</h3>
 <pre><code>@mixin button-bg($bg, $txt) {
@@ -56,7 +57,7 @@ $breakpoint-xlarge: 1440px !default;
         transition: all 0.3s ease;
     }
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include button-bg(#000000, #ffffff);
 </code></pre><h3 id="hollow-buttons">Hollow Buttons</h3>
 <pre><code>@mixin button-hollow($border, $txt) {
@@ -70,7 +71,7 @@ $breakpoint-xlarge: 1440px !default;
         color: darken($txt, 10%);
     }
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include button-hollow(#000000, #000000);
 </code></pre><h3 id="pseudos">Pseudos</h3>
 <pre><code>@mixin pseudo($display: block, $pos: absolute, $content: &#39;&#39;){
@@ -78,7 +79,7 @@ $breakpoint-xlarge: 1440px !default;
     display: $display;
     position: $pos;
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include pseudo;
 </code></pre><h3 id="placeholders">Placeholders</h3>
 <pre><code>@mixin input-placeholder {
@@ -88,7 +89,7 @@ $breakpoint-xlarge: 1440px !default;
     &amp;:-ms-input-placeholder { @content; }
     &amp;::-webkit-input-placeholder { @content; }
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include input-placeholder {
     color: $grey;
 }
@@ -111,7 +112,7 @@ $breakpoint-xlarge: 1440px !default;
         font-size: rem-calc(30);
     }
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include h1;
 </code></pre><h3 id="font-sizes">Font sizes</h3>
 <pre><code>$body-font-size: 14
@@ -124,7 +125,7 @@ $breakpoint-xlarge: 1440px !default;
     }
     @return $pixels / $context * 1em;
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>font-size: rem-calc(12)
 </code></pre><h3 id="z-indexes">Z Indexes</h3>
 <pre><code>$z-index: (
@@ -141,7 +142,7 @@ $breakpoint-xlarge: 1440px !default;
 @mixin z-index($key) {
     z-index: z-index($key);
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include z-index(header);
 </code></pre><h3 id="fades">Fades</h3>
 <pre><code>@mixin fade($type) {
@@ -156,10 +157,120 @@ $breakpoint-xlarge: 1440px !default;
         transition: visibility 1s, opacity 1s;
     }
 }
-</code></pre><p>To use:</p>
+</code></pre><p><em>To use:</em></p>
 <pre><code>@include fade(hide)
 @include fade(show)
-</code></pre><h2 id="authors">Authors</h2>
+</code></pre><hr>
+<h2 id="extends">Extends</h2>
+<h3 id="alignment">Alignment</h3>
+<pre><code>// Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
+    // within a container, align items visually center
+    .middle-all{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // within a container, align items in the middle
+    .align-middle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    // within a container, align items in the center
+    .align-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+// Columns in a flex grid can be aligned horizontal or vertical individually also
+    // align a column within a row to the bottom
+    .align-self-bottom {
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+
+    // align a column within a row to the middle
+    .align-self-middle {
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    // align a column within a row to the top
+    .align-self-top {
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+
+// Elements can be absolutely positioned inside of it&#39;s relative parent
+    // Horizontally centers the element
+    .horizontal-center {
+        position: absolute;
+        left: 50%;
+        top: auto;
+        transform: translatey(-50%);
+    }
+
+    // Vertically centers the element
+    .vertical-center {
+        position: absolute;
+        left: auto;
+        top: 50%;
+        transform: translatex(-50%);
+    }
+
+    // Abolutely centers the element
+    .absolute-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+</code></pre><p><em>To use:</em></p>
+<pre><code>@extend .middle-all
+@extend .align-middle
+@extend .align-center
+@extend .horizontal-middle
+@extend .vertical-middle
+@extend .absolute-middle
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row align-center align-middle&quot;&gt;
+        &lt;div class=&quot;small-12 medium-6 columns align-self-top&quot;&gt;column&lt;/div&gt;
+        &lt;div class=&quot;small-12 medium-6 columns align-self-middle column&lt;/div&gt;
+        &lt;div class=&quot;small-12 medium-6 columns align-self-bottom&quot;&gt;column&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="text-alignment">Text Alignment</h3>
+<pre><code>// align texts center
+.text-center {
+    text-align: center;
+}
+// .. left
+.text-left {
+    text-align: left;
+}
+// .. right
+.text-right {
+    text-align: right;
+}
+</code></pre><p><em>To use:</em></p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row align-center align-middle&quot;&gt;
+        &lt;div class=&quot;small-12 large-4 columns text-left&quot;&gt;column&lt;/div&gt;
+        &lt;div class=&quot;small-12 large-4 column text-right&quot;&gt;column&lt;/div&gt;
+        &lt;div class=&quot;small-12 large-4 columns text-center&quot;&gt;column&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><hr>
+<h2 id="authors">Authors</h2>
 <ul>
 <li><strong>Ceryni</strong> - <em>Initial work</em> - <a href="https://github.com/Ceryni173">Ceryni173</a></li>
 </ul>

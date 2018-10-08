@@ -61,6 +61,8 @@ $breakpoint-xlarge: 1440px !default;
 </div>
 ```
 
+---
+
 ## Extra mixins ##
 
 These are just tidbits that come in handy when starting out a new build
@@ -81,7 +83,7 @@ These are just tidbits that come in handy when starting out a new build
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include button-bg(#000000, #ffffff);
@@ -103,7 +105,7 @@ To use:
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include button-hollow(#000000, #000000);
@@ -119,7 +121,7 @@ To use:
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include pseudo;
@@ -137,7 +139,7 @@ To use:
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include input-placeholder {
@@ -168,7 +170,7 @@ To use:
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include h1;
@@ -190,7 +192,7 @@ $body-font-size: 14
 }
 ```
 
-To use:
+_To use:_
 
 ```
 font-size: rem-calc(12)
@@ -216,7 +218,7 @@ $z-index: (
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include z-index(header);
@@ -239,13 +241,144 @@ To use:
 }
 ```
 
-To use:
+_To use:_
 
 ```
 @include fade(hide)
 @include fade(show)
 ```
 
+
+---
+
+
+## Extends ##
+
+### Alignment ###
+
+```
+// Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
+	// within a container, align items visually center
+	.middle-all{
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// within a container, align items in the middle
+	.align-middle {
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	}
+
+	// within a container, align items in the center
+	.align-center {
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	}
+
+// Columns in a flex grid can be aligned horizontal or vertical individually also
+	// align a column within a row to the bottom
+	.align-self-bottom {
+	    -webkit-align-self: flex-end;
+	    -ms-flex-item-align: end;
+	    align-self: flex-end;
+	}
+
+	// align a column within a row to the middle
+	.align-self-middle {
+		-webkit-align-self: center;
+	    -ms-flex-item-align: center;
+	    align-self: center;
+	}
+
+	// align a column within a row to the top
+	.align-self-top {
+		-webkit-align-self: flex-start;
+		-ms-flex-item-align: start;
+		align-self: flex-start;
+	}
+
+// Elements can be absolutely positioned inside of it's relative parent
+	// Horizontally centers the element
+	.horizontal-center {
+		position: absolute;
+		left: 50%;
+		top: auto;
+		transform: translatey(-50%);
+	}
+
+	// Vertically centers the element
+	.vertical-center {
+		position: absolute;
+		left: auto;
+		top: 50%;
+		transform: translatex(-50%);
+	}
+
+	// Abolutely centers the element
+	.absolute-center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+```
+
+_To use:_
+
+```
+@extend .middle-all
+@extend .align-middle
+@extend .align-center
+@extend .horizontal-middle
+@extend .vertical-middle
+@extend .absolute-middle
+
+<div class="container">
+	<div class="row align-center align-middle">
+		<div class="small-12 medium-6 columns align-self-top">column</div>
+		<div class="small-12 medium-6 columns align-self-middle column</div>
+		<div class="small-12 medium-6 columns align-self-bottom">column</div>
+	</div>
+</div>
+```
+
+
+### Text Alignment ###
+
+```
+// align texts center
+.text-center {
+	text-align: center;
+}
+// .. left
+.text-left {
+	text-align: left;
+}
+// .. right
+.text-right {
+	text-align: right;
+}
+```
+
+_To use:_
+
+```
+<div class="container">
+	<div class="row align-center align-middle">
+		<div class="small-12 large-4 columns text-left">column</div>
+		<div class="small-12 large-4 column text-right">column</div>
+		<div class="small-12 large-4 columns text-center">column</div>
+	</div>
+</div>
+```
+
+---
 
 ## Authors
 
