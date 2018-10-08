@@ -15,10 +15,10 @@ To isolate the grid, navigate to [grid.scss](https://github.com/ceryni173/Cattle
 
 If you wish to use the entire project, the folder structure is very simple.
 
-#### General ####
+#### General
 General contains all files needed to set up a new site, from colours, helpers, form elements and mixins
 
-#### Specific ####
+#### Specific
 Specific contains files related to the project you're about to build.
 
 _I use an autoprefixer on my scss!_
@@ -65,12 +65,12 @@ $breakpoint-xlarge: 1440px !default;
 
 ---
 
-## Extra mixins & Settings ##
+## Extra mixins & Settings
 
 These are just tidbits that come in handy when starting out a new build!
 
 
-### Sizings ###
+### Sizings
 ```
 $small-space: 5px;
 $medium-space: 20px;
@@ -82,7 +82,7 @@ $border-radius: 3px;
 ```
 
 
-### Atom Users!###
+### Atom Users!
 
 If you use Atom - this handy snippet allows for easy autofill of sizes! Be a faster dev
 
@@ -118,7 +118,7 @@ If you use Atom - this handy snippet allows for easy autofill of sizes! Be a fas
 ```
 
 
-### Crayola ###
+### Crayola
 
 ```
 $palette: (
@@ -148,7 +148,7 @@ background-color: $primary;
 color: $primaryText;
 ```
 
-### Buttons ###
+### Buttons
 
 ```
 @mixin button-bg($bg, $txt) {
@@ -170,7 +170,7 @@ _To use:_
 @include button-bg(#000000, #ffffff);
 ```
 
-### Hollow Buttons ###
+### Hollow Buttons
 
 ```
 @mixin button-hollow($border, $txt) {
@@ -192,7 +192,7 @@ _To use:_
 @include button-hollow(#000000, #000000);
 ```
 
-### Pseudos ###
+### Pseudos
 
 ```
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
@@ -208,7 +208,7 @@ _To use:_
 @include pseudo;
 ```
 
-### Placeholders ###
+### Placeholders
 
 ```
 @mixin input-placeholder {
@@ -228,7 +228,7 @@ _To use:_
 }
 ```
 
-### Headlines ###
+### Headlines
 
 ```
 @mixin heading {
@@ -258,7 +258,7 @@ _To use:_
 ```
 
 
-### Font sizes ###
+### Font sizes
 
 ```
 $body-font-size: 14
@@ -280,7 +280,7 @@ font-size: rem-calc(12)
 ```
 
 
-### Z Indexes ###
+### Z Indexes
 
 ```
 $z-index: (
@@ -305,7 +305,7 @@ _To use:_
 @include z-index(header);
 ```
 
-### Fades ###
+### Fades
 
 ```
 @mixin fade($type) {
@@ -333,9 +333,9 @@ _To use:_
 ---
 
 
-## Extends ##
+## Extends
 
-### Alignment ###
+### Alignment
 
 ```
 // Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
@@ -409,7 +409,7 @@ _To use:_
 ```
 
 
-### Text Alignment ###
+### Text Alignment
 
 ```
 // align texts center
