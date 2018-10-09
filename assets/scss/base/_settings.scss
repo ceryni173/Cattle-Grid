@@ -1,6 +1,3 @@
-// import site specific styles first
-@import '../site/settings.scss';
-
 // mixins to use
 @import 'mixins';
 
@@ -43,5 +40,8 @@ $pinterest: #bd081c;
 $etsy: #d5641c;
 $snapchat: #f8ec1e;
 
+
+
 // anchor styles
 $anchor-font-color: $primary;
+$body-font-size: rem-calc($body-font-size);

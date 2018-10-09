@@ -1,7 +1,7 @@
 // if you want an icon on your select initially, use this
 .select-wrapper {
 	&:before {
-		font-size: rem-calc(16);
+		font-size: rem-calc(16px);
 		font-family: 'FontAwesome';
 		position: absolute;
 		left: ($small-space * 3);
@@ -23,7 +23,7 @@
 		height: $input-height;
 		border: 1px solid $light;
 		margin: 0 0 1.14286rem;
-		font-size: rem-calc(12);
+		font-size: rem-calc(12px);
 		font-family: inherit;
 		line-height: normal;
 		color: $body-font-color;
@@ -186,7 +186,7 @@
 	}
 }
 
-// image filters 
+// image filters
 .imgFilter {
 	display: inline-block;
 	img {

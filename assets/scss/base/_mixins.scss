@@ -1,3 +1,6 @@
+// import site specific styles first
+@import '../site/settings.scss';
+
 //button generators
 @mixin button-bg($bg, $txt) {
 	background: $bg;
@@ -41,17 +44,10 @@
 }
 
 // set font size in rems
-$body-font-size: 14;
-@function rem-calc($pixels, $context: $body-font-size) {
-	@if (unitless($pixels)) {
-		$pixels: $pixels * 1px;
-	}
-	@if (unitless($context)) {
-		$context: $context * 1px;
-	}
-	@return $pixels / $context * 1em;
+@mixin rem-calc($size) {
+	font-size: $size; // Fallback in px.
+	font-size: ($size / $body-font-size) * 1rem;
 }
-// font-size: rem-calc(##)
 
 
 // Headline
@@ -68,9 +64,9 @@ $body-font-size: 14;
 
 @mixin h1 {
 	@include heading;
-	font-size: rem-calc(40);
+	font-size: rem-calc(40px);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(30);
+		font-size: rem-calc(30px);
 	}
 }
 
@@ -78,39 +74,39 @@ $body-font-size: 14;
 	@include heading;
 	font-size: rem-calc(30);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(20);
+		font-size: rem-calc(20px);
 	}
 }
 
 @mixin h3 {
 	@include heading;
-	font-size: rem-calc(25);
+	font-size: rem-calc(25px);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(18);
+		font-size: rem-calc(18px);
 	}
 }
 
 @mixin h4 {
 	@include heading;
-	font-size: rem-calc(20);
+	font-size: rem-calc(20px);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(16);
+		font-size: rem-calc(16px);
 	}
 }
 
 @mixin h5 {
 	@include heading;
-	font-size: rem-calc(18);
+	font-size: rem-calc(18px);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(14);
+		font-size: rem-calc(14px);
 	}
 }
 
 @mixin h6 {
 	@include heading;
-	font-size: rem-calc(16);
+	font-size: rem-calc(16px);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(14);
+		font-size: rem-calc(14px);
 	}
 }
 
