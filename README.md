@@ -15,11 +15,11 @@ To isolate the grid, navigate to [grid.scss](https://github.com/ceryni173/Cattle
 
 If you wish to use the entire project, the folder structure is very simple.
 
-#### General
+#### Base
 General contains all files needed to set up a new site, from colours, helpers, form elements and mixins
 
-#### Specific
-Specific contains files related to the project you're about to build.
+#### Site
+Site contains files related to the project you're about to build.
 
 _I use an autoprefixer on my scss!_
 
@@ -343,16 +343,15 @@ _To use:_
 
 ## Extends
 
-### Alignment
+### Alignment & Positioning
 
 ```
 // Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
-	.middle-all{
+	.align-all {
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		display: flex;
 		flex-direction: column;
-		align-items: center;
 	}
 
 	.align-middle {
@@ -402,16 +401,29 @@ _To use:_
 _To use:_
 
 ```
-@extend .middle-all
-@extend .horizontal-center
-@extend .vertical-center
-@extend .absolute-center
+@extend .align-all;
+@extend .horizontal-center;
+@extend .vertical-center;
+@extend .absolute-center;
 
 <div class="container">
-	<div class="row align-center align-middle">
+	<div class="row align-all">
 		<div class="small-12 medium-6 columns align-self-top">column</div>
-		<div class="small-12 medium-6 columns align-self-middle column</div>
+		<div class="small-12 medium-6 columns align-self-middle"> column</div>
 		<div class="small-12 medium-6 columns align-self-bottom">column</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="box horizontal-center align-all">
+				horizontal-center
+			</div>
+			<div class="box vertical-center align-all">
+				vertical-center
+			</div>
+			<div class="box absolute-center align-all">
+				absolute-center
+			</div>
+		</div>
 	</div>
 </div>
 ```

@@ -118,6 +118,7 @@ $breakpoints: (
 	.columns {
 		box-sizing: border-box;
 	    min-width: initial;
+		width: 100%;
 		flex-grow: 1;
 		padding-left: calc(#{$grid-gutter-medium} / 2);
 		padding-right: calc(#{$grid-gutter-medium} / 2);

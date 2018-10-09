@@ -107,3 +107,24 @@ p {
 input {
 	margin-bottom: ($small-space * 2);
 }
+
+.showcase {
+	background-color: #f9f9f9;
+	margin-top: $medium-space;
+}
+
+.sandbox  {
+	height: 400px;
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	background-color: rgba($light, 0.2);
+	padding: $medium-space;
+	.box {
+		height: 100px;
+		width: 100px;
+		background-color: rgba($primary, 10%);
+		color: $primaryText;
+		font-size: rem-calc(11);
+	}
+}

@@ -42,6 +42,7 @@
 		<nav>
 			<ul>
 				<li><a href="#grid">Grid</a></li>
+				<li><a href="#positioning">Positioning</a></li>
 				<li><a href="#headlines">Headlines</a></li>
 				<li><a href="#list">Lists</a></li>
 				<li><a href="#tables">Tables</a></li>
@@ -66,27 +67,53 @@
 			<div id="grid"></div>
 			<div class="grid">
 				<div class="row">
-					<div class="small-12 medium-6 large-3 columns">column</div>
-					<div class="small-12 medium-6 large-3 columns">column</div>
-					<div class="small-12 medium-6 large-3 columns">column</div>
-					<div class="small-12 medium-6 large-3 columns">column</div>
+					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
 				</div>
 				<div class="row">
-					<div class="small-12 large-4 columns">column</div>
-					<div class="small-12 large-4 columns">column</div>
-					<div class="small-12 large-4 columns">column</div>
+					<div class="small-12 large-4 columns">small-12 large-4</div>
+					<div class="small-12 large-4 columns">small-12 large-4</div>
+					<div class="small-12 large-4 columns">small-12 large-4</div>
 				</div>
 				<div class="row">
-					<div class="small-12 large-6 columns">column</div>
-					<div class="small-12 large-6 columns">column</div>
+					<div class="small-12 large-6 columns">small-12 large-6</div>
+					<div class="small-12 large-6 columns">small-12 large-6</div>
 				</div>
 				<div class="row">
-					<div class="small-12 columns">column</div>
+					<div class="small-12 columns">small-12</div>
+				</div>
+				<div class="row align-all showcase">
+					<div class="small-12 medium-4 columns align-self-top">align-self-top</div>
+					<div class="small-12 medium-4 columns align-self-middle">align-self-middle</div>
+					<div class="small-12 medium-4 columns align-self-bottom">align-self-bottom</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="fades"></div>
+				<div class="small-12 columns">
+					<hr/>
+					<strong>Positioning</strong>
+				</div>
+				<div class="small-12 columns">
+					<div class="sandbox">
+						<div class="box horizontal-center align-all">
+							horizontal-center
+						</div>
+						<div class="box vertical-center align-all">
+							vertical-center
+						</div>
+						<div class="box absolute-center align-all">
+							absolute-center
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="headlines"></div>
 			<div class="row">
-				<div class="column small-12">
+				<div class="columns small-12">
+					<hr/>
 					<h1>
 						Level 1 heading
 					</h1>
@@ -123,7 +150,7 @@
 					<hr/>
 				</div>
 				<div id="list"></div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>List items</strong>
 					<ul>
 						<li>This is a list item</li>
@@ -141,7 +168,7 @@
 					</ul>
 					<hr/>
 				</div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Ordered lists</strong>
 					<ol>
 						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
@@ -157,7 +184,7 @@
 					<hr/>
 				</div>
 				<div id="tables"></div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>A Table</strong>
 					<table>
 						<tr>
@@ -204,7 +231,7 @@
 					<hr/>
 				</div>
 				<div id="quotes"></div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Block Quotes</strong>
 					<blockquote>
 						<p>
@@ -213,7 +240,7 @@
 					</blockquote>
 					<hr/>
 				</div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Block Quotes with Cite</strong>
 					<blockquote>
 						<p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
@@ -223,7 +250,7 @@
 					</blockquote>
 					<hr/>
 				</div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Pre Code</strong>
 <pre><code>#header h1 a {
 	display: block;
@@ -232,7 +259,7 @@
 }</code></pre>
 					<hr/>
 				</div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<div id="text"></div>
 					<strong>Address</strong>
 					<address>
@@ -240,7 +267,7 @@
 					</address>
 					<hr/>
 				</div>
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<p>
 						I am <a href="?abc123">the a tag</a> example<br>
 						I am <abbr title="test">the abbr tag</abbr> example<br>
@@ -253,7 +280,7 @@
 					</p>
 				</div>
 
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<p>
 						I am <dfn>the dfn tag</dfn> example<br>
 						I am <em>the em tag</em> example<br>
@@ -267,7 +294,7 @@
 					</p>
 				</div>
 
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<p>
 						I am <sub>the sub tag</sub> example<br>
 						I am <tt>the tt tag</tt> example<br>
@@ -280,22 +307,22 @@
 				</div>
 
 				<div id="form"></div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<hr/>
 					<strong>Inputs</strong>
 				</div>
 
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<label for="f1">Text input:</label>
 					<input type="text" id="f1" value="input text">
 				</div>
 
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<label for="f2">Text input Rounded:</label>
 					<input type="text" id="f2" value="input text" class="rounded">
 				</div>
 
-				<div class="column small-12 medium-4">
+				<div class="columns small-12 medium-4">
 					<label for="pw">Password input:</label>
 					<input type="password" id="pw" value="password">
 				</div>
@@ -303,10 +330,10 @@
 				<div class="small-12 columns">
 					<hr/>
 				</div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Select Options</strong>
 				</div>
-				<div class="column small-12 large-6">
+				<div class="columns small-12 large-6">
 					<label for="f4">Select field:</label>
 					<div class="select-wrapper name">
 						<select id="f4">
@@ -319,7 +346,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="column small-12 large-6">
+				<div class="columns small-12 large-6">
 					<label for="f5">Select field:</label>
 					<div class="select-wrapper name">
 						<select id="f5" class="rounded">
@@ -336,11 +363,11 @@
 				<div class="small-12 columns">
 					<hr/>
 				</div>
-				<div class="column small-12 large-6">
+				<div class="columns small-12 large-6">
 					<strong>Text Area</strong>
 					<textarea id="f5" cols="30" rows="5">Textarea text</textarea>
 				</div>
-				<div class="column small-12 large-6">
+				<div class="columns small-12 large-6">
 					<strong>Text Area Rounded</strong>
 					<textarea class="rounded" id="f6" cols="30" rows="5">Textarea text</textarea>
 				</div>
@@ -352,13 +379,13 @@
 				<div class="small-12 columns">
 					<strong>Check Boxes</strong>
 				</div>
-				<div class="column small-12 medium-4 large-2">
+				<div class="columns small-12 medium-4 large-2">
 					<label class="control" for="checkbox1">
 						<input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1" />
 						<div class="checky"></div>
 					</label>
 				</div>
-				<div class="column small-12 medium-4 large-2">
+				<div class="columns small-12 medium-4 large-2">
 					<label class="control" for="checkbox2">
 						<input type="checkbox" id="checkbox2" name="checkbox1" value="checkbox1" />
 						<div class="checky rounded"></div>
@@ -368,25 +395,25 @@
 					<hr/>
 					<strong>Radio Boxes</strong>
 				</div>
-				<div class="column small-4 medium-4 large-2">
+				<div class="columns small-4 medium-4 large-2">
 					<label class="control radio" for="radio1">
 						<input type="radio" id="radio1" name="radioGroup" value="radio1" />
 						<div class="checky"></div>
 					</label>
 				</div>
-				<div class="column small-4 medium-4 large-2">
+				<div class="columns small-4 medium-4 large-2">
 					<label class="control radio" for="radio2">
 						<input type="radio" id="radio2" name="radioGroup" value="radio1" />
 						<div class="checky"></div>
 					</label>
 				</div>
-				<div class="column small-4 large-4">
+				<div class="columns small-4 large-4">
 					<label class="control radio" for="radio3">
 						<input type="radio" id="radio3" name="radioGroup" value="radio1" />
 						<div class="checky"></div>
 					</label>
 				</div>
-				<div class="column small-12 large-12">
+				<div class="columns small-12 large-12">
 					<hr/>
 					<strong>Switch</strong>
 					<label>
@@ -398,7 +425,7 @@
 			</div>
 			<div class="row">
 				<div id="buttons"></div>
-				<div class="column small-12">
+				<div class="columns small-12">
 					<strong>Buttons</strong>
 					<a class="button primary"> Primary</a>
 					<a class="button primary hollow"> Primary</a>
