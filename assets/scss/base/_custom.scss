@@ -94,8 +94,8 @@ hr {
 
 // set base paragraph size
 p {
-	line-height: 1.6;
-	margin-bottom: 1.2rem;
+	line-height: normal;
+	margin-bottom: rem-calc(10);
 	text-rendering: optimizeLegibility;
 	font-size: $body-font-size;
 	// if it's the only p contained within an element
@@ -106,18 +106,18 @@ p {
 	}
 	// small print
 	&.small {
-		font-size: rem-calc(10px);
+		font-size: rem-calc(10);
 	}
 }
 
 small,
 .small {
-	font-size: rem-calc(10px);
+	font-size: rem-calc(10);
 	font-weight: 400;
 }
 
 .large {
-	font-size: rem-calc(18px);
+	font-size: rem-calc(18);
 	font-weight: 400;
 }
 
@@ -202,7 +202,7 @@ code {
 	border-radius: $border-radius;
 	color: $primary;
 	font-size: $body-font-size;
-	line-height: rem-calc(30px);
+	line-height: rem-calc(30);
 	padding: $small-space;
 }
 

@@ -43,10 +43,9 @@
 	}
 }
 
-// set font size in rems
-@mixin rem-calc($size) {
-	font-size: $size; // Fallback in px.
-	font-size: ($size / $body-font-size) * 1rem;
+@function rem-calc($font-size) {
+  $rem-size: $font-size / 16;
+  @return #{$rem-size}rem;
 }
 
 
@@ -64,9 +63,9 @@
 
 @mixin h1 {
 	@include heading;
-	font-size: rem-calc(40px);
+	font-size: rem-calc(40);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(30px);
+		font-size: rem-calc(30);
 	}
 }
 
@@ -74,39 +73,39 @@
 	@include heading;
 	font-size: rem-calc(30);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(20px);
+		font-size: rem-calc(20);
 	}
 }
 
 @mixin h3 {
 	@include heading;
-	font-size: rem-calc(25px);
+	font-size: rem-calc(25);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(18px);
+		font-size: rem-calc(18);
 	}
 }
 
 @mixin h4 {
 	@include heading;
-	font-size: rem-calc(20px);
+	font-size: rem-calc(20);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(16px);
+		font-size: rem-calc(16);
 	}
 }
 
 @mixin h5 {
 	@include heading;
-	font-size: rem-calc(18px);
+	font-size: rem-calc(18);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(14px);
+		font-size: rem-calc(14);
 	}
 }
 
 @mixin h6 {
 	@include heading;
-	font-size: rem-calc(16px);
+	font-size: rem-calc(16);
 	@include breakpoint($smallOnly) {
-		font-size: rem-calc(14px);
+		font-size: rem-calc(14);
 	}
 }
 

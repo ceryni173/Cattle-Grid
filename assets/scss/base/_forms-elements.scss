@@ -13,7 +13,7 @@ select {
 	// add font awesome to font family for placeholders
 	color: $body-font-color;
 	font-family: $body-font-family;
-	font-size: rem-calc(12px);
+	font-size: rem-calc(12);
 	font-weight: 300;
 	min-height: $input-height;
 	padding: 0;
@@ -80,7 +80,7 @@ textarea {
 label {
 	color: $body-font-color;
 	display: inline-block;
-	font-size: rem-calc(10px);
+	font-size: rem-calc(10);
 	text-transform: uppercase;
 	margin-bottom: $small-space;
 	opacity: 0.6;
@@ -89,7 +89,7 @@ label {
 select {
 	min-height: $input-height;
 	color: $light;
-	font-size: rem-calc(14px);
+	font-size: rem-calc(14);
 }
 
 fieldset {

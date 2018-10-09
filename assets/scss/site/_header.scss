@@ -22,7 +22,7 @@ nav {
 			display: inline-flex;
 			a {
 				text-transform: uppercase;
-                font-size: rem-calc(12px);
+                font-size: $body-font-size;
 				&:hover,
 				&:focus,
 				&:active {
