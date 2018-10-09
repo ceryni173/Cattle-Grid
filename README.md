@@ -384,7 +384,6 @@ _To use:_
 		transform: translateX(-50%);
 	}
 
-	// Vertically centers the element
 	.vertical-center {
 		position: absolute;
 		left: auto;
@@ -392,7 +391,6 @@ _To use:_
 		transform: translateY(-50%);
 	}
 
-	// Abolutely centers the element
 	.absolute-center {
 		position: absolute;
 		top: 50%;
