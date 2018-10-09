@@ -352,6 +352,7 @@ _To use:_
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		text-align: center;
 	}
 
 	.align-middle {
@@ -380,20 +381,22 @@ _To use:_
 		position: absolute;
 		left: 50%;
 		top: auto;
-		transform: translatey(-50%);
+		transform: translateX(-50%);
 	}
 
+	// Vertically centers the element
 	.vertical-center {
 		position: absolute;
 		left: auto;
 		top: 50%;
-		transform: translatex(-50%);
+		transform: translateY(-50%);
 	}
 
+	// Abolutely centers the element
 	.absolute-center {
 		position: absolute;
-		left: 50%;
 		top: 50%;
+		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 ```
