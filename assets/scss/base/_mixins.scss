@@ -43,11 +43,11 @@
 	}
 }
 
+// Rem Calc 
 @function rem-calc($font-size) {
-  $rem-size: $font-size / 16;
-  @return #{$rem-size}rem;
+	$rem-size: $font-size / 16;
+	@return #{$rem-size}rem;
 }
-
 
 // Headline
 @mixin heading {

@@ -269,16 +269,12 @@ _To use:_
 ### Font sizes
 
 ```
-$body-font-size: 14
-@function rem-calc($pixels, $context: $body-font-size) {
-	@if (unitless($pixels)) {
-		$pixels: $pixels * 1px;
-	}
-	@if (unitless($context)) {
-		$context: $context * 1px;
-	}
-	@return $pixels / $context * 1em;
+// Rem Calc
+@function rem-calc($font-size) {
+	$rem-size: $font-size / 16;
+	@return #{$rem-size}rem;
 }
+
 ```
 
 _To use:_

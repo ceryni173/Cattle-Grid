@@ -181,16 +181,12 @@ color: $primaryText;
 </code></pre><p><em>To use:</em></p>
 <pre><code>@include h1;
 </code></pre><h3 id="font-sizes">Font sizes</h3>
-<pre><code>$body-font-size: 14
-@function rem-calc($pixels, $context: $body-font-size) {
-    @if (unitless($pixels)) {
-        $pixels: $pixels * 1px;
-    }
-    @if (unitless($context)) {
-        $context: $context * 1px;
-    }
-    @return $pixels / $context * 1em;
+<pre><code>// Rem Calc
+@function rem-calc($font-size) {
+    $rem-size: $font-size / 16;
+    @return #{$rem-size}rem;
 }
+
 </code></pre><p><em>To use:</em></p>
 <pre><code>font-size: rem-calc(12)
 </code></pre><h3 id="z-indexes">Z Indexes</h3>
