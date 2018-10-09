@@ -46,6 +46,11 @@ main {
 	flex: 1 0 auto;
 }
 
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+	margin: 0;
+	padding: 0;
+}
+
 // headlines
 h1 { @include h1; }
 h2 { @include h2; }
@@ -53,11 +58,6 @@ h3 { @include h3; }
 h4 { @include h4; }
 h5 { @include h5; }
 h6 { @include h6; }
-
-blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
-	margin: 0;
-	padding: 0;
-}
 
 // normalise
 abbr[title],

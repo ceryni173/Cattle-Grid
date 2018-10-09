@@ -43,7 +43,7 @@
 	}
 }
 
-// Rem Calc 
+// Rem Calc
 @function rem-calc($font-size) {
 	$rem-size: $font-size / 16;
 	@return #{$rem-size}rem;
@@ -56,8 +56,8 @@
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin-top: 0;
-	margin-bottom: 0.5rem;
-	line-height: 1.4;
+	margin-bottom: ($small-space * 3);
+	line-height: normal;
 	padding: 0;
 }
 
