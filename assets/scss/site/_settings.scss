@@ -1,0 +1,18 @@
+// crayola
+$palette: (
+	primary: #8eb8ba,
+	primaryText: #fcf8f4,
+	secondary: #ebc7ba,
+	secondaryText: #697280,
+	success: #c9e4bf,
+	error: #d38a8a,
+	alert: #d38a8a,
+	warning: #d29075,
+	light-grey: #c4c5c5
+);
+
+// global
+$body-font-size: rem-calc(13);
+$body-background: #fff;
+$body-font-color: #53596C;
+$body-font-family: 'Open Sans', sans-serif;

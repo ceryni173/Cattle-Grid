@@ -1,3 +1,7 @@
+// import site specific styles first
+@import '../site/settings.scss';
+
+// mixins to use
 @import 'mixins';
 
 // sizing
@@ -8,19 +12,6 @@ $xlarge-space: 60px;
 $hundred: ($large-space + $xlarge-space);
 $input-height: $large-space;
 $border-radius: 3px;
-
-// crayola
-$palette: (
-	primary: #8eb8ba,
-	primaryText: #fcf8f4,
-	secondary: #ebc7ba,
-	secondaryText: #697280,
-	success: #c9e4bf,
-	error: #d38a8a,
-	alert: #d38a8a,
-	warning: #d29075,
-	light-grey: #c4c5c5
-);
 
 // Z index heirarchy
 $z-index: (
@@ -52,9 +43,5 @@ $pinterest: #bd081c;
 $etsy: #d5641c;
 $snapchat: #f8ec1e;
 
-// global
-$body-font-size: rem-calc(13);
-$body-background: #fff;
-$body-font-color: #53596C;
-$body-font-family: 'Open Sans', sans-serif;
+// anchor styles
 $anchor-font-color: $primary;
