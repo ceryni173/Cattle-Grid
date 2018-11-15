@@ -253,7 +253,7 @@ _To use:_
 @mixin h1 {
 	@include heading;
 	font-size: rem-calc(40);
-	@include breakpoint($smallOnly) {
+	@include breakpoint($small-only) {
 		font-size: rem-calc(30);
 	}
 }

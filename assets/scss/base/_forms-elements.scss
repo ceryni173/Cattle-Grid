@@ -26,10 +26,10 @@ select {
 	border-radius: 0;
 
 	// style placeholder
-	@mixin input-placeholder {
+	@include input-placeholder {
 		color: $light;
 		font-family: 'FontAwesome', $body-font-family;
-		font-size: 13px;
+		font-size: rem-calc(11);
 		position: relative;
 		padding: 0;
 		top: 0px;

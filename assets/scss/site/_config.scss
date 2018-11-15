@@ -12,7 +12,9 @@ $palette: (
 );
 
 // global
-$font-size: 14;
+$body-font-size: rem-calc(14);
 $body-background: #ffffff;
 $body-font-color: #53596C;
+
+// Loaded from Google Fonts in the header
 $body-font-family: 'Open Sans', sans-serif;

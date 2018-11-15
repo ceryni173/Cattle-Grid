@@ -9,7 +9,7 @@
 
 	// if applied, has a border radius
 	&.rounded {
-		border-radius: $border-radius;
+		border-radius: $border-radius!important;
 	}
 }
 
@@ -238,22 +238,50 @@ blockquote {
 
 //Alignment and positioning
 
+//Alignment and positioning
+
 // only for medium up,
 // mobile will hardly ever need these
-@mixin mq($medium) {
+@include breakpoint($medium) {
 	// remove padding from the left
 	.zeroL {
-		padding-left: 0;
+		padding-left: 0!important;
 	}
 
 	// remove padding from the right
 	.zeroR {
-		padding-right: 0;
+		padding-right:  0!important;
 	}
 
 	// remove padding from the left and right
 	.zero {
-		padding-left: 0;
-		padding-right: 0;
+		padding-left:  0!important;
+		padding-right:  0!important;
+	}
+
+	// remove padding from all axis
+	.zeroAll {
+		padding:  0!important;
+	}
+
+	// remove padding from the left
+	.zeroLM {
+		margin-left:  0!important;
+	}
+
+	// remove margin from the right
+	.zeroRM {
+		margin-right:  0!important;
+	}
+
+	// remove margin from the left and right
+	.zeroM {
+		margin-left:  0!important;
+		margin-right:  0!important;
+	}
+
+	// remove margin from all axis
+	.zeroMAll {
+		margin:  0!important;
 	}
 }

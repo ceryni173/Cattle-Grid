@@ -18,8 +18,9 @@ input[type="button"] {
 	cursor: pointer;
 	text-decoration: none;
 	height: $input-height;
+	font-family: $body-font-family;
 
-	@include breakpoint($smallOnly) {
+	@include breakpoint($small-only) {
 		width: 100%;
 	}
 

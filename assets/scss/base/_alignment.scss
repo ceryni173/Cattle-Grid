@@ -30,6 +30,24 @@
 	justify-content: center;
 }
 
+.align-left {
+    justify-content: flex-start;
+}
+.align-right {
+    justify-content: flex-end;
+}
+.align-center {
+    justify-content: center;
+}
+.align-justify {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.align-spaced {
+    justify-content: space-around;
+}
+
+
 // Columns in a flex grid can be aligned horizontal or vertical individually also
 // align a column within a row to the bottom
 .align-self-bottom {
