@@ -1,6 +1,6 @@
 //Rem Calc
 @function rem-calc($font-size) {
-	$rem-size: $font-size / 14;
+	$rem-size: $font-size / 16;
 	@return #{$rem-size}rem;
 }
 
