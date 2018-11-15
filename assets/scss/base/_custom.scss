@@ -9,7 +9,7 @@
 
 	// if applied, has a border radius
 	&.rounded {
-		border-radius: $border-radius;
+		border-radius: $border-radius!important;
 	}
 }
 

@@ -7,7 +7,7 @@ nav {
 	padding: $small-space $large-space;
 	background-color: #ffffff;
 	@include z-index(navigation);
-	@media #{$smallOnly}{
+	@media #{$small-only}{
 		display: none;
 	}
 	ul {
