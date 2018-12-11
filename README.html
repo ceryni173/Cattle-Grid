@@ -303,6 +303,34 @@ color: $primaryText;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><hr>
+<h2 id="markup-elements">Markup Elements</h2>
+<h3 id="drawer">Drawer</h3>
+<p><em>To use:</em></p>
+<pre><code>
+// Will sit to the top right of the page
+// The Drawer will open from the right
+
+
+&lt;a href=&quot;#main-menu&quot; role=&quot;button&quot; id=&quot;main-menu-toggle&quot; class=&quot;menu-toggle&quot;
+    aria-expanded=&quot;false&quot;
+    aria-controls=&quot;main-menu&quot;
+    aria-label=&quot;Open main menu&quot;&gt;
+    &lt;span class=&quot;fa fa-bars&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;nav id=&quot;main-menu&quot; role=&quot;navigation&quot; class=&quot;main-menu&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Main menu&quot;&gt;
+    &lt;a href=&quot;#main-menu-toggle&quot; role=&quot;button&quot; id=&quot;main-menu-close&quot; class=&quot;menu-close&quot;
+        aria-expanded=&quot;false&quot;
+        aria-controls=&quot;main-menu&quot;
+        aria-label=&quot;Close main menu&quot;&gt;
+        &lt;span class=&quot;fa fa-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;drawerMenu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;a href=&quot;#main-menu-toggle&quot; class=&quot;menuBg&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot; hidden&gt;&lt;/a&gt;
+
+</code></pre><hr>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><strong>Ceryni</strong> - <em>Initial work</em> - <a href="https://github.com/Ceryni173">Ceryni173</a></li>
