@@ -5,9 +5,8 @@ textarea:focus,
 button:focus {
 	outline: none;
 }
-
 // generic styling on input elements
-input:not([type='checkbox']):not([type='radio']):not([type='button']),
+input:not([type='checkbox']):not([type='radio']):not([type='button']):not([type='submit']),
 textarea,
 select {
 	// add font awesome to font family for placeholders
@@ -18,13 +17,12 @@ select {
 	min-height: $input-height;
 	padding: 0;
 	padding-left: ($small-space * 2);
-	border: 1px solid $light;
+	border: 1px solid $border;
 	box-shadow: none;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 0;
-
 	// style placeholder
 	@include input-placeholder {
 		color: $light;
@@ -36,7 +34,6 @@ select {
 		transition: all, 250ms, ease-in;
 		line-height: normal;
 		@include z-index(main);
-
 		// for safari only
 		@media only screen and (-webkit-min-device-pixel-ratio: 1) {
 			padding-top: 0px;
@@ -57,7 +54,6 @@ select {
 		color: transparent;
 	}
 }
-
 // for focused elements
 input:not([type='checkbox']):not([type='radio']):not([type='button']):focus,
 select:focus,
@@ -68,7 +64,6 @@ textarea:focus {
 	transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 	border: none !important;
 }
-
 textarea {
 	resize: none;
 	height: $hundred;
@@ -76,29 +71,25 @@ textarea {
 	padding: $small-space ($small-space * 2);
     font-size: $body-font-size;
 }
-
 label {
 	color: $body-font-color;
 	display: inline-block;
-	font-size: rem-calc(10);
+	font-size: rem-calc(11);
 	text-transform: uppercase;
 	margin-bottom: $small-space;
 	opacity: 0.6;
 }
-
 select {
 	min-height: $input-height;
 	color: $light;
 	font-size: rem-calc(14);
 }
-
 fieldset {
     margin-bottom: $medium-space;
 	border: 0;
     margin: 0;
     padding: 0;
 }
-
 legend {
     font-size: $body-font-size;
     font-weight: 500;

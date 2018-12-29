@@ -1,9 +1,7 @@
 // import site specific styles first
 @import '../site/config.scss';
-
 // mixins to use
 @import 'mixins';
-
 // sizing
 $small-space: 5px;
 $medium-space: 20px;
@@ -12,7 +10,6 @@ $xlarge-space: 60px;
 $hundred: ($large-space + $xlarge-space);
 $input-height: $large-space;
 $border-radius: 3px;
-
 // Z index heirarchy
 $z-index: (
 	modal           : 200,
@@ -21,19 +18,17 @@ $z-index: (
 	header         	: 50,
 	main			: 10,
 );
-
 // shorthand
 $primary: map-get($palette, primary);
 $primaryText: map-get($palette, primaryText);
 $secondary: map-get($palette, secondary);
 $secondaryText: map-get($palette, secondaryText);
 $light: map-get($palette, light-grey);
-
+$border: darken($light, 5%);
 // notifications
 $success: map-get($palette, success);
 $error: map-get($palette, error);
 $warning: map-get($palette, warning);
-
 // social
 $facebook: #3b5998;
 $twitter: #55acee;
@@ -42,6 +37,9 @@ $facebook: #3b5998;
 $pinterest: #bd081c;
 $etsy: #d5641c;
 $snapchat: #f8ec1e;
-
+$linkedin: #0077b5;
+$buffer: #323b43;
+$reddit: #ff4500;
+$email: $primary;
 // anchor styles
 $anchor-font-color: $primary;

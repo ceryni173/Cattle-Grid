@@ -1,10 +1,10 @@
 .no-js button[type="button"] {
 	display: none;
 }
-
 // buttons
 .button,
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
 	background-color: $primary;
 	border: none;
 	color: #ffffff;
@@ -19,18 +19,15 @@ input[type="button"] {
 	text-decoration: none;
 	height: $input-height;
 	font-family: $body-font-family;
-
 	@include breakpoint($small-only) {
 		width: 100%;
 	}
-
 	// style focus & hover
 	&:hover, &:focus {
 		background-color: darken($primary, 10%);
 		text-decoration: none;
 		color: #ffffff;
 	}
-
 	&.primary {
 		@include button-bg($primary, $primaryText);
 		&.hollow {
@@ -67,10 +64,28 @@ input[type="button"] {
 			@include button-hollow($pinterest, $pinterest);
 		}
 	}
-	&.snapchat {
-		@include button-bg($snapchat, $body-font-color);
+	&.linkedin {
+		@include button-bg($linkedin, #ffffff);
 		&.hollow {
-			@include button-hollow($snapchat, $body-font-color);
+			@include button-hollow($linkedin, #ffffff);
+		}
+	}
+	&.buffer {
+		@include button-bg($buffer, #ffffff);
+		&.hollow {
+			@include button-hollow($buffer, #ffffff);
+		}
+	}
+	&.email {
+		@include button-bg($email, $body-font-color);
+		&.hollow {
+			@include button-hollow($email, $body-font-color);
+		}
+	}
+	&.reddit {
+		@include button-bg($reddit, #ffffff);
+		&.hollow {
+			@include button-hollow($reddit, #ffffff);
 		}
 	}
 }

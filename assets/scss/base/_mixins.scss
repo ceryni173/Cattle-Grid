@@ -3,22 +3,20 @@
 	$rem-size: $font-size / 16;
 	@return #{$rem-size}rem;
 }
-
 // import site specific styles after the rem math
 @import '../site/config.scss';
-
 // Headline
 @mixin heading {
 	color: inherit;
-	font-weight: 500;
+	font-weight: 300;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin-top: 0;
 	margin-bottom: ($small-space * 3);
 	line-height: normal;
+	font-family: $header-font-family;
 	padding: 0;
 }
-
 @mixin h1 {
 	@include heading;
 	font-size: rem-calc(40);
@@ -26,23 +24,20 @@
 		font-size: rem-calc(30);
 	}
 }
-
 @mixin h2 {
 	@include heading;
-	font-size: rem-calc(25);
-	@include breakpoint($small-only) {
-		font-size: rem-calc(20);
-	}
-}
-
-@mixin h3 {
-	@include heading;
-	font-size: rem-calc(25);
+	font-size: rem-calc(20);
 	@include breakpoint($small-only) {
 		font-size: rem-calc(18);
 	}
 }
-
+@mixin h3 {
+	@include heading;
+	font-size: rem-calc(25);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(16);
+	}
+}
 @mixin h4 {
 	@include heading;
 	font-size: rem-calc(20);
@@ -50,7 +45,6 @@
 		font-size: rem-calc(16);
 	}
 }
-
 @mixin h5 {
 	@include heading;
 	font-size: rem-calc(18);
@@ -58,7 +52,6 @@
 		font-size: rem-calc(14);
 	}
 }
-
 @mixin h6 {
 	@include heading;
 	font-size: rem-calc(16);
@@ -66,8 +59,6 @@
 		font-size: rem-calc(14);
 	}
 }
-
-
 //button generators
 @mixin button-bg($bg, $txt) {
 	background: $bg;
@@ -80,7 +71,6 @@
 		transition: all 0.3s ease;
 	}
 }
-
 //button generators
 @mixin button-hollow($border, $txt) {
 	background: transparent;
@@ -93,7 +83,6 @@
 		color: darken($txt, 10%);
 	}
 }
-
 // Deep Get
 @function map-fetch($map, $keys) {
 	$key: nth($keys, 1);
@@ -109,8 +98,6 @@
 		@return $value;
 	}
 }
-
-
 // set the standard for the pseufo code block
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;
@@ -118,7 +105,6 @@
 	position: $pos;
 }
 // @include pseudo;
-
 @mixin input-placeholder {
 	&.placeholder { @content; }
 	&:-moz-placeholder { @content; }
@@ -129,7 +115,6 @@
 // @include input-placeholder {
 //     color: $grey;
 // }
-
 @function z($name) {
 	@if index($z-indexes, $name) {
 		@return (length($z-indexes) - index($z-indexes, $name)) + 1;
@@ -141,8 +126,6 @@
 // .site-header {
 //     z-index: z('site-header');
 // }
-
-
 @mixin fade($type) {
 	@if $type == 'hide' {
 		visibility: hidden;
@@ -157,14 +140,11 @@
 }
 // @include fade(hide)
 // @include fade(show)
-
 // z-indexes
 @function z-index($key) {
 	@return map-get($z-index, $key);
 }
-
 @mixin z-index($key) {
 	z-index: z-index($key);
 }
-
 // @include z-index(navigation);

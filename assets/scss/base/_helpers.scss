@@ -9,12 +9,10 @@
 		color: $primary;
 		z-index: 10;
 	}
-
 	// set a class name, with a matching icon (Font Awesome)
 	&.name:before {
 		content: '\f041';
 	}
-
 	// pad out the select so the icon has room
 	select {
 		padding-left: ($small-space * 7);
@@ -37,7 +35,6 @@
 		background-repeat: no-repeat;
 	}
 }
-
 //checkbox & radio
 .control {
 	display: inline-block;
@@ -59,7 +56,6 @@
 			border-color: $light;
 		}
 	}
-
 	// for radio buttons
 	&.radio {
 		.checky {
@@ -94,7 +90,6 @@
 			border-width: 0 2px 2px 0;
 			transform: rotate(45deg);
 		}
-
 	}
 	&:hover input ~ .checky {
 		background: rgba($primary, 0.3);
@@ -125,7 +120,6 @@
 		}
 	}
 }
-
 // toggle switch
 .checkSwitch {
 	-webkit-appearance: none;
@@ -143,7 +137,6 @@
 	display: inline-block;
 	top: $small-space;
 }
-
 /* switch background */
 .checkSwitchInput {
 	position: absolute;
@@ -163,7 +156,6 @@
 		&::before {
 			transform: translate(18px, 0);
 			background: darken($primary, 10%);
-
 		}
 		&.dark::before {
 			background: lighten($primary, 10%);
@@ -185,7 +177,6 @@
 		background: lighten($primary, 15%);
 	}
 }
-
 // image filters
 .imgFilter {
 	display: inline-block;
@@ -211,11 +202,20 @@
 		filter: blur(#{$small-space});
 	}
 }
-
-
 // to debug any element
 .debug {
 	* {
 		border: 1px solid red;
 	}
+}
+// when containing none row elements
+.extendRow {
+	display: flex;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+	flex-flow: row wrap;
+	width: 100%;
+	max-width: $global-width;
 }
