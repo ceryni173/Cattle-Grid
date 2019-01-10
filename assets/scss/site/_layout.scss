@@ -7,6 +7,31 @@ main {
 	margin-bottom: ($small-space * 2);
 }
 
+.notification {
+	width: calc(100% + 120px);
+	background-color: rgba($primary, 0.7);
+	border-bottom: 3px solid $primary;
+	padding: $small-space;
+	text-align: center;
+	margin-left: -$large-space;
+	margin-right: -$large-space;
+	margin-top: -$small-space;
+	margin-bottom: ($small-space * 2);
+	strong {
+		font-weight: normal;
+	}
+	p {
+		color: $body-font-color;
+		a {
+			color: $body-font-color;
+			font-weight: bold;
+		}
+	}
+	.fa {
+		color: #ffffff;
+	}
+}
+
 strong:not(.alone) {
 	display: block;
 	margin-bottom: $small-space;
@@ -30,7 +55,7 @@ strong:not(.alone) {
 .logo {
 	width: 100%;
 	max-width: 400px;
-	margin: $large-space 0;
+	margin: 100px 0 $xlarge-space 0;
 }
 
 

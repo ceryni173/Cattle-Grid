@@ -10,8 +10,6 @@
 .text-right {
 	text-align: right;
 }
-
-
 // Columns in a flex grid can be aligned horizontal or vertical inside of their parent.
 // within a container, align items visually center
 .align-all {
@@ -21,15 +19,12 @@
 	flex-direction: column;
 	text-align: center;
 }
-
 .align-middle {
 	align-items: center;
 }
-
 .align-center {
 	justify-content: center;
 }
-
 .align-left {
     justify-content: flex-start;
 }
@@ -46,24 +41,19 @@
 .align-spaced {
     justify-content: space-around;
 }
-
-
 // Columns in a flex grid can be aligned horizontal or vertical individually also
 // align a column within a row to the bottom
 .align-self-bottom {
 	align-self: flex-end;
 }
-
 // align a column within a row to the middle
 .align-self-middle {
 	align-self: center;
 }
-
 // align a column within a row to the top
 .align-self-top {
 	align-self: flex-start;
 }
-
 // Elements can be absolutely positioned inside of it's relative parent
 // Horizontally centers the element
 .horizontal-center {
@@ -72,7 +62,6 @@
 	top: auto;
 	transform: translateX(-50%);
 }
-
 // Vertically centers the element
 .vertical-center {
 	position: absolute;
@@ -80,7 +69,6 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
-
 // Abolutely centers the element
 .absolute-center {
 	position: absolute;

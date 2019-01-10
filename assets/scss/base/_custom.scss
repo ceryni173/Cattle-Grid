@@ -6,17 +6,14 @@
 	background-repeat: no-repeat;
 	// add box sizing
 	box-sizing: border-box;
-
 	// if applied, has a border radius
 	&.rounded {
 		border-radius: $border-radius!important;
 	}
 }
-
 html {
 	box-sizing: border-box;
 }
-
 body {
 	background-color: #fff;
 	height: 100%;
@@ -28,29 +25,23 @@ body {
 	flex-direction: column;
 	padding: 0;
 	margin: 0;
-
 	// if the body has a background image
 	background-position: center center;
 	background-repeat: repeat;
-
 	font-family: $body-font-family;
 	font-size: $body-font-size;
 	color: $body-font-color;
 }
-
-
 // wrap any body content in a margin
 // creates a sticky footer
 main {
 	/* flex: 1; would be enough but it looks bad in IE */
 	flex: 1 0 auto;
 }
-
 blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
 	margin: 0;
 	padding: 0;
 }
-
 // headlines
 h1 { @include h1; }
 h2 { @include h2; }
@@ -58,23 +49,19 @@ h3 { @include h3; }
 h4 { @include h4; }
 h5 { @include h5; }
 h6 { @include h6; }
-
 // normalise
 abbr[title],
 acronym[title],
 dfn {
 	cursor: help;
 }
-
 del {
 	text-decoration: line-through;
 }
-
 img {
 	font-style: italic;
 	max-width: 100%;
 }
-
 hr {
 	border: 0;
 	border-bottom: 1px dashed $light;
@@ -82,19 +69,16 @@ hr {
 	opacity: 0.4;
 	margin: $medium-space 0;
 }
-
 [disabled] {
 	cursor: default;
 }
-
 [aria-disabled="true"] {
 	cursor: default;
 	pointer-events: none;
 }
-
 // set base paragraph size
 p {
-	line-height: normal;
+	line-height: 2;
 	margin-bottom: rem-calc(10);
 	text-rendering: optimizeLegibility;
 	font-size: $body-font-size;
@@ -108,25 +92,50 @@ p {
 	&.small {
 		font-size: rem-calc(10);
 	}
+	// fades
+	&.fade {
+		cursor: pointer;
+		+ span {
+			color: $secondary;
+			font-weight: bold;
+			font-size: rem-calc(16);
+		}
+		&.show {
+			+ span {
+				@include fade(show);
+			}
+			&:hover {
+				+ span {
+					@include fade(hide);
+				}
+			}
+		}
+		&.hide {
+			+ span {
+				@include fade(hide);
+			}
+			&:hover {
+				+ span {
+					@include fade(show)
+				}
+			}
+		}
+	}
 }
-
 small,
 .small {
 	font-size: rem-calc(10);
 	font-weight: 400;
 }
-
 .large {
 	font-size: rem-calc(18);
 	font-weight: 400;
 }
-
 hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
 }
-
 sub,
 sup {
 	font-size: 75%;
@@ -134,21 +143,17 @@ sup {
 	position: relative;
 	vertical-align: baseline;
 }
-
 .highlight {
 	background-color: $primary;
 	color: $primaryText;
 	padding: 0 $small-space;
 }
-
 .quiet {
 	opacity: 0.3;
 }
-
-
 // remove borders
 a:not(.button) {
-	font-weight: bold;
+	font-weight: normal;
 	color: $anchor-font-color;
 	text-decoration: none;
 	cursor: pointer;
@@ -167,9 +172,56 @@ a:not(.button) {
 	&:visited {
 		text-decoration: none;
 	}
-
+	// social
+	&.facebook {
+		color: $facebook;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($facebook, 10%);
+		}
+	}
+	&.twitter {
+		color: $twitter;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($twitter, 10%);
+		}
+	}
+	&.instagram {
+		color: $instagram;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($instagram, 10%);
+		}
+	}
+	&.pinterest {
+		color: $pinterest;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($pinterest, 10%);
+		}
+	}
+	&.etsy {
+		color: $etsy;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($etsy, 10%);
+		}
+	}
+	&.linkedin {
+		color: $linkedin;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($linkedin, 10%);
+		}
+	}
 }
-
 // list items
 ul, ol {
 	padding-top: $small-space;
@@ -188,7 +240,6 @@ ul, ol {
 		}
 	}
 }
-
 // remove address styling
 address {
 	font-style: normal;
@@ -196,7 +247,6 @@ address {
 q {
 	font-style: italic;
 }
-
 code {
 	background: rgba($primary, 0.3);
 	border-radius: $border-radius;
@@ -205,7 +255,6 @@ code {
 	line-height: rem-calc(30);
 	padding: $small-space;
 }
-
 kbd {
 	background: #454d5d;
 	border-radius: .1rem;
@@ -214,12 +263,9 @@ kbd {
 	line-height: 1.2;
 	padding: .1rem .2rem;
 }
-
 code, kbd, pre, samp {
 	font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
-
 }
-
 blockquote {
 	border-left: .1rem solid #e7e9ed;
 	margin-left: 0;
@@ -228,18 +274,13 @@ blockquote {
 		margin: 0;
 	}
 }
-
 // apply to anything to make full width
 .full {
 	width: 100%;
 	max-width: 100%;
 }
-
-
 //Alignment and positioning
-
 //Alignment and positioning
-
 // only for medium up,
 // mobile will hardly ever need these
 @include breakpoint($medium) {
@@ -247,39 +288,32 @@ blockquote {
 	.zeroL {
 		padding-left: 0!important;
 	}
-
 	// remove padding from the right
 	.zeroR {
 		padding-right:  0!important;
 	}
-
 	// remove padding from the left and right
 	.zero {
 		padding-left:  0!important;
 		padding-right:  0!important;
 	}
-
 	// remove padding from all axis
 	.zeroAll {
 		padding:  0!important;
 	}
-
 	// remove padding from the left
 	.zeroLM {
 		margin-left:  0!important;
 	}
-
 	// remove margin from the right
 	.zeroRM {
 		margin-right:  0!important;
 	}
-
 	// remove margin from the left and right
 	.zeroM {
 		margin-left:  0!important;
 		margin-right:  0!important;
 	}
-
 	// remove margin from all axis
 	.zeroMAll {
 		margin:  0!important;
