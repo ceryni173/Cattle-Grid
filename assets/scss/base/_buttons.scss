@@ -10,7 +10,7 @@ input[type="submit"] {
 	color: #ffffff;
 	margin: 0;
 	padding: 0 ($small-space * 3);
-	font-size: rem-calc(11);
+	font-size: $body-font-size;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
