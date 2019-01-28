@@ -49,10 +49,20 @@ $breakpoints: (
 	.row {
 		margin-right: -($grid-gutter-medium / 2);
     	margin-left: -($grid-gutter-medium / 2);
+		@media #{$small-only} {
+			margin-right: -($grid-gutter-small / 2);
+	    	margin-left: -($grid-gutter-small / 2);
+		}
 	}
 	// reverse rows
 	&.reverse {
 		flex-direction: row-reverse;
+	}
+	&.collapse {
+		> .columns {
+			padding-right: 0;
+			padding-left: 0;
+		}
 	}
 	// columns
 	.column,
@@ -91,6 +101,10 @@ $breakpoints: (
 			> .columns {
 				padding-right: ($grid-gutter-medium / 2);
     			padding-left: ($grid-gutter-medium / 2);
+				@media #{$small-only} {
+					padding-left: calc(#{$grid-gutter-small} / 2);
+					padding-right: calc(#{$grid-gutter-small} / 2);
+				}
 			}
 		}
 		// collapse
@@ -126,11 +140,11 @@ $breakpoints: (
 }
 // create text based display
 @mixin create-hiders($name) {
-	// align texts center
+	//hide for
 	.hide-for-#{$name} {
 		display: none!important;
 	}
-	// .. left
+	// show for
 	.show-for-#{$name} {
 		display: inline-flex!important;
 	}
