@@ -1,3 +1,27 @@
+//button generators
+@mixin button-bg($bg, $txt) {
+	background: $bg;
+	border: $bg;
+	color: $txt;
+	&:hover,
+	&:focus {
+		background:darken($bg,10%);
+		border:darken($bg, 10%);
+		transition: all 0.3s ease;
+	}
+}
+//button generators
+@mixin button-hollow($border, $txt) {
+	background: transparent;
+	border: 1px solid $border;
+	color: $txt;
+	&:hover,
+	&:focus {
+		border: 1px solid darken($border, 10%);
+		transition: all 0.3s ease;
+		color: darken($txt, 10%);
+	}
+}
 .no-js button[type="button"] {
 	display: none;
 }

@@ -1,0 +1,54 @@
+// Headline
+@mixin heading {
+	color: inherit;
+	font-weight: 300;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-top: 0;
+	margin-bottom: ($small-space * 3);
+	line-height: normal;
+	font-family: $header-font-family;
+	padding: 0;
+}
+@mixin h1 {
+	@include heading;
+	font-size: rem-calc(40);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(30);
+	}
+}
+@mixin h2 {
+	@include heading;
+	font-size: rem-calc(20);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(18);
+	}
+}
+@mixin h3 {
+	@include heading;
+	font-size: rem-calc(25);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(16);
+	}
+}
+@mixin h4 {
+	@include heading;
+	font-size: rem-calc(20);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(16);
+	}
+}
+@mixin h5 {
+	@include heading;
+	font-size: rem-calc(18);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(14);
+	}
+}
+@mixin h6 {
+	@include heading;
+	font-size: rem-calc(16);
+	@include breakpoint($small-only) {
+		font-size: rem-calc(14);
+	}
+}
