@@ -116,3 +116,14 @@ input {
 	padding: $large-space;
 	border-radius: ($small-space * 2);
 }
+.buttons-links {
+	strong:last-of-type {
+		margin-top: $medium-space;
+	}
+	a:not(.button){
+		.fa {
+			width: $medium-space;
+			margin-right: ($small-space * 2);
+		}
+	}
+}
