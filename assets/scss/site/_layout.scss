@@ -1,37 +1,35 @@
 // site specific (demo purposes only)
-
 main {
 	padding: $large-space 0;
 }
 .button {
 	margin-bottom: ($small-space * 2);
 }
-
 .notification {
-	width: calc(100% + 120px);
-	background-color: rgba($primary, 0.7);
-	border-bottom: 3px solid $primary;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: $small-space $large-space;
+	@include z-index(navigation);
+	background-color: #323b43;
+	border-bottom: 3px solid #222222;
 	padding: $small-space;
 	text-align: center;
-	margin-left: -$large-space;
-	margin-right: -$large-space;
-	margin-top: -$small-space;
 	margin-bottom: ($small-space * 2);
 	strong {
 		font-weight: normal;
 	}
 	p {
-		color: $body-font-color;
+		color: #ffffff;
 		a {
-			color: $body-font-color;
-			font-weight: bold;
+			color: $primary;
 		}
 	}
 	.fa {
 		color: #ffffff;
 	}
 }
-
 strong:not(.alone) {
 	display: block;
 	margin-bottom: $small-space;
@@ -39,6 +37,8 @@ strong:not(.alone) {
 .grid {
 	margin-bottom: $medium-space;
 	margin-top: $large-space;
+	display: inline-block;
+    width: 100%;
 	.row {
 		font-size: $body-font-size;
 		line-height: 2rem;
@@ -46,24 +46,18 @@ strong:not(.alone) {
 			background: #eee;
 		}
 	}
-
 	.row .columns:nth-child(even)  {
 		background: #e1e1e1;
 	}
 }
-
 .logo {
 	width: 100%;
 	max-width: 400px;
-	margin: 100px 0 $xlarge-space 0;
+	margin: $medium-space 0 $xlarge-space 0;
 }
-
-
 .control {
 	margin-top: $small-space;
 }
-
-
 p {
 	&.fade {
 		cursor: pointer;
@@ -94,22 +88,19 @@ p {
 		}
 	}
 }
-
 input {
 	margin-bottom: ($small-space * 2);
 }
-
 .showcase {
 	background-color: #f9f9f9;
 	margin-top: $medium-space;
 }
-
 .sandbox  {
 	height: 400px;
 	position: relative;
 	width: 100%;
 	display: inline-block;
-	background-color: rgba($light, 0.2);
+	background-color: $body-background;
 	padding: $medium-space;
 	.box {
 		height: 100px;
@@ -118,4 +109,10 @@ input {
 		color: $primaryText;
 		font-size: rem-calc(11);
 	}
+}
+.box {
+	background-color: #ffffff;
+	margin-top: ($xlarge-space / 2);
+	padding: $large-space;
+	border-radius: ($small-space * 2);
 }

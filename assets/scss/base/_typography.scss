@@ -1,6 +1,6 @@
 // Headline
 @mixin heading {
-	color: inherit;
+	color: #000000;;
 	font-weight: 300;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
@@ -9,6 +9,8 @@
 	line-height: normal;
 	font-family: $header-font-family;
 	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 @mixin h1 {
 	@include heading;

@@ -1,19 +1,12 @@
 // Header specific styles here
 nav:not(.main-menu) {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: $small-space $large-space;
-	padding-right: 80px;
-	background-color: #ffffff;
-	@include z-index(navigation);
-
 	ul:not(.drawerMenu) {
 		margin: 0;
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
+		margin-top: -$medium-space;
+		margin-bottom: $medium-space;
 		@media #{$small-only}{
 			display: none;
 		}
@@ -24,11 +17,20 @@ nav:not(.main-menu) {
 			display: inline-flex;
 			a {
 				text-transform: uppercase;
-                font-size: $body-font-size;
+                font-size: rem-calc(12);
+				color: $body-font-color;
 				&:hover,
 				&:focus,
 				&:active {
-					border-bottom: 2px solid $secondary;
+					color: $primary;
+					&:after {
+						@include pseudo();
+						position: absolute;
+						bottom: -$small-space;
+						border-bottom: 2px solid $secondary;
+						width: 100%;
+						height: 2px;
+					}
 				}
 			}
 		}

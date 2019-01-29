@@ -48,6 +48,7 @@ $breakpoints: (
 	.row {
 		margin-right: -($grid-gutter-medium / 2);
     	margin-left: -($grid-gutter-medium / 2);
+		max-width: none;
 		@media #{$small-only} {
 			margin-right: -($grid-gutter-small / 2);
 	    	margin-left: -($grid-gutter-small / 2);
