@@ -6,7 +6,6 @@
 	<title>Cattle Grid</title>
 	<meta name="description" content="Extremely lightweight, basic flex css grid built from a simple mixin">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<!-- Favicons -->
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/images/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/images/apple-touch-icon-114x114.png" />
@@ -28,14 +27,11 @@
 	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
 	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/app.css?v=1.0.2" />
-
 </head>
-
 <body>
 	<main>
 		<nav>
@@ -55,494 +51,478 @@
 				<li><a href="#images">Images</a></li>
 				<li><a href="#fades">Fades</a></li>
 			</ul>
-
 			<a href="#main-menu" role="button" id="main-menu-toggle" class="menu-toggle"
-				aria-expanded="false"
-				aria-controls="main-menu"
-				aria-label="Open main menu">
-				<span class="fa fa-bars" aria-hidden="true"></span>
-			</a>
-			<nav id="main-menu" role="navigation" class="main-menu" aria-expanded="false" aria-label="Main menu">
-				<a href="#main-menu-toggle" role="button" id="main-menu-close" class="menu-close"
-					aria-expanded="false"
-					aria-controls="main-menu"
-					aria-label="Close main menu">
-					<span class="fa fa-close" aria-hidden="true"></span>
-				</a>
-				<ul class="drawerMenu">
-					<li><a href="#grid">Grid</a></li>
-					<li><a href="#positioning">Positioning</a></li>
-					<li><a href="#headlines">Headlines</a></li>
-					<li><a href="#list">Lists</a></li>
-					<li><a href="#tables">Tables</a></li>
-					<li><a href="#quotes">Quotes &amp; Code</a></li>
-					<li><a href="#text">Text</a></li>
-					<li><a href="#form">Form</a></li>
-					<li><a href="#buttons">Buttons</a></li>
-					<li><a href="#images">Images</a></li>
-					<li><a href="#fades">Fades</a></li>
-				</ul>
-			</nav>
-			<a href="#main-menu-toggle" class="menuBg" tabindex="-1" aria-hidden="true" hidden></a>
-
-		</nav>
-		<div class="container">
-			<div class="row">
-				<div class="small-12 columns text-center">
-					<img src="./assets/images/logo-type.png" class="logo">
-				</div>
-				<div class="small-12 columns">
-					<p>Finally got around to building my own CSS Framework after becoming too annoyed at the reliance on the likes of a Foundation & Bootstrap. Foundation served me well for years, but it’s too bloated and too contaminated with elements that could be refactored and simplified. </p>
-					<p>Which leads me, to this! I now have my simple (under 20kb) responsive flex box grid I’ve named the Cattle Grid 🐮 - If you want just the grid, grab <strong class="alone">_grid.scss</strong> from <em> assets/scss/general</em> and import it into your stylesheets!</p>
-					<p>The repo for the entire codebase can be found over on <a target="_blank" href="https://gitlab.com/Ceryni/cattle-grid">GitLab <span class="fa fa-gitlab" aria-hidden="true"></span></a>
-				</div>
+			aria-expanded="false"
+			aria-controls="main-menu"
+			aria-label="Open main menu">
+			<span class="fa fa-bars" aria-hidden="true"></span>
+		</a>
+		<nav id="main-menu" role="navigation" class="main-menu" aria-expanded="false" aria-label="Main menu">
+			<a href="#main-menu-toggle" role="button" id="main-menu-close" class="menu-close"
+			aria-expanded="false"
+			aria-controls="main-menu"
+			aria-label="Close main menu">
+			<span class="fa fa-close" aria-hidden="true"></span>
+		</a>
+		<ul class="drawerMenu">
+			<li><a href="#grid">Grid</a></li>
+			<li><a href="#positioning">Positioning</a></li>
+			<li><a href="#headlines">Headlines</a></li>
+			<li><a href="#list">Lists</a></li>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#quotes">Quotes &amp; Code</a></li>
+			<li><a href="#text">Text</a></li>
+			<li><a href="#form">Form</a></li>
+			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#fades">Fades</a></li>
+		</ul>
+	</nav>
+	<a href="#main-menu-toggle" class="menuBg" tabindex="-1" aria-hidden="true" hidden></a>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<img src="./assets/images/logo-type.png" class="logo">
+		</div>
+		<div class="small-12 columns">
+			<p>Finally got around to building my own CSS Framework after becoming too annoyed at the reliance on the likes of a Foundation & Bootstrap. Foundation served me well for years, but it’s too bloated and too contaminated with elements that could be refactored and simplified. </p>
+			<p>Which leads me, to this! I now have my simple (under 20kb) responsive flex box grid I’ve named the Cattle Grid 🐮 - If you want just the grid, grab <strong class="alone">_grid.scss</strong> from <em> assets/scss/general</em> and import it into your stylesheets!</p>
+			<p>The repo for the entire codebase can be found over on <a target="_blank" href="https://gitlab.com/Ceryni/cattle-grid">GitLab <span class="fa fa-gitlab" aria-hidden="true"></span></a>
 			</div>
-			<div id="grid"></div>
-			<div class="grid">
-				<div class="row">
-					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
-					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
-					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
-					<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-4 columns">small-12 large-4</div>
-					<div class="small-12 large-4 columns">small-12 large-4</div>
-					<div class="small-12 large-4 columns">small-12 large-4</div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-6 columns">small-12 large-6</div>
-					<div class="small-12 large-6 columns">small-12 large-6</div>
-				</div>
-				<div class="row">
-					<div class="small-12 columns">small-12</div>
-				</div>
-				<div class="row align-all showcase">
-					<div class="small-12 medium-4 columns align-self-top">align-self-top</div>
-					<div class="small-12 medium-4 columns align-self-middle">align-self-middle</div>
-					<div class="small-12 medium-4 columns align-self-bottom">align-self-bottom</div>
-				</div>
+		</div>
+		<div id="grid"></div>
+		<div class="grid">
+			<div class="row">
+				<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+				<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+				<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
+				<div class="small-12 medium-6 large-3 columns">small-12 medium-6 large-3</div>
 			</div>
 			<div class="row">
-				<div id="positioning"></div>
-				<div class="small-12 columns">
-					<hr/>
-					<strong>Positioning</strong>
-				</div>
-				<div class="small-12 columns">
-					<div class="sandbox">
-						<div class="box horizontal-center align-all">
-							horizontal-center
-						</div>
-						<div class="box vertical-center align-all">
-							vertical-center
-						</div>
-						<div class="box absolute-center align-all">
-							absolute-center
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="headlines"></div>
-			<div class="row">
-				<div class="columns small-12">
-					<hr/>
-					<h1>
-						Level 1 heading
-					</h1>
-					<p>
-						Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-					</p>
-					<h2>
-						Level 02 Heading
-					</h2>
-					<p>
-						Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-					</p>
-
-					<h3>
-						Level 03 Heading
-					</h3>
-					<p>
-						Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-					</p>
-
-					<h4>
-						Level 04 Heading
-					</h4>
-					<p>
-						Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-					</p>
-					<h5>
-						Level 05 Heading
-					</h5>
-					<p>
-						Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-					</p>
-
-					<hr/>
-				</div>
-				<div id="list"></div>
-				<div class="columns small-12">
-					<strong>List items</strong>
-					<ul>
-						<li>This is a list item</li>
-						<li>So is this - there could be more</li>
-						<li>Make sure to style list items to:
-							<ul>
-								<li>Not forgetting child list items</li>
-								<li>Not forgetting child list items</li>
-								<li>Not forgetting child list items</li>
-								<li>Not forgetting child list items</li>
-							</ul>
-						</li>
-						<li>A couple more</li>
-						<li>top level list items</li>
-					</ul>
-					<hr/>
-				</div>
-				<div class="columns small-12">
-					<strong>Ordered lists</strong>
-					<ol>
-						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-						<li>Aliquam tincidunt mauris eu risus.
-							<ol>
-								<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-								<li>Aliquam tincidunt mauris eu risus.</li>
-							</ol>
-						</li>
-						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-						<li>Aliquam tincidunt mauris eu risus.</li>
-					</ol>
-					<hr/>
-				</div>
-				<div id="tables"></div>
-				<div class="columns small-12">
-					<strong>A Table</strong>
-					<table>
-						<tr>
-							<th>
-								Table Heading
-							</th>
-							<th>
-								Table Heading
-							</th>
-						</tr>
-						<tr>
-							<td>
-								table data
-							</td>
-							<td>
-								table data
-							</td>
-						</tr>
-						<tr>
-							<td>
-								table data
-							</td>
-							<td>
-								table data
-							</td>
-						</tr>
-						<tr>
-							<td>
-								table data
-							</td>
-							<td>
-								table data
-							</td>
-						</tr>
-						<tr>
-							<td>
-								table data
-							</td>
-							<td>
-								table data
-							</td>
-						</tr>
-					</table>
-					<hr/>
-				</div>
-				<div id="quotes"></div>
-				<div class="columns small-12">
-					<strong>Block Quotes</strong>
-					<blockquote>
-						<p>
-							“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
-						</p>
-					</blockquote>
-					<hr/>
-				</div>
-				<div class="columns small-12">
-					<strong>Block Quotes with Cite</strong>
-					<blockquote>
-						<p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
-						<footer>
-							— <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
-						</footer>
-					</blockquote>
-					<hr/>
-				</div>
-				<div class="columns small-12">
-					<strong>Pre Code</strong>
-<pre><code>#header h1 a {
-	display: block;
-	width: 300px;
-	height: 80px;
-}</code></pre>
-					<hr/>
-				</div>
-				<div class="columns small-12">
-					<div id="text"></div>
-					<strong>Address</strong>
-					<address>
-						Address: Example address 224, Sweden
-					</address>
-					<hr/>
-				</div>
-				<div class="columns small-12 medium-4">
-					<p>
-						I am <a href="?abc123">the a tag</a> example<br>
-						I am <abbr title="test">the abbr tag</abbr> example<br>
-						I am <acronym>the acronym tag</acronym> example<br>
-						I am <b>the b tag</b> example<br>
-						I am <big>the big tag</big> example<br>
-						I am <cite>the cite tag</cite> example<br>
-						I am <code>the code tag</code> example<br>
-						I am <del>the del tag</del> example<br>
-					</p>
-				</div>
-
-				<div class="columns small-12 medium-4">
-					<p>
-						I am <dfn>the dfn tag</dfn> example<br>
-						I am <em>the em tag</em> example<br>
-						I am <i>the i tag</i> example<br>
-						I am <ins>the ins tag</ins> example<br>
-						I am <kbd>the kbd tag</kbd> example<br>
-						I am <q>the q tag</q> example<br>
-						I am <samp>the samp tag</samp> example<br>
-						I am <small>the small tag</small> example<br>
-						I am <span>the span tag</span> example<br>
-					</p>
-				</div>
-
-				<div class="columns small-12 medium-4">
-					<p>
-						I am <sub>the sub tag</sub> example<br>
-						I am <tt>the tt tag</tt> example<br>
-						I am <var>the var tag</var> example<br>
-						I am the <span class="small">small class</span> example<br>
-						I am the <span class="large">large class</span> example<br>
-						I am the <span class="quiet">quiet class</span> example<br>
-						I am the <span class="highlight">highlight class</span> example
-					</p>
-				</div>
-
-				<div id="form"></div>
-				<div class="columns small-12">
-					<hr/>
-					<strong>Inputs</strong>
-				</div>
-
-				<div class="columns small-12 medium-4">
-					<label for="f1">Text input:</label>
-					<input type="text" id="f1" value="input text">
-				</div>
-
-				<div class="columns small-12 medium-4">
-					<label for="f2">Text input Rounded:</label>
-					<input type="text" id="f2" value="input text" class="rounded">
-				</div>
-
-				<div class="columns small-12 medium-4">
-					<label for="pw">Password input:</label>
-					<input type="password" id="pw" value="password">
-				</div>
-
-				<div class="small-12 columns">
-					<hr/>
-				</div>
-				<div class="columns small-12">
-					<strong>Select Options</strong>
-				</div>
-				<div class="columns small-12 large-6">
-					<label for="f4">Select field:</label>
-					<div class="select-wrapper name">
-						<select id="f4">
-							<option>
-								Option 01
-							</option>
-							<option>
-								Option 02
-							</option>
-						</select>
-					</div>
-				</div>
-				<div class="columns small-12 large-6">
-					<label for="f5">Select field:</label>
-					<div class="select-wrapper name">
-						<select id="f5" class="rounded">
-							<option>
-								Option 01
-							</option>
-							<option>
-								Option 02
-							</option>
-						</select>
-					</div>
-				</div>
-
-				<div class="small-12 columns">
-					<hr/>
-				</div>
-				<div class="columns small-12 large-6">
-					<strong>Text Area</strong>
-					<textarea id="f5" cols="30" rows="5">Textarea text</textarea>
-				</div>
-				<div class="columns small-12 large-6">
-					<strong>Text Area Rounded</strong>
-					<textarea class="rounded" id="f6" cols="30" rows="5">Textarea text</textarea>
-				</div>
-
-				<div class="small-12 columns">
-					<hr/>
-				</div>
-
-				<div class="small-12 columns">
-					<strong>Check Boxes</strong>
-				</div>
-				<div class="columns small-12 medium-4 large-2">
-					<label class="control" for="checkbox1">
-						<input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1" />
-						<div class="checky"></div>
-					</label>
-				</div>
-				<div class="columns small-12 medium-4 large-2">
-					<label class="control" for="checkbox2">
-						<input type="checkbox" id="checkbox2" name="checkbox1" value="checkbox1" />
-						<div class="checky rounded"></div>
-					</label>
-				</div>
-				<div class="small-12 columns">
-					<hr/>
-					<strong>Radio Boxes</strong>
-				</div>
-				<div class="columns small-4 medium-4 large-2">
-					<label class="control radio" for="radio1">
-						<input type="radio" id="radio1" name="radioGroup" value="radio1" />
-						<div class="checky"></div>
-					</label>
-				</div>
-				<div class="columns small-4 medium-4 large-2">
-					<label class="control radio" for="radio2">
-						<input type="radio" id="radio2" name="radioGroup" value="radio1" />
-						<div class="checky"></div>
-					</label>
-				</div>
-				<div class="columns small-4 large-4">
-					<label class="control radio" for="radio3">
-						<input type="radio" id="radio3" name="radioGroup" value="radio1" />
-						<div class="checky"></div>
-					</label>
-				</div>
-				<div class="columns small-12 large-12">
-					<hr/>
-					<strong>Switch</strong>
-					<label>
-						<input type="checkbox" checked="checked" class="checkSwitchInput"/>
-						<span class="checkSwitch dark"></span>
-					</label>
-					<hr/>
-				</div>
+				<div class="small-12 large-4 columns">small-12 large-4</div>
+				<div class="small-12 large-4 columns">small-12 large-4</div>
+				<div class="small-12 large-4 columns">small-12 large-4</div>
 			</div>
 			<div class="row">
-				<div id="buttons"></div>
-				<div class="columns small-12">
-					<strong>Buttons</strong>
-					<a class="button primary"> Primary</a>
-					<a class="button primary hollow"> Primary</a>
-					<a class="button primary rounded"> Rounded</a>
-
-					<a class="button secondary"> Secondary</a>
-					<a class="button secondary hollow"> Secondary</a>
-					<a class="button secondary rounded"> Rounded</a>
-
-					<a class="button facebook"> Facebook</a>
-					<a class="button facebook hollow"> Facebook</a>
-					<a class="button facebook rounded"> Rounded</a>
-
-					<a class="button instagram"> Instagram</a>
-					<a class="button instagram hollow"> Instagram</a>
-					<a class="button instagram rounded"> Rounded</a>
-
-					<a class="button twitter"> Twitter</a>
-					<a class="button twitter hollow"> Twitter</a>
-					<a class="button twitter rounded"> Rounded</a>
-
-					<a class="button pinterest"> Pinterest</a>
-					<a class="button pinterest hollow"> Pinterest</a>
-					<a class="button pinterest rounded"> Rounded</a>
-
-					<a class="button snapchat"> Snapchat</a>
-					<a class="button snapchat hollow"> Snapchat</a>
-					<a class="button snapchat rounded"> Rounded</a>
-				</div>
+				<div class="small-12 large-6 columns">small-12 large-6</div>
+				<div class="small-12 large-6 columns">small-12 large-6</div>
 			</div>
 			<div class="row">
-				<div id="images"></div>
-				<div class="small-12 columns">
-					<hr/>
-					<strong>Image Filters</strong>
-				</div>
-				<div class="small-12 medium-3 columns text-center">
-					<img src="https://picsum.photos/300/300/?random">
-					<p>Normal</p>
-				</div>
-				<div class="small-12 medium-3 columns text-center">
-					<div class="imgFilter overlay">
-						<img src="https://picsum.photos/300/300/?random">
-					</div>
-					<p>Overlay</p>
-				</div>
-				<div class="small-12 medium-3 columns text-center">
-					<div class="imgFilter greyScale">
-						<img src="https://picsum.photos/300/300/?random">
-					</div>
-					<p>Greyscale</p>
-				</div>
-				<div class="small-12 medium-3 columns text-center">
-					<div class="imgFilter blur">
-						<img src="https://picsum.photos/300/300/?random">
-					</div>
-					<p>Blur</p>
-				</div>
+				<div class="small-12 columns">small-12</div>
 			</div>
-			<div class="row">
-				<div id="fades"></div>
-				<div class="small-12 columns">
-					<hr/>
-					<strong>Fades</strong>
-				</div>
-				<div class="small-12 medium-6 columns text-center">
-					<p class="fade show">Hover to hide</p>
-					<span>hello!</span>
-				</div>
-				<div class="small-12 medium-6 columns text-center">
-					<p class="fade hide">Hover to show</p>
-					<span>goodbye!</span>
+			<div class="row align-all showcase">
+				<div class="small-12 medium-4 columns align-self-top">align-self-top</div>
+				<div class="small-12 medium-4 columns align-self-middle">align-self-middle</div>
+				<div class="small-12 medium-4 columns align-self-bottom">align-self-bottom</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="positioning"></div>
+			<div class="small-12 columns">
+				<hr/>
+				<strong>Positioning</strong>
+			</div>
+			<div class="small-12 columns">
+				<div class="sandbox">
+					<div class="box horizontal-center align-all">
+						horizontal-center
+					</div>
+					<div class="box vertical-center align-all">
+						vertical-center
+					</div>
+					<div class="box absolute-center align-all">
+						absolute-center
+					</div>
 				</div>
 			</div>
 		</div>
-	</main>
+		<div id="headlines"></div>
+		<div class="row">
+			<div class="columns small-12">
+				<hr/>
+				<h1>
+					Level 1 heading
+				</h1>
+				<p>
+					Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+				</p>
+				<h2>
+					Level 02 Heading
+				</h2>
+				<p>
+					Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+				</p>
+				<h3>
+					Level 03 Heading
+				</h3>
+				<p>
+					Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+				</p>
+				<h4>
+					Level 04 Heading
+				</h4>
+				<p>
+					Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+				</p>
+				<h5>
+					Level 05 Heading
+				</h5>
+				<p>
+					Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+				</p>
+				<hr/>
+			</div>
+			<div id="list"></div>
+			<div class="columns small-12">
+				<strong>List items</strong>
+				<ul>
+					<li>This is a list item</li>
+					<li>So is this - there could be more</li>
+					<li>Make sure to style list items to:
+						<ul>
+							<li>Not forgetting child list items</li>
+							<li>Not forgetting child list items</li>
+							<li>Not forgetting child list items</li>
+							<li>Not forgetting child list items</li>
+						</ul>
+					</li>
+					<li>A couple more</li>
+					<li>top level list items</li>
+				</ul>
+				<hr/>
+			</div>
+			<div class="columns small-12">
+				<strong>Ordered lists</strong>
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li>Aliquam tincidunt mauris eu risus.</li>
+						</ol>
+					</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
+				</ol>
+				<hr/>
+			</div>
+			<div id="tables"></div>
+			<div class="columns small-12">
+				<strong>A Table</strong>
+				<table>
+					<tr>
+						<th>
+							Table Heading
+						</th>
+						<th>
+							Table Heading
+						</th>
+					</tr>
+					<tr>
+						<td>
+							table data
+						</td>
+						<td>
+							table data
+						</td>
+					</tr>
+					<tr>
+						<td>
+							table data
+						</td>
+						<td>
+							table data
+						</td>
+					</tr>
+					<tr>
+						<td>
+							table data
+						</td>
+						<td>
+							table data
+						</td>
+					</tr>
+					<tr>
+						<td>
+							table data
+						</td>
+						<td>
+							table data
+						</td>
+					</tr>
+				</table>
+				<hr/>
+			</div>
+			<div id="quotes"></div>
+			<div class="columns small-12">
+				<strong>Block Quotes</strong>
+				<blockquote>
+					<p>
+						“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
+					</p>
+				</blockquote>
+				<hr/>
+			</div>
+			<div class="columns small-12">
+				<strong>Block Quotes with Cite</strong>
+				<blockquote>
+					<p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
+					<footer>
+						— <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
+					</footer>
+				</blockquote>
+				<hr/>
+			</div>
+			<div class="columns small-12">
+				<strong>Pre Code</strong>
+				<pre><code>#header h1 a {
+					display: block;
+					width: 300px;
+					height: 80px;
+				}</code></pre>
+				<hr/>
+			</div>
+			<div class="columns small-12">
+				<div id="text"></div>
+				<strong>Address</strong>
+				<address>
+					Address: Example address 224, Sweden
+				</address>
+				<hr/>
+			</div>
+			<div class="columns small-12 medium-4">
+				<p>
+					I am <a href="?abc123">the a tag</a> example<br>
+					I am <abbr title="test">the abbr tag</abbr> example<br>
+					I am <acronym>the acronym tag</acronym> example<br>
+					I am <b>the b tag</b> example<br>
+					I am <big>the big tag</big> example<br>
+					I am <cite>the cite tag</cite> example<br>
+					I am <code>the code tag</code> example<br>
+					I am <del>the del tag</del> example<br>
+				</p>
+			</div>
+			<div class="columns small-12 medium-4">
+				<p>
+					I am <dfn>the dfn tag</dfn> example<br>
+					I am <em>the em tag</em> example<br>
+					I am <i>the i tag</i> example<br>
+					I am <ins>the ins tag</ins> example<br>
+					I am <kbd>the kbd tag</kbd> example<br>
+					I am <q>the q tag</q> example<br>
+					I am <samp>the samp tag</samp> example<br>
+					I am <small>the small tag</small> example<br>
+					I am <span>the span tag</span> example<br>
+				</p>
+			</div>
+			<div class="columns small-12 medium-4">
+				<p>
+					I am <sub>the sub tag</sub> example<br>
+					I am <tt>the tt tag</tt> example<br>
+					I am <var>the var tag</var> example<br>
+					I am the <span class="small">small class</span> example<br>
+					I am the <span class="large">large class</span> example<br>
+					I am the <span class="quiet">quiet class</span> example<br>
+					I am the <span class="highlight">highlight class</span> example
+				</p>
+			</div>
+			<div id="form"></div>
+			<div class="columns small-12">
+				<hr/>
+				<strong>Inputs</strong>
+			</div>
+			<div class="columns small-12 medium-4">
+				<label for="f1">Text input:</label>
+				<input type="text" id="f1" value="input text">
+			</div>
+			<div class="columns small-12 medium-4">
+				<label for="f2">Text input Rounded:</label>
+				<input type="text" id="f2" value="input text" class="rounded">
+			</div>
+			<div class="columns small-12 medium-4">
+				<label for="pw">Password input:</label>
+				<input type="password" id="pw" value="password">
+			</div>
+			<div class="small-12 columns">
+				<hr/>
+			</div>
+			<div class="columns small-12">
+				<strong>Select Options</strong>
+			</div>
+			<div class="columns small-12 large-6">
+				<label for="f4">Select field:</label>
+				<div class="select-wrapper name">
+					<select id="f4">
+						<option>
+							Option 01
+						</option>
+						<option>
+							Option 02
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="columns small-12 large-6">
+				<label for="f5">Select field:</label>
+				<div class="select-wrapper name">
+					<select id="f5" class="rounded">
+						<option>
+							Option 01
+						</option>
+						<option>
+							Option 02
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="small-12 columns">
+				<hr/>
+			</div>
+			<div class="columns small-12 large-6">
+				<strong>Text Area</strong>
+				<textarea id="f5" cols="30" rows="5">Textarea text</textarea>
+			</div>
+			<div class="columns small-12 large-6">
+				<strong>Text Area Rounded</strong>
+				<textarea class="rounded" id="f6" cols="30" rows="5">Textarea text</textarea>
+			</div>
+			<div class="small-12 columns">
+				<hr/>
+			</div>
+			<div class="small-12 columns">
+				<strong>Check Boxes</strong>
+			</div>
+			<div class="columns small-12 medium-4 large-2">
+				<label class="control" for="checkbox1">
+					<input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1" />
+					<div class="checky"></div>
+				</label>
+			</div>
+			<div class="columns small-12 medium-4 large-2">
+				<label class="control" for="checkbox2">
+					<input type="checkbox" id="checkbox2" name="checkbox1" value="checkbox1" />
+					<div class="checky rounded"></div>
+				</label>
+			</div>
+			<div class="small-12 columns">
+				<hr/>
+				<strong>Radio Boxes</strong>
+			</div>
+			<div class="columns small-4 medium-4 large-2">
+				<label class="control radio" for="radio1">
+					<input type="radio" id="radio1" name="radioGroup" value="radio1" />
+					<div class="checky"></div>
+				</label>
+			</div>
+			<div class="columns small-4 medium-4 large-2">
+				<label class="control radio" for="radio2">
+					<input type="radio" id="radio2" name="radioGroup" value="radio1" />
+					<div class="checky"></div>
+				</label>
+			</div>
+			<div class="columns small-4 large-4">
+				<label class="control radio" for="radio3">
+					<input type="radio" id="radio3" name="radioGroup" value="radio1" />
+					<div class="checky"></div>
+				</label>
+			</div>
+			<div class="columns small-12 large-12">
+				<hr/>
+				<strong>Switch</strong>
+				<label>
+					<input type="checkbox" checked="checked" class="checkSwitchInput"/>
+					<span class="checkSwitch dark"></span>
+				</label>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div id="buttons"></div>
+			<div class="columns small-12">
+				<strong>Buttons</strong>
+				<a class="button primary"> Primary</a>
+				<a class="button primary hollow"> Primary</a>
+				<a class="button primary rounded"> Rounded</a>
+				<a class="button secondary"> Secondary</a>
+				<a class="button secondary hollow"> Secondary</a>
+				<a class="button secondary rounded"> Rounded</a>
+				<a class="button facebook"> Facebook</a>
+				<a class="button facebook hollow"> Facebook</a>
+				<a class="button facebook rounded"> Rounded</a>
+				<a class="button instagram"> Instagram</a>
+				<a class="button instagram hollow"> Instagram</a>
+				<a class="button instagram rounded"> Rounded</a>
+				<a class="button twitter"> Twitter</a>
+				<a class="button twitter hollow"> Twitter</a>
+				<a class="button twitter rounded"> Rounded</a>
+				<a class="button pinterest"> Pinterest</a>
+				<a class="button pinterest hollow"> Pinterest</a>
+				<a class="button pinterest rounded"> Rounded</a>
+				<strong>Links</strong>
+				<a class="facebook"><span class="fa fa-facebook"></span></a>
+				<a class="instagram"><span class="fa fa-instagram"></span></a>
+				<a class="twitter"><span class="fa fa-twitter"></span></a>
+				<a class="pinterest"><span class="fa fa-pinterest"></span></a>
+				<a class="etsy"><span class="fa fa-etsy"></span></a>
+				<a class="linkedin"><span class="fa fa-linkedin"></span></a>
+				<a class="reddit"><span class="fa fa-reddit"></span></a>
+				<a class="email"><span class="fa fa-email"></span></a>
+			</div>
+		</div>
+		<div class="row">
+			<div id="images"></div>
+			<div class="small-12 columns">
+				<hr/>
+				<strong>Image Filters</strong>
+			</div>
+			<div class="small-12 medium-3 columns text-center">
+				<img src="https://picsum.photos/300/300/?random">
+				<p>Normal</p>
+			</div>
+			<div class="small-12 medium-3 columns text-center">
+				<div class="imgFilter overlay">
+					<img src="https://picsum.photos/300/300/?random">
+				</div>
+				<p>Overlay</p>
+			</div>
+			<div class="small-12 medium-3 columns text-center">
+				<div class="imgFilter greyScale">
+					<img src="https://picsum.photos/300/300/?random">
+				</div>
+				<p>Greyscale</p>
+			</div>
+			<div class="small-12 medium-3 columns text-center">
+				<div class="imgFilter blur">
+					<img src="https://picsum.photos/300/300/?random">
+				</div>
+				<p>Blur</p>
+			</div>
+		</div>
+		<div class="row">
+			<div id="fades"></div>
+			<div class="small-12 columns">
+				<hr/>
+				<strong>Fades</strong>
+			</div>
+			<div class="small-12 medium-6 columns text-center">
+				<p class="fade show">Hover to hide</p>
+				<span>hello!</span>
+			</div>
+			<div class="small-12 medium-6 columns text-center">
+				<p class="fade hide">Hover to show</p>
+				<span>goodbye!</span>
+			</div>
+		</div>
+	</div>
+</main>
 </body>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131546424-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-131546424-1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-131546424-1');
 </script>
 </html>

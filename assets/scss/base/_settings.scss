@@ -31,13 +31,52 @@ $warning: map-get($palette, warning);
 $facebook: #3b5998;
 $twitter: #55acee;
 $instagram: #e1306c;
-$facebook: #3b5998;
 $pinterest: #bd081c;
 $etsy: #d5641c;
-$snapchat: #f8ec1e;
 $linkedin: #0077b5;
 $buffer: #323b43;
 $reddit: #ff4500;
 $email: $primary;
+//map networks
+$config: (
+	networks: (
+		facebook: (
+			colour: $facebook,
+			text: #ffffff,
+		),
+		twitter: (
+			colour: $twitter,
+			text: #ffffff,
+		),
+		instagram: (
+			colour: $instagram,
+			text: #ffffff,
+		),
+		pinterest: (
+			colour: $pinterest,
+			text: #ffffff,
+		),
+		etsy: (
+			colour: $etsy,
+			text: #ffffff,
+		),
+		linkedin: (
+			colour: $linkedin,
+			text: #ffffff,
+		),
+		buffer: (
+			colour: $buffer,
+			text: #ffffff,
+		),
+		reddit: (
+			colour: $reddit,
+			text: #ffffff,
+		),
+		email: (
+			colour: $primary,
+			text: $body-font-color,
+		)
+	),
+);
 // anchor styles
 $anchor-font-color: $primary;

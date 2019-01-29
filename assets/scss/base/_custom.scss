@@ -42,13 +42,6 @@ blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, t
 	margin: 0;
 	padding: 0;
 }
-// headlines
-h1 { @include h1; }
-h2 { @include h2; }
-h3 { @include h3; }
-h4 { @include h4; }
-h5 { @include h5; }
-h6 { @include h6; }
 // normalise
 abbr[title],
 acronym[title],
@@ -172,53 +165,14 @@ a:not(.button) {
 	&:visited {
 		text-decoration: none;
 	}
-	// social
-	&.facebook {
-		color: $facebook;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($facebook, 10%);
-		}
-	}
-	&.twitter {
-		color: $twitter;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($twitter, 10%);
-		}
-	}
-	&.instagram {
-		color: $instagram;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($instagram, 10%);
-		}
-	}
-	&.pinterest {
-		color: $pinterest;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($pinterest, 10%);
-		}
-	}
-	&.etsy {
-		color: $etsy;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($etsy, 10%);
-		}
-	}
-	&.linkedin {
-		color: $linkedin;
-		&:hover,
-		&:active,
-		&:focus {
-			color: darken($linkedin, 10%);
+	@each $network in map-keys(map-get($config, networks)) {
+	  	&.#{$network} {
+			color: map-fetch($config, networks $network colour );
+			&:hover,
+			&:active,
+			&:focus {
+				color: darken(map-fetch($config, networks $network colour ), 10%);
+			}
 		}
 	}
 }

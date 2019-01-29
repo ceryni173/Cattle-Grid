@@ -52,3 +52,10 @@
 		font-size: rem-calc(14);
 	}
 }
+// headlines
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include h6; }
