@@ -19,7 +19,7 @@
 }
 @mixin h2 {
 	@include heading;
-	font-size: rem-calc(20);
+	font-size: rem-calc(30);
 	@include breakpoint($small-only) {
 		font-size: rem-calc(18);
 	}
