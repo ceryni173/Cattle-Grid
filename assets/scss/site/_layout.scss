@@ -33,6 +33,7 @@ main {
 strong:not(.alone) {
 	display: block;
 	margin-bottom: $small-space;
+	color: #000000;
 }
 .grid {
 	margin-bottom: $medium-space;
@@ -126,4 +127,7 @@ input {
 			margin-right: ($small-space * 2);
 		}
 	}
+}
+footer {
+	margin-top: $large-space;
 }
