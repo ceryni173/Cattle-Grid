@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://usecattlegrid.com/sitemap.xml
