@@ -1,2 +1,4 @@
-RewriteCond %{HTTP_HOST} ^www.site\.com$ [NC]
-RewriteRule ^(.*)$ Http://site.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^(www\.)(.+) [OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?(.+)
+RewriteRule ^ https://%2%{REQUEST_URI} [R=301,L]
