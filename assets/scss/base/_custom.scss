@@ -177,7 +177,8 @@ a:not(.button) {
 	}
 }
 // list items
-ul, ol {
+ul,
+ol {
 	padding-top: $small-space;
 	list-style-position: inside;
 	&.noList {
@@ -188,9 +189,12 @@ ul, ol {
 		color: $body-font-color;
 		font-size: $body-font-size;
 		padding-bottom: $small-space;
+		ul,
+		ol {
+			margin: .8rem 0 .8rem .8rem;
+		}
 		ul {
 			list-style-type: circle;
-			margin: .8rem 0 .8rem .8rem;
 		}
 	}
 }

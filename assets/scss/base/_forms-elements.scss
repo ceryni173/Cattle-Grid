@@ -73,7 +73,7 @@ textarea {
 }
 label {
 	color: $body-font-color;
-	display: inline-block;
+	display: block;
 	font-size: rem-calc(11);
 	text-transform: uppercase;
 	margin-bottom: $small-space;
