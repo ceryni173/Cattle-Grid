@@ -22,6 +22,7 @@ $primaryText: map-get($palette, primaryText);
 $secondary: map-get($palette, secondary);
 $secondaryText: map-get($palette, secondaryText);
 $light: map-get($palette, light-grey);
+$dark: map-get($palette, dark-grey);
 $border: darken($light, 5%);
 // notifications
 $success: map-get($palette, success);

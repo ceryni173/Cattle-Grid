@@ -1,0 +1,48 @@
+.badge {
+    display: inline-block;
+    padding: $small-space ($small-space * 2);
+    font-size: rem-calc(9);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $border-radius;
+    // map through social networks
+    @each $network in map-keys(map-get($config, networks)) {
+	  	&.#{$network} {
+			background-color: map-fetch($config, networks $network colour );
+            color: map-fetch($config, networks $network text );
+		}
+	}
+    // loop through crayola settings
+    &.primary {
+        background-color: $primary;
+        color: $primaryText;
+    }
+    &.secondary {
+        background-color: $secondary;
+        color: $secondaryText;
+    }
+    &.success {
+        background-color: $success;
+        color: #ffffff;
+    }
+    &.error {
+        background-color: $error;
+        color: #ffffff;
+    }
+    &.warning {
+        background-color: $warning;
+        color: #ffffff;
+    }
+    &.light {
+        background-color: $light;
+        color: #ffffff;
+    }
+    &.dark {
+        background-color: $dark;
+        color: #ffffff;
+    }
+}
