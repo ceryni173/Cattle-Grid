@@ -133,6 +133,11 @@ input {
 		margin-bottom: $large-space;
 	}
 }
+.badgeHolder {
+	.badge {
+		margin-bottom: $small-space;
+	}
+}
 footer {
 	margin-top: $large-space;
 }
