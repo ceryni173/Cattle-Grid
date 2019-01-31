@@ -22,6 +22,12 @@
 .align-middle {
 	align-items: center;
 }
+.align-top {
+	align-items: flex-start;
+}
+.align-bottom {
+	align-items: flex-end;
+}
 .align-center {
 	justify-content: center;
 }
