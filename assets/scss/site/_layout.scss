@@ -128,6 +128,11 @@ input {
 		}
 	}
 }
+.headlines {
+	p {
+		margin-bottom: $large-space;
+	}
+}
 footer {
 	margin-top: $large-space;
 }
