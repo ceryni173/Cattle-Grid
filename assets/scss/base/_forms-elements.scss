@@ -12,7 +12,7 @@ select {
 	// add font awesome to font family for placeholders
 	color: $body-font-color;
 	font-family: $body-font-family;
-	font-size: rem-calc(12);
+	font-size: $body-font-size;
 	font-weight: 300;
 	min-height: $input-height;
 	padding: 0;
@@ -37,7 +37,7 @@ select {
 		// for safari only
 		@media only screen and (-webkit-min-device-pixel-ratio: 1) {
 			padding-top: 0px;
-			line-height: 12px;
+			line-height: rem-calc(12);
 		}
 	}
 	// change the horrible yellow background to white in chrome
@@ -47,7 +47,7 @@ select {
 		padding-left: ($small-space * 2);
 		color: $body-font-color;
 		font-family: $body-font-family!important;
-		font-size: 14px;
+		font-size: $body-font-size;
 	}
 	// hide placeholder on focus
 	&:focus::-webkit-input-placeholder{
@@ -59,7 +59,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='button']):focus,
 select:focus,
 textarea:focus {
 	outline: none;
-	box-shadow: 0 0 5px $light;
+	box-shadow: 0 0 $small-space $light;
 	-webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 	transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 	border: none !important;
@@ -100,4 +100,90 @@ legend {
     max-width: 100%;
     padding: 0;
     white-space: normal;
+}
+// styling inputs further
+// if you want an icon on your select initially, you're covered
+.select-wrapper {
+	width: 100%;
+	max-width: 300px;
+	&:before {
+		content: '\f041'; // default
+		font-size: rem-calc(16);
+		font-family: 'FontAwesome';
+		position: absolute;
+		left: 12px;
+		top: 7px;
+		color: #222222;
+		z-index: 10;
+	}
+	// pad out the select so the icon has room
+	select {
+		padding-left: ($large-space - $small-space);
+		padding-right: ($xlarge-space / 2);
+		background-position: right -($small-space * 3) center;
+		background-repeat: no-repeat;
+		background-size: auto 90%;
+		background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23#{$primary}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A);
+	}
+}
+// file upload
+.fileUploadHolder {
+	width: auto;
+	margin: $medium-space auto;
+	text-align: center;
+	.fileInput + label {
+		display: inline-block;
+		width: auto;
+		margin-top: 0;
+		vertical-align: top;
+		padding: 0;
+		background: none;
+		font-weight: 600;
+		color: $light;
+		&.hasFile {
+			color: $body-font-color;
+		}
+	}
+}
+// Cfile upload button
+.fileInput {
+	width: 0.1px!important;
+	height: 0.1px!important;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	+ label {
+		opacity: 1;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+		display: inline-block;
+		overflow: hidden;
+		padding: ($small-space * 2);
+		margin-top: ($small-space * 3);
+		width: auto;
+		max-width: 300px;
+		text-align: left;
+		color: #ffffff;
+		text-transform: none;
+		background-color: $primary;
+		transition: background 250ms ease-in-out;
+		// Containing the text
+		span {
+			font-size: rem-calc(13) !important;
+		}
+		strong {
+			font-style: italic;
+			color: darken($primary, 25%);
+		}
+		&:focus + label,
+		&.has-focus + label,
+		+ label:hover {
+			background-color: $primary;
+		}
+		* {
+			pointer-events: none;
+		}
+	}
 }
