@@ -3,9 +3,9 @@
 	$rem-size: $font-size / 16;
 	@return #{$rem-size}rem;
 }
-// import site specific styles after the rem math
+// ** import site specific styles after the rem math
 @import '../site/config.scss';
-// Deep Get
+// ** Deep Get
 @function map-fetch($map, $keys) {
 	$key: nth($keys, 1);
 	$length: length($keys);
@@ -20,13 +20,14 @@
 		@return $value;
 	}
 }
-// set the standard for the pseufo code block
+// ** Set the standard for the pseufo code block
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;
 	display: $display;
 	position: $pos;
 }
 // @include pseudo;
+// ** Create all of the prefixes
 @mixin input-placeholder {
 	&.placeholder { @content; }
 	&:-moz-placeholder { @content; }
@@ -37,17 +38,7 @@
 // @include input-placeholder {
 //     color: $grey;
 // }
-@function z($name) {
-	@if index($z-indexes, $name) {
-		@return (length($z-indexes) - index($z-indexes, $name)) + 1;
-	} @else {
-		@warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
-		@return null;
-	}
-}
-// .site-header {
-//     z-index: z('site-header');
-// }
+// ** Create fades
 @mixin fade($type) {
 	@if $type == 'hide' {
 		visibility: hidden;
@@ -62,7 +53,7 @@
 }
 // @include fade(hide)
 // @include fade(show)
-// z-indexes
+// ** Create Z index
 @function z-index($key) {
 	@return map-get($z-index, $key);
 }
@@ -70,3 +61,21 @@
 	z-index: z-index($key);
 }
 // @include z-index(navigation);
+// ** Only allow an import of a file once
+/// List storing names of imported modules
+/// @type List
+$imported-modules: () !default;
+/// Make sure a file is imported only once.
+/// @access public
+/// @param {String} $name - Name of exported module
+/// @require $imported-modules
+@mixin exports($name) {
+    @if not index($imported-modules, $name) {
+        $imported-modules: append($imported-modules, $name) !global;
+        @content;
+    } @else {
+        @warn 'Module `#{$name}` has already been imported.';
+    }
+}
+// to use
+// @include exports('custom') {  'custom file contents here' }
