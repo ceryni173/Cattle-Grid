@@ -1,0 +1,65 @@
+@keyframes moveIndeterminate {
+	0% {
+	    background-position: 200% 0;
+	}
+	100% {
+	    background-position: -200% 0;
+	}
+}
+
+progress {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: $border-radius;
+    display: block;
+    height: ($small-space * 2);
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+	background-color: rgba($light, 0.3);
+	&::-webkit-progress-bar {
+	  background-color: rgba($light, 0.3);
+	}
+
+	&:indeterminate {
+	    animation-duration: 1.5s;
+	    animation-iteration-count: infinite;
+	    animation-name: moveIndeterminate;
+	    animation-timing-function: linear;
+	    background-position: top left;
+	    background-repeat: no-repeat;
+	    background-size: 150% 150%;
+	}
+
+	&.primary {
+		&::-webkit-progress-value {
+		  background-color: $primary;
+		}
+		&::-moz-progress-bar {
+		  background-color:  $primary;
+		}
+		&::-ms-fill {
+		  background-color:  $primary;
+		  border: none;
+		}
+		&:indeterminate {
+		    background-image: linear-gradient(to right,$primary 30%, rgba($light, 0.3) 30%);
+		}
+	}
+	&.secondary {
+		&::-webkit-progress-value {
+		  background-color: $secondary;
+		}
+		&::-moz-progress-bar {
+		  background-color:  $secondary;
+		}
+		&::-ms-fill {
+		  background-color:  $secondary;
+		  border: none;
+		}
+		&:indeterminate {
+		    background-image: linear-gradient(to right,$secondary 30%, rgba($light, 0.3) 30%);
+		}
+	}
+}

@@ -23,6 +23,7 @@ select {
 	align-items: center;
 	justify-content: center;
 	border-radius: 0;
+	width: 100%;
 	// style placeholder
 	@include input-placeholder {
 		color: $light;
@@ -70,7 +71,6 @@ textarea {
 	box-shadow: none;
 	padding: $small-space ($small-space * 2);
     font-size: $body-font-size;
-	width: 100%;
 }
 label {
 	color: $body-font-color;

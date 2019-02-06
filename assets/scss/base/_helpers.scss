@@ -1,4 +1,9 @@
-
+// to debug any element
+.debug {
+	* {
+		border: 1px solid red;
+	}
+}
 // image filters
 .imgFilter {
 	display: inline-block;
@@ -24,14 +29,8 @@
 		filter: blur(#{$small-space});
 	}
 }
-// to debug any element
-.debug {
-	* {
-		border: 1px solid red;
-	}
-}
 // when containing none row elements
-.extendRow {
+%extendRow {
 	display: flex;
 	box-sizing: border-box;
 	margin-left: auto;
